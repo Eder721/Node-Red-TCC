@@ -671,12 +671,14 @@
         "id": "bc2f7a13ddee397c",
         "type": "junction",
         "z": "986afd82ee909974",
-        "x": 1420,
-        "y": 1660,
+        "x": 1520,
+        "y": 1600,
         "wires": [
             [
-                "342e35389720f83d",
-                "19c92c50.4d9f64"
+                "239802e9717738e1",
+                "b6ca060716a4f878",
+                "a42e5b0ca9cb0498",
+                "562ad9cf6ffef88a"
             ]
         ]
     },
@@ -1019,9 +1021,9 @@
         "type": "ui_group",
         "name": "Resumo Individual",
         "tab": "30c4fa48.b40b76",
-        "order": 2,
+        "order": 1,
         "disp": true,
-        "width": "8",
+        "width": "10",
         "collapse": false,
         "className": ""
     },
@@ -1430,8 +1432,8 @@
                 "gy": 10,
                 "cx": 6,
                 "cy": 6,
-                "px": 20,
-                "py": 20
+                "px": 15,
+                "py": 15
             }
         }
     },
@@ -1610,9 +1612,9 @@
         "type": "ui_group",
         "name": "Tabela Resumo",
         "tab": "30c4fa48.b40b76",
-        "order": 4,
+        "order": 2,
         "disp": true,
-        "width": "7",
+        "width": "11",
         "collapse": false,
         "className": ""
     },
@@ -1621,9 +1623,9 @@
         "type": "ui_group",
         "name": "Gráfico Pizza",
         "tab": "30c4fa48.b40b76",
-        "order": 5,
+        "order": 4,
         "disp": true,
-        "width": "7",
+        "width": "11",
         "collapse": false,
         "className": ""
     },
@@ -1632,9 +1634,9 @@
         "type": "ui_group",
         "name": "Descrição",
         "tab": "30c4fa48.b40b76",
-        "order": 6,
-        "disp": true,
-        "width": "8",
+        "order": 3,
+        "disp": false,
+        "width": "10",
         "collapse": false,
         "className": ""
     },
@@ -1700,6 +1702,16 @@
         "height": 1
     },
     {
+        "id": "86ac27f58ca47d87",
+        "type": "ui_spacer",
+        "z": "986afd82ee909974",
+        "name": "spacer",
+        "group": "79b4d5c2.bfe4ac",
+        "order": 4,
+        "width": "3",
+        "height": "1"
+    },
+    {
         "id": "91661a03.9d6408",
         "type": "function",
         "z": "fcc6da58.250b58",
@@ -1760,7 +1772,7 @@
         "z": "986afd82ee909974",
         "g": "7321907a.ee288",
         "name": "Conf_Principal",
-        "func": "var date = new Date()\nvar day = date.getDate().toString().padStart(2, '0')\nvar month = (date.getMonth()+1).toString().padStart(2, '0')\nvar year = date.getFullYear()\nvar hours = (date.getHours()-3).toString().padStart(2, '0')\nvar minutes = date.getMinutes().toString().padStart(2, '0')\nvar seconds = date.getSeconds().toString().padStart(2, '0')\nvar current_date = day+\"/\"+month+\"/\"+year;\n\nvar color_values = flow.get(\"color_values\", \"bank1\")\nvar sinalizadores = flow.get('sinalizadores', \"bank1\")\nvar pos_atual = flow.get(\"pos_atual\", \"bank1\")\nvar allClients = flow.get(\"allClients\", \"bank1\")\n\nfunction calculaTempo(totalTime){   //recebe em milisegundos\n    var diffDays = Math.floor(totalTime / 86400000); // days\n    var diffHrs = Math.floor((totalTime % 86400000) / 3600000); // hours\n    diffHrs = diffHrs < 10 ? \"0\" + diffHrs : diffHrs;\n    var diffMins = Math.floor(((totalTime % 86400000) % 3600000) / 60000); // minutes\n    diffMins = diffMins < 10 ? \"0\" + diffMins : diffMins;\n    var diffSecs = Math.floor((((totalTime % 86400000) % 3600000) % 60000)/1000);  //seconds\n    diffSecs = diffSecs < 10 ? \"0\" + diffSecs : diffSecs;\n    var testvar = diffHrs + (diffDays*24)\n    var calculatedTime = diffHrs+\":\"+diffMins+\":\"+diffSecs\n    return calculatedTime;\n}\n\n\nvar mensagem = msg.payload  //Ex.: VT300-green\nvar separator = mensagem.split(\"-\")  //separa o cliente do status\n\nvar current_status = separator[1]  //status Ex.: green\nvar clientID = separator[0] //cliente   Ex.: VT300\n\nvar pos_clientNome\nfor(var j=0; j<allClients.length; j++){\n    if(allClients[j].clientID == clientID){\n        pos_clientNome = j\n    }\n}\n    \nvar i\nfor(i=0; i<sinalizadores.length; i++){ //varre o vetor\n    if(sinalizadores[i].clientID == clientID){   //encontra o sinalizador no vetor\n        pos_atual = i   //guarda a posição desse sinalizador no vetor\n    }\n}\n\n//atualiza o tempo \nvar time_status_change = date.getTime()\nvar total_time_last_status = time_status_change - sinalizadores[pos_atual].time_current_status  //tempo total em milisegundos\n\nif(sinalizadores[pos_atual].current_status == color_values.yellow){\n    sinalizadores[pos_atual].time_yellow = total_time_last_status + sinalizadores[pos_atual].time_yellow;\n    sinalizadores[pos_atual].time_yellow_str = calculaTempo(sinalizadores[pos_atual].time_yellow)\n}\nelse if(sinalizadores[pos_atual].current_status == color_values.green){\n    sinalizadores[pos_atual].time_green = total_time_last_status + sinalizadores[pos_atual].time_green;\n    sinalizadores[pos_atual].time_green_str = calculaTempo(sinalizadores[pos_atual].time_green)\n}\nelse if(sinalizadores[pos_atual].current_status == color_values.blue){\n    sinalizadores[pos_atual].time_blue = total_time_last_status + sinalizadores[pos_atual].time_blue;\n    sinalizadores[pos_atual].time_blue_str = calculaTempo(sinalizadores[pos_atual].time_blue)\n}\nelse if(sinalizadores[pos_atual].current_status == color_values.red){\n    sinalizadores[pos_atual].time_red = total_time_last_status + sinalizadores[pos_atual].time_red;\n    sinalizadores[pos_atual].time_red_str= calculaTempo(sinalizadores[pos_atual].time_red)\n}\nelse if(sinalizadores[pos_atual].current_status == color_values.gray){\n    sinalizadores[pos_atual].time_gray = total_time_last_status + sinalizadores[pos_atual].time_gray;\n    sinalizadores[pos_atual].time_gray_str= calculaTempo(sinalizadores[pos_atual].time_gray)\n}\n\n//atualiza o status e incrementa contador de paradas se for o caso\nif(current_status == \"green\"){\n    //current_status = \"Em operação\"\n    current_status = color_values.green\n}\nelse if(current_status == \"red\"){\n    //current_status = \"Parada não programada\"\n    current_status = color_values.red\n    sinalizadores[pos_atual].stop_counter = sinalizadores[pos_atual].stop_counter + 1 //add contagem de paradas\n}\nelse if(current_status == \"yellow\"){\n    //current_status = \"Setup\"\n    current_status = color_values.yellow\n}\nelse if(current_status == \"blue\"){\n    //current_status = \"Parada programada\"\n    current_status = color_values.blue\n    sinalizadores[pos_atual].stop_counter = sinalizadores[pos_atual].stop_counter + 1 //add contagem de paradas\n}\nelse if(current_status == \"gray\"){\n    //current_status = \"Setup\"\n    current_status = color_values.gray\n}\n\nsinalizadores[pos_atual].current_status = current_status  //atualiza status\nsinalizadores[pos_atual].time_current_status = date.getTime()    //atualiza o tempo\nsinalizadores[pos_atual].time_change_str = hours+\":\"+minutes+\":\"+seconds //atualiza o tempo formatado\nsinalizadores[pos_atual].current_date = current_date   //atualiza a data\n\n\nflow.set(\"sinalizadores\", sinalizadores, \"bank1\")\nflow.set(\"pos_atual\", pos_atual, \"bank1\")\n\nmsg = {};\nmsg.payload = sinalizadores\n\nreturn msg;",
+        "func": "var date = new Date()\n\nvar full_date = date.toLocaleString('pt-BR', {\n    timeZone: 'America/Sao_Paulo',\n})\nvar date_separator = full_date.split(\" \")\nvar new_date = date_separator[0]    //Ex: \"18/10/2022\"\nvar new_time = date_separator[1]    //Ex: \"15:45:05\"\n\nvar day = date.getDate().toString().padStart(2, '0')\nvar month = (date.getMonth()+1).toString().padStart(2, '0')\nvar year = date.getFullYear()\nvar hours = (date.getHours()-3).toString().padStart(2, '0')\nvar minutes = date.getMinutes().toString().padStart(2, '0')\nvar seconds = date.getSeconds().toString().padStart(2, '0')\nvar current_date = day+\"/\"+month+\"/\"+year;\n\nvar color_values = flow.get(\"color_values\", \"bank1\")\nvar sinalizadores = flow.get('sinalizadores', \"bank1\")\nvar pos_atual = flow.get(\"pos_atual\", \"bank1\")\nvar allClients = flow.get(\"allClients\", \"bank1\")\n\nfunction calculaTempo(totalTime){   //recebe em milisegundos\n    var diffDays = Math.floor(totalTime / 86400000); // days\n    var diffHrs = Math.floor((totalTime % 86400000) / 3600000); // hours\n    diffHrs = diffHrs < 10 ? \"0\" + diffHrs : diffHrs;\n    var diffMins = Math.floor(((totalTime % 86400000) % 3600000) / 60000); // minutes\n    diffMins = diffMins < 10 ? \"0\" + diffMins : diffMins;\n    var diffSecs = Math.floor((((totalTime % 86400000) % 3600000) % 60000)/1000);  //seconds\n    diffSecs = diffSecs < 10 ? \"0\" + diffSecs : diffSecs;\n    var testvar = diffHrs + (diffDays*24)\n    var calculatedTime = diffHrs+\":\"+diffMins+\":\"+diffSecs\n    return calculatedTime;\n}\n\n\nvar mensagem = msg.payload  //Ex.: VT300-green\nvar separator = mensagem.split(\"-\")  //separa o cliente do status\n\nvar current_status = separator[1]  //status Ex.: green\nvar clientID = separator[0] //cliente   Ex.: VT300\n\nvar pos_clientNome\nfor(var j=0; j<allClients.length; j++){\n    if(allClients[j].clientID == clientID){\n        pos_clientNome = j\n    }\n}\n    \nvar i\nfor(i=0; i<sinalizadores.length; i++){ //varre o vetor\n    if(sinalizadores[i].clientID == clientID){   //encontra o sinalizador no vetor\n        pos_atual = i   //guarda a posição desse sinalizador no vetor\n    }\n}\n\n//atualiza o tempo \nvar time_status_change = date.getTime()\nvar total_time_last_status = time_status_change - sinalizadores[pos_atual].time_current_status  //tempo total em milisegundos\n\nif(sinalizadores[pos_atual].current_status == color_values.yellow){\n    sinalizadores[pos_atual].time_yellow = total_time_last_status + sinalizadores[pos_atual].time_yellow;\n    sinalizadores[pos_atual].time_yellow_str = calculaTempo(sinalizadores[pos_atual].time_yellow)\n}\nelse if(sinalizadores[pos_atual].current_status == color_values.green){\n    sinalizadores[pos_atual].time_green = total_time_last_status + sinalizadores[pos_atual].time_green;\n    sinalizadores[pos_atual].time_green_str = calculaTempo(sinalizadores[pos_atual].time_green)\n}\nelse if(sinalizadores[pos_atual].current_status == color_values.blue){\n    sinalizadores[pos_atual].time_blue = total_time_last_status + sinalizadores[pos_atual].time_blue;\n    sinalizadores[pos_atual].time_blue_str = calculaTempo(sinalizadores[pos_atual].time_blue)\n}\nelse if(sinalizadores[pos_atual].current_status == color_values.red){\n    sinalizadores[pos_atual].time_red = total_time_last_status + sinalizadores[pos_atual].time_red;\n    sinalizadores[pos_atual].time_red_str= calculaTempo(sinalizadores[pos_atual].time_red)\n}\nelse if(sinalizadores[pos_atual].current_status == color_values.gray){\n    sinalizadores[pos_atual].time_gray = total_time_last_status + sinalizadores[pos_atual].time_gray;\n    sinalizadores[pos_atual].time_gray_str= calculaTempo(sinalizadores[pos_atual].time_gray)\n}\n\n//atualiza o status e incrementa contador de paradas se for o caso\nif(current_status == \"green\"){\n    //current_status = \"Em operação\"\n    current_status = color_values.green\n}\nelse if(current_status == \"red\"){\n    //current_status = \"Parada não programada\"\n    current_status = color_values.red\n    sinalizadores[pos_atual].stop_counter = sinalizadores[pos_atual].stop_counter + 1 //add contagem de paradas\n}\nelse if(current_status == \"yellow\"){\n    //current_status = \"Setup\"\n    current_status = color_values.yellow\n}\nelse if(current_status == \"blue\"){\n    //current_status = \"Parada programada\"\n    current_status = color_values.blue\n    sinalizadores[pos_atual].stop_counter = sinalizadores[pos_atual].stop_counter + 1 //add contagem de paradas\n}\nelse if(current_status == \"gray\"){\n    //current_status = \"Setup\"\n    current_status = color_values.gray\n}\n\nsinalizadores[pos_atual].current_status = current_status  //atualiza status\nsinalizadores[pos_atual].time_current_status = date.getTime()    //atualiza o tempo em milisegundos\n//sinalizadores[pos_atual].time_change_str = hours+\":\"+minutes+\":\"+seconds //atualiza o tempo formatado\nsinalizadores[pos_atual].time_change_str = new_time //atualiza o tempo formatado\n//sinalizadores[pos_atual].current_date = current_date   //atualiza a data\nsinalizadores[pos_atual].current_date = new_date   //atualiza a data\nsinalizadores[pos_atual].ihm_connectivity = true\n\nflow.set(\"sinalizadores\", sinalizadores, \"bank1\")\nflow.set(\"pos_atual\", pos_atual, \"bank1\")\n\nmsg = {};\nmsg.payload = sinalizadores\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "// Code added here will be run once\n// whenever the node is started.\nvar pos_atual = 0;\nflow.set(\"pos_atual\", pos_atual, \"bank1\")\n\nvar color_values = {\n    green   : \"Em operação\",\n    red     : \"Parada não programada\",\n    yellow  : \"Setup\",\n    blue    : \"Parada programada\",\n    gray    : \"Offline\"\n}\n\nflow.set(\"color_values\", color_values, \"bank1\")\n\n",
@@ -2013,7 +2025,7 @@
         "z": "986afd82ee909974",
         "g": "7321907a.ee288",
         "name": "Update Function",
-        "func": "var date = new Date()\nvar day = date.getDate().toString().padStart(2, '0')\nvar month = (date.getMonth()+1).toString().padStart(2, '0')\nvar year = date.getFullYear()\nvar hours = (date.getHours()-3).toString().padStart(2, '0')\nvar minutes = date.getMinutes().toString().padStart(2, '0')\nvar seconds = date.getSeconds().toString().padStart(2, '0')\nvar current_date = day+\"/\"+month+\"/\"+year;\n\nvar sinalizadores = flow.get('sinalizadores', \"bank1\")\nvar allClients = flow.get(\"allClients\", \"bank1\")\nvar color_values = flow.get(\"color_values\", \"bank1\")\n\nfunction calculaTempo(totalTime){   //recebe em milisegundos\n    var diffDays = Math.floor(totalTime / 86400000); // days\n    var diffHrs = Math.floor((totalTime % 86400000) / 3600000); // hours\n    diffHrs = diffHrs < 10 ? \"0\" + diffHrs : diffHrs;\n    var diffMins = Math.floor(((totalTime % 86400000) % 3600000) / 60000); // minutes\n    diffMins = diffMins < 10 ? \"0\" + diffMins : diffMins;\n    var diffSecs = Math.floor((((totalTime % 86400000) % 3600000) % 60000)/1000);  //seconds\n    diffSecs = diffSecs < 10 ? \"0\" + diffSecs : diffSecs;\n    var testvar = diffHrs + (diffDays*24)\n    var calculatedTime = diffHrs+\":\"+diffMins+\":\"+diffSecs\n    return calculatedTime;\n}\n\n//atualiza o tempo\nfor(var j=0; j<sinalizadores.length; j++){\n    var time_status_troca = date.getTime()\n    var timeTotal = time_status_troca - sinalizadores[j].time_current_status  //tempo total em milisegundos\n\n    if(sinalizadores[j].current_status == color_values.green){\n        sinalizadores[j].time_green = timeTotal + sinalizadores[j].time_green;\n        sinalizadores[j].time_green_str = calculaTempo(sinalizadores[j].time_green)\n    }\n    else if(sinalizadores[j].current_status == color_values.red){\n        sinalizadores[j].time_red = timeTotal + sinalizadores[j].time_red;\n        sinalizadores[j].time_red_str = calculaTempo(sinalizadores[j].time_red)\n    }\n    else if(sinalizadores[j].current_status == color_values.yellow){\n        sinalizadores[j].time_yellow = timeTotal + sinalizadores[j].time_yellow;\n        sinalizadores[j].time_yellow_str = calculaTempo(sinalizadores[j].time_yellow)\n    }\n    else if(sinalizadores[j].current_status == color_values.blue){\n        sinalizadores[j].time_blue = timeTotal + sinalizadores[j].time_blue;\n        sinalizadores[j].time_blue_str = calculaTempo(sinalizadores[j].time_blue)\n    }\n    else if(sinalizadores[j].current_status == color_values.gray){\n        sinalizadores[j].time_gray = timeTotal + sinalizadores[j].time_gray;\n        sinalizadores[j].time_gray_str = calculaTempo(sinalizadores[j].time_gray)\n    }\n            \n    sinalizadores[j].time_current_status = date.getTime()\n}\n\n\nflow.set(\"sinalizadores\", sinalizadores, \"bank1\")\n\nmsg = {};\nmsg.payload = sinalizadores\n\nreturn msg;",
+        "func": "var date = new Date()\n\nvar full_date = date.toLocaleString('pt-BR', {\n    timeZone: 'America/Sao_Paulo',\n})\nvar date_separator = full_date.split(\" \")\nvar new_date = date_separator[0]    //Ex: \"18/10/2022\"\nvar new_time = date_separator[1]    //Ex: \"15:45:05\"\n\nvar day = date.getDate().toString().padStart(2, '0')\nvar month = (date.getMonth()+1).toString().padStart(2, '0')\nvar year = date.getFullYear()\nvar hours = (date.getHours()-3).toString().padStart(2, '0')\nvar minutes = date.getMinutes().toString().padStart(2, '0')\nvar seconds = date.getSeconds().toString().padStart(2, '0')\nvar current_date = day+\"/\"+month+\"/\"+year;\n\nvar sinalizadores = flow.get('sinalizadores', \"bank1\")\nvar allClients = flow.get(\"allClients\", \"bank1\")\nvar color_values = flow.get(\"color_values\", \"bank1\")\n\nfunction calculaTempo(totalTime){   //recebe em milisegundos\n    var diffDays = Math.floor(totalTime / 86400000); // days\n    var diffHrs = Math.floor((totalTime % 86400000) / 3600000); // hours\n    diffHrs = diffHrs < 10 ? \"0\" + diffHrs : diffHrs;\n    var diffMins = Math.floor(((totalTime % 86400000) % 3600000) / 60000); // minutes\n    diffMins = diffMins < 10 ? \"0\" + diffMins : diffMins;\n    var diffSecs = Math.floor((((totalTime % 86400000) % 3600000) % 60000)/1000);  //seconds\n    diffSecs = diffSecs < 10 ? \"0\" + diffSecs : diffSecs;\n    var testvar = diffHrs + (diffDays*24)\n    var calculatedTime = diffHrs+\":\"+diffMins+\":\"+diffSecs\n    return calculatedTime;\n}\n\n//atualiza o tempo\nfor(var j=0; j<sinalizadores.length; j++){\n    var time_status_troca = date.getTime()\n    var timeTotal = time_status_troca - sinalizadores[j].time_current_status  //tempo total em milisegundos\n\n    if(sinalizadores[j].current_status == color_values.green){\n        sinalizadores[j].time_green = timeTotal + sinalizadores[j].time_green;\n        sinalizadores[j].time_green_str = calculaTempo(sinalizadores[j].time_green)\n    }\n    else if(sinalizadores[j].current_status == color_values.red){\n        sinalizadores[j].time_red = timeTotal + sinalizadores[j].time_red;\n        sinalizadores[j].time_red_str = calculaTempo(sinalizadores[j].time_red)\n    }\n    else if(sinalizadores[j].current_status == color_values.yellow){\n        sinalizadores[j].time_yellow = timeTotal + sinalizadores[j].time_yellow;\n        sinalizadores[j].time_yellow_str = calculaTempo(sinalizadores[j].time_yellow)\n    }\n    else if(sinalizadores[j].current_status == color_values.blue){\n        sinalizadores[j].time_blue = timeTotal + sinalizadores[j].time_blue;\n        sinalizadores[j].time_blue_str = calculaTempo(sinalizadores[j].time_blue)\n    }\n    else if(sinalizadores[j].current_status == color_values.gray){\n        sinalizadores[j].time_gray = timeTotal + sinalizadores[j].time_gray;\n        sinalizadores[j].time_gray_str = calculaTempo(sinalizadores[j].time_gray)\n    }\n            \n    sinalizadores[j].time_current_status = date.getTime()\n    sinalizadores[j].current_date = new_date\n}\n\n\nflow.set(\"sinalizadores\", sinalizadores, \"bank1\")\n\nmsg = {};\nmsg.payload = sinalizadores\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -2068,7 +2080,7 @@
         "z": "986afd82ee909974",
         "g": "1504f413.2fc83c",
         "name": "Config msg - csv",
-        "func": "var pos_atual = flow.get(\"pos_atual\", \"bank1\")\nvar newPayload = {};\n\nvar date = new Date();\nvar year = date.getFullYear();\nvar month = date.getMonth() < 9 ? \"0\" + (date.getMonth() + 1) : (date.getMonth() + 1); // getMonth() is zero-based\nvar day  = date.getDate() < 10 ? \"0\" + date.getDate() : date.getDate();\nvar hours = (date.getHours()-3) < 10 ? \"0\" + (date.getHours()-3) : (date.getHours()-3);\nvar minutes = date.getMinutes() < 10 ? \"0\" + date.getMinutes() : date.getMinutes();\nvar seconds = date.getSeconds() < 10 ? \"0\" + date.getSeconds() : date.getSeconds();\n\n\nnewPayload.Cliente = msg.payload[pos_atual].name\nnewPayload.Status = msg.payload[pos_atual].current_status\nnewPayload.Data = msg.payload[pos_atual].current_date\nnewPayload.Tempo_Verde = msg.payload[pos_atual].time_green_str\nnewPayload.Tempo_Vermelho = msg.payload[pos_atual].time_red_str\nnewPayload.Tempo_Amarelo = msg.payload[pos_atual].time_yellow_str\nnewPayload.Tempo_Azul = msg.payload[pos_atual].time_blue_str\nnewPayload.Tempo_Cinza = msg.payload[pos_atual].time_gray_str\nnewPayload.Horario = hours+\":\"+minutes+\":\"+seconds\nnewPayload.Count_stop = msg.payload[pos_atual].stop_counter\n\n// Generate out file name pattern\nmsg.fname = \"Sinalizador\"+newPayload.Cliente+\"-\"+ day + month + year + \".csv\";\n// Full filename with path for the file node later\nmsg.filename = \"/home/pi/Documents/datalog/Produto/\"+ msg.fname;\n\n// We save the current payload into a different place on the msg object\nmsg.filecontent = newPayload;\n\n// We are passing the file name search pattern to fs node to tell us if the file exists or not\nmsg.payload = {\"pattern\":msg.fname};\n\nnode.status({fill:\"blue\",shape:\"ring\",text:msg.fname});\n\n\nreturn msg;",
+        "func": "var pos_atual = flow.get(\"pos_atual\", \"bank1\")\nvar newPayload = {};\n\nvar date = new Date();\n\nvar year = date.getFullYear();\nvar month = date.getMonth() < 9 ? \"0\" + (date.getMonth() + 1) : (date.getMonth() + 1); // getMonth() is zero-based\nvar day  = date.getDate() < 10 ? \"0\" + date.getDate() : date.getDate();\nvar hours = (date.getHours()-3) < 10 ? \"0\" + (date.getHours()-3) : (date.getHours()-3);\nvar minutes = date.getMinutes() < 10 ? \"0\" + date.getMinutes() : date.getMinutes();\nvar seconds = date.getSeconds() < 10 ? \"0\" + date.getSeconds() : date.getSeconds();\n\n\nnewPayload.Cliente = msg.payload[pos_atual].name\nnewPayload.Status = msg.payload[pos_atual].current_status\nnewPayload.Data = msg.payload[pos_atual].current_date\nnewPayload.Tempo_Verde = msg.payload[pos_atual].time_green_str\nnewPayload.Tempo_Vermelho = msg.payload[pos_atual].time_red_str\nnewPayload.Tempo_Amarelo = msg.payload[pos_atual].time_yellow_str\nnewPayload.Tempo_Azul = msg.payload[pos_atual].time_blue_str\nnewPayload.Tempo_Cinza = msg.payload[pos_atual].time_gray_str\nnewPayload.Horario = hours+\":\"+minutes+\":\"+seconds\nnewPayload.Count_stop = msg.payload[pos_atual].stop_counter\n\n// Generate out file name pattern\nmsg.fname = \"Sinalizador\"+newPayload.Cliente+\"-\"+ day + month + year + \".csv\";\n// Full filename with path for the file node later\nmsg.filename = \"/home/pi/Documents/datalog/Produto/\"+ msg.fname;\n\n// We save the current payload into a different place on the msg object\nmsg.filecontent = newPayload;\n\n// We are passing the file name search pattern to fs node to tell us if the file exists or not\nmsg.payload = {\"pattern\":msg.fname};\n\nnode.status({fill:\"blue\",shape:\"ring\",text:msg.fname});\n\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -2792,9 +2804,7 @@
         "x": 1330,
         "y": 2960,
         "wires": [
-            [
-                "5b6cdffd.a2d7b"
-            ]
+            []
         ]
     },
     {
@@ -2869,7 +2879,7 @@
         "z": "986afd82ee909974",
         "g": "7321907a.ee288",
         "name": "Cadastra equipamento",
-        "func": "var date = new Date()\nvar day = date.getDate().toString().padStart(2, '0')\nvar month = (date.getMonth()+1).toString().padStart(2, '0')\nvar year = date.getFullYear()\nvar hours = (date.getHours()-3).toString().padStart(2, '0')\nvar minutes = date.getMinutes().toString().padStart(2, '0')\nvar seconds = date.getSeconds().toString().padStart(2, '0')\nvar current_date = day+\"/\"+month+\"/\"+year;\n\nvar podeAdd = true\nvar allClients = flow.get(\"allClients\", \"bank1\")||[]\n\nvar cliente = {};\n\nvar mensagem = msg.payload  //Ex.: AA100-IHM-00:11:22:33:44:55\nvar separator = mensagem.split(\"-\")  //separa a mensagem\n\nvar pos\n\n//verifica se esse cliente eh novo ou nao\nfor(var j=0; j<allClients.length; j++){\n    if(allClients[j].macAdd == separator[2]){   //equipamento ja cadastrado\n        pos = j;\n        podeAdd = false\n        allClients[j].connectivity = true\n        allClients[j].current_date = current_date\n    }\n}\n\ncliente.clientID = separator[0] //cliente   Ex.: AA100\ncliente.name = separator[0]     //nome. Default = ID\ncliente.type = separator[1]  //Ex: IHM \ncliente.macAdd = separator[2]   //Ex: 00:11:22:33:44:55\ncliente.connectivity = true\ncliente.registration_date = current_date\ncliente.current_date = current_date\ncliente.connection_lost = 0\n\n\n\n\nif(podeAdd == true){    //novo equipamento - insere na lista\n    allClients.push(cliente)\n}\n\n\nflow.set(\"allClients\", allClients, \"bank1\")\n\nmsg.payload = allClients\nreturn msg;",
+        "func": "var date = new Date()\n\nvar full_date = date.toLocaleString('pt-BR', {\n    timeZone: 'America/Sao_Paulo',\n})\nvar date_separator = full_date.split(\" \")\nvar new_date = date_separator[0]    //Ex: \"18/10/2022\"\nvar new_time = date_separator[1]    //Ex: \"15:45:05\"\n\nvar day = date.getDate().toString().padStart(2, '0')\nvar month = (date.getMonth()+1).toString().padStart(2, '0')\nvar year = date.getFullYear()\nvar hours = (date.getHours()-3).toString().padStart(2, '0')\nvar minutes = date.getMinutes().toString().padStart(2, '0')\nvar seconds = date.getSeconds().toString().padStart(2, '0')\nvar current_date = day+\"/\"+month+\"/\"+year;\n\nvar podeAdd = true\nvar allClients = flow.get(\"allClients\", \"bank1\")||[]\n\nvar cliente = {};\n\nvar mensagem = msg.payload  //Ex.: AA100-IHM-00:11:22:33:44:55\nvar separator = mensagem.split(\"-\")  //separa a mensagem\n\nvar pos\n\n//verifica se esse cliente eh novo ou nao\nfor(var j=0; j<allClients.length; j++){\n    if(allClients[j].macAdd == separator[2]){   //equipamento ja cadastrado\n        pos = j;\n        podeAdd = false\n        allClients[j].connectivity = true\n        allClients[j].current_date = new_date\n    }\n}\n\ncliente.clientID = separator[0] //cliente   Ex.: AA100\ncliente.name = separator[0]     //nome. Default = ID\ncliente.type = separator[1]  //Ex: IHM \ncliente.macAdd = separator[2]   //Ex: 00:11:22:33:44:55\ncliente.connectivity = true\ncliente.registration_date = new_date\ncliente.registration_time = new_time\ncliente.current_date = new_date\ncliente.connection_lost = 0\n\nif(podeAdd == true){    //novo equipamento - insere na lista\n    allClients.push(cliente)\n}\n\nflow.set(\"allClients\", allClients, \"bank1\")\n\nmsg.payload = allClients\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -3935,7 +3945,7 @@
         "z": "986afd82ee909974",
         "g": "7321907a.ee288",
         "name": "Att conectividade",
-        "func": "var allClients = flow.get(\"allClients\", \"bank1\")\n\nvar mensagem = msg.payload  //Ex: AA100-IHM-00:11:22:33:44:55\nvar separator = mensagem.split(\"-\")  //separa a mensagem\n\nvar id = separator[0]\nvar type = separator[1]\n\nmsg = {};\n\nfor(var i=0; i<allClients.length; i++){\n    if(allClients[i].clientID == id && allClients[i].type == type){\n        allClients[i].connectivity = false\n        msg.payload = allClients[i].clientID+\"-gray\"\n        ++allClients[i].connection_lost;\n    }\n}\n\nflow.set(\"allClients\", allClients, \"bank1\")\n\n\n\nreturn msg;",
+        "func": "var allClients = flow.get(\"allClients\", \"bank1\")\nvar sinalizadores = flow.get(\"sinalizadores\", \"bank1\")\n\nvar mensagem = msg.payload  //Ex: AA100-IHM-00:11:22:33:44:55\nvar separator = mensagem.split(\"-\")  //separa a mensagem\n\nvar id = separator[0]\nvar type = separator[1]\n\nmsg = {};\n\nfor(var i=0; i<allClients.length; i++){\n    if(allClients[i].clientID == id && allClients[i].type == type){\n        allClients[i].connectivity = false\n        msg.payload = allClients[i].clientID+\"-gray\"\n        ++allClients[i].connection_lost;\n    }\n}\n\nfor (var j=0; j< sinalizadores.length; j++){\n    if(sinalizadores[j].clientID == id){\n        if(type == \"IHM\"){\n            sinalizadores[j].ihm_connectivity = false\n        }\n        else{\n            sinalizadores[j].tower_connectivity = false\n        }\n    }\n}\n\nflow.set(\"allClients\", allClients, \"bank1\")\nflow.set(\"sinalizadores\", sinalizadores, \"bank1\")\n\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -4130,7 +4140,7 @@
             "53f8a41a.fc9d1c",
             "3650a27e.536ade"
         ],
-        "x": 1455,
+        "x": 1445,
         "y": 2960,
         "wires": []
     },
@@ -4200,7 +4210,7 @@
         "z": "986afd82ee909974",
         "g": "7321907a.ee288",
         "name": "Cadastra Sinalizador",
-        "func": "var date = new Date()\nvar day = date.getDate().toString().padStart(2, '0')\nvar month = (date.getMonth()+1).toString().padStart(2, '0')\nvar year = date.getFullYear()\nvar hours = (date.getHours()-3).toString().padStart(2, '0')\nvar minutes = date.getMinutes().toString().padStart(2, '0')\nvar seconds = date.getSeconds().toString().padStart(2, '0')\nvar current_date = day+\"/\"+month+\"/\"+year;\n\nvar sinalizadores = flow.get(\"sinalizadores\", \"bank1\")||[]\nvar sinalizador = {};\n\nvar mensagem = msg.payload  //Ex.: AA100-IHM-00:11:22:33:44:55\nvar separator = mensagem.split(\"-\")  //separa a mensagem\nvar clientID = separator[0]\nvar type = separator[1]\nvar macAdd = separator[2]\n\nvar position\nvar exist = false\n\nfor(var i=0; i<sinalizadores.length; i++){  //varre o vetor sinalizadores\n    \n    if(sinalizadores[i].clientID == clientID){  //se encontrou sinalizador com mesmo clientID\n        position = i\n        exist = true\n    }\n}\n\nif(exist == true){  //sinalizador ja existe no vetor\n    if(type == \"IHM\" && sinalizadores[position].ihm_mac == \"\"){   //IHM ainda nao cadastrada\n        sinalizadores[position].ihm_mac = macAdd\n        sinalizadores[position].ihm_connectivity = true\n    }\n  \n    else if(type == \"Torre\" && sinalizadores[position].tower_mac == \"\"){  //Torre ainda nao cadastrada\n        sinalizadores[position].tower_mac = macAdd\n        sinalizadores[position].tower_connectivity = true\n    }\n}\nelse{   //add novo sinalizador no vetor\n    sinalizador.clientID = clientID\n    sinalizador.name = clientID\n    sinalizador.current_status = \"\"\n    sinalizador.current_date = current_date\n    sinalizador.time_green = 0\n    sinalizador.time_red = 0\n    sinalizador.time_yellow = 0\n    sinalizador.time_blue = 0\n    sinalizador.time_gray = 0\n    sinalizador.time_green_str = \"00:00:00\"\n    sinalizador.time_red_str = \"00:00:00\"\n    sinalizador.time_yellow_str = \"00:00:00\"\n    sinalizador.time_blue_str = \"00:00:00\"\n    sinalizador.time_gray_str = \"00:00:00\"\n    sinalizador.time_current_status = 0\n    sinalizador.time_change_str = \"00:00:00\"\n    sinalizador.stop_counter = 0\n    \n    if(type == \"IHM\"){\n        sinalizador.ihm_mac = macAdd\n        sinalizador.tower_mac = \"\"\n        sinalizador.ihm_connectivity = true\n    }\n    else if(type == \"Torre\"){\n        sinalizador.ihm_mac = \"\"\n        sinalizador.tower_mac = macAdd\n        sinalizador.tower_connectivity = true\n    }\n    \n    sinalizadores.push(sinalizador)\n}\n\n\nflow.set(\"sinalizadores\", sinalizadores, \"bank1\")\nreturn msg;",
+        "func": "var date = new Date()\n\nvar full_date = date.toLocaleString('pt-BR', {\n    timeZone: 'America/Sao_Paulo',\n})\nvar date_separator = full_date.split(\" \")\nvar new_date = date_separator[0]    //Ex: \"18/10/2022\"\nvar new_time = date_separator[1]    //Ex: \"15:45:05\"\n\nvar day = date.getDate().toString().padStart(2, '0')\nvar month = (date.getMonth()+1).toString().padStart(2, '0')\nvar year = date.getFullYear()\nvar hours = (date.getHours()-3).toString().padStart(2, '0')\nvar minutes = date.getMinutes().toString().padStart(2, '0')\nvar seconds = date.getSeconds().toString().padStart(2, '0')\nvar current_date = day+\"/\"+month+\"/\"+year;\n\nvar sinalizadores = flow.get(\"sinalizadores\", \"bank1\")||[]\nvar sinalizador = {};\n\nvar mensagem = msg.payload  //Ex.: AA100-IHM-00:11:22:33:44:55\nvar separator = mensagem.split(\"-\")  //separa a mensagem\nvar clientID = separator[0]\nvar type = separator[1]\nvar macAdd = separator[2]\n\nvar position\nvar exist = false\n\nfor(var i=0; i<sinalizadores.length; i++){  //varre o vetor sinalizadores\n    \n    if(sinalizadores[i].clientID == clientID){  //se encontrou sinalizador com mesmo clientID\n        position = i\n        exist = true\n    }\n}\n\nif(exist == true){  //sinalizador ja existe no vetor\n    if(type == \"IHM\" && sinalizadores[position].ihm_mac == \"\"){   //IHM ainda nao cadastrada\n        sinalizadores[position].ihm_mac = macAdd\n        sinalizadores[position].ihm_connectivity = true\n    }\n  \n    else if(type == \"Torre\" && sinalizadores[position].tower_mac == \"\"){  //Torre ainda nao cadastrada\n        sinalizadores[position].tower_mac = macAdd\n        sinalizadores[position].tower_connectivity = true\n    }\n}\nelse{   //add novo sinalizador no vetor\n    sinalizador.clientID = clientID\n    sinalizador.name = clientID\n    sinalizador.current_status = \"\"\n    sinalizador.current_date = new_date\n    sinalizador.time_green = 0\n    sinalizador.time_red = 0\n    sinalizador.time_yellow = 0\n    sinalizador.time_blue = 0\n    sinalizador.time_gray = 0\n    sinalizador.time_green_str = \"00:00:00\"\n    sinalizador.time_red_str = \"00:00:00\"\n    sinalizador.time_yellow_str = \"00:00:00\"\n    sinalizador.time_blue_str = \"00:00:00\"\n    sinalizador.time_gray_str = \"00:00:00\"\n    sinalizador.time_current_status = 0\n    sinalizador.time_change_str = \"00:00:00\"\n    sinalizador.stop_counter = 0\n    \n    if(type == \"IHM\"){\n        sinalizador.ihm_mac = macAdd\n        sinalizador.tower_mac = \"\"\n        sinalizador.ihm_connectivity = true\n    }\n    else if(type == \"Torre\"){\n        sinalizador.ihm_mac = \"\"\n        sinalizador.tower_mac = macAdd\n        sinalizador.tower_connectivity = true\n    }\n    \n    sinalizadores.push(sinalizador)\n}\n\n\nflow.set(\"sinalizadores\", sinalizadores, \"bank1\")\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -4381,32 +4391,12 @@
         "initialize": "// Code added here will be run once\n// whenever the node is started.\nvar parada_table = \" \"\nflow.set(\"parada_table\",parada_table, \"bank1\")",
         "finalize": "",
         "libs": [],
-        "x": 1830,
-        "y": 1380,
+        "x": 1810,
+        "y": 1400,
         "wires": [
             []
         ],
         "info": "Atualiza a variavel do sinalizador selecionado no dropdown menu"
-    },
-    {
-        "id": "342e35389720f83d",
-        "type": "function",
-        "z": "986afd82ee909974",
-        "name": "Seleciona Grafico",
-        "func": "var sinalizador\nvar parada_table = flow.get(\"parada_table\", \"bank1\")\nvar sinalizadores = flow.get(\"sinalizadores\", \"bank1\")\nvar position = 0\n\nfor(var i=0; i<sinalizadores.length; i++){\n    if(parada_table == sinalizadores[i].clientID){\n        position = i\n    }\n}\n\nsinalizador = sinalizadores[position]\n\nmsg = {};\nmsg.payload = sinalizador\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1570,
-        "y": 1680,
-        "wires": [
-            [
-                "63724ab6a4ba01f2",
-                "a42e5b0ca9cb0498"
-            ]
-        ]
     },
     {
         "id": "677ac102c233ddee",
@@ -4550,7 +4540,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1990,
+        "x": 1930,
         "y": 1480,
         "wires": [
             [
@@ -4574,7 +4564,7 @@
         "randomUnits": "seconds",
         "drop": false,
         "outputs": 1,
-        "x": 1970,
+        "x": 1910,
         "y": 1520,
         "wires": [
             [
@@ -4635,14 +4625,14 @@
         "type": "function",
         "z": "986afd82ee909974",
         "name": "Conf gráfico",
-        "func": "\n\nvar t_green = msg.payload.time_green\nvar t_red = msg.payload.time_red\nvar t_yellow = msg.payload.time_yellow\nvar t_blue = msg.payload.time_blue\nvar t_gray = msg.payload.time_gray\n\nvar t_total = t_green + t_red + t_yellow + t_blue + t_gray\n\nvar per_green = (t_green/t_total)*100\nvar per_red = (t_red/t_total)*100\nvar per_yellow = (t_yellow/t_total)*100\nvar per_blue = (t_blue/t_total)*100\nvar per_gray = (t_gray/t_total)*100\n\nper_green = per_green.toFixed(2)\nper_red = per_red.toFixed(2)\nper_yellow = per_yellow.toFixed(2)\nper_blue = per_blue.toFixed(2)\nper_gray = per_gray.toFixed(2)\n\nmsg.topic = msg.payload.name+\"(%)\"\n// make it part of the outgoing msg object\nmsg.payload=[{\n    \"series\": [\"Tempo\"],\n    \"data\": [ [per_green,per_red,per_yellow,per_blue,per_gray] ],\n    \"labels\": [\"\", \"\", \"\", \"\", \"\"]\n    //\"labels\": [\"Em operação\", \"Parada não programada\", \"Setup\", \"Parada programada\"]\n}];\n\n\n\nreturn msg;",
+        "func": "var color_values = flow.get(\"color_values\", \"bank1\")\n\nvar t_green = msg.payload.time_green\nvar t_red = msg.payload.time_red\nvar t_yellow = msg.payload.time_yellow\nvar t_blue = msg.payload.time_blue\nvar t_gray = msg.payload.time_gray\n\nvar t_total = t_green + t_red + t_yellow + t_blue + t_gray\n\nvar per_green = (t_green/t_total)*100\nvar per_red = (t_red/t_total)*100\nvar per_yellow = (t_yellow/t_total)*100\nvar per_blue = (t_blue/t_total)*100\nvar per_gray = (t_gray/t_total)*100\n\nper_green = per_green.toFixed(2)\nper_red = per_red.toFixed(2)\nper_yellow = per_yellow.toFixed(2)\nper_blue = per_blue.toFixed(2)\nper_gray = per_gray.toFixed(2)\n\nmsg.topic = msg.payload.name+\"(%)\"\n// make it part of the outgoing msg object\nmsg.payload=[{\n    \"series\": [\"Tempo\"],\n    \"data\": [ [per_green,per_red,per_yellow,per_blue,per_gray] ],\n    //\"labels\": [\"\", \"\", \"\", \"\", \"\"]\n    \"labels\": [color_values.green, color_values.red, color_values.yellow, color_values.blue, color_values.gray]\n}];\n\n\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1970,
-        "y": 1580,
+        "x": 1910,
+        "y": 1600,
         "wires": [
             [
                 "98723328.bd031"
@@ -4656,8 +4646,8 @@
         "z": "986afd82ee909974",
         "name": "Chart",
         "info": "Configurações para os gráficos pizzas ou de barra.\n\nDados: Porcentagem dos tempos de cada status.",
-        "x": 2190,
-        "y": 1540,
+        "x": 2130,
+        "y": 1560,
         "wires": []
     },
     {
@@ -4686,26 +4676,6 @@
         "wires": [
             [
                 "3449de0a.70f5c2"
-            ]
-        ]
-    },
-    {
-        "id": "19c92c50.4d9f64",
-        "type": "function",
-        "z": "986afd82ee909974",
-        "name": "Sel Tabela Resumo",
-        "func": "\nvar parada_table = flow.get(\"parada_table\", \"bank1\")\nvar resumo_sinalizadores = flow.get(\"resumo_sinalizadores\", \"bank1\")\n\n\nvar tabela_individual = []\nvar x = 0\n\nfor(var j=0; j<resumo_sinalizadores.length; j++){\n    if(resumo_sinalizadores[j].clientID == parada_table){\n        tabela_individual[x] = resumo_sinalizadores[j]\n        x++\n    }\n}\n\nmsg = {};\nmsg.payload = tabela_individual\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1570,
-        "y": 1640,
-        "wires": [
-            [
-                "aa95499224ace9b0",
-                "47493818d817e28b"
             ]
         ]
     },
@@ -4887,7 +4857,7 @@
         "type": "function",
         "z": "986afd82ee909974",
         "name": "",
-        "func": "var date = new Date()\nvar sinalizadores = flow.get(\"sinalizadores\", \"bank1\")\nvar resumo_sinalizadores = flow.get(\"resumo_sinalizadores\", \"bank1\")\n\nvar dataItems = new Array(sinalizadores.length)\n\nfunction timeStamptoString(timestamp){\n    var date = new Date(timestamp)\n    var day = date.getDate().toString().padStart(2, '0')\n    var month = (date.getMonth()+1).toString().padStart(2, '0')\n    var year = date.getFullYear()\n    var hours = (date.getHours()-3).toString().padStart(2, '0')\n    var minutes = date.getMinutes().toString().padStart(2, '0')\n    var seconds = date.getSeconds().toString().padStart(2, '0')\n    return year+\"-\"+month+\"-\"+day+\"T\"+hours+\":\"+minutes+\":\"+seconds+\"-03:00\"\n}\n\nfunction getdataArr(name){\n    var arr = []\n    var y=0\n    for(var x=0; x<resumo_sinalizadores.length; x++){\n        if(resumo_sinalizadores[x].name == name){   //achou evento do sinalizador especificado\n            //if(x == resumo_sinalizadores.length - 1){\n            //    resumo_sinalizadores[x].time_ended = date.getTime()\n            //}\n            arr[y] = {\n                timeRange:[\n                    timeStamptoString(resumo_sinalizadores[x].time_started), \n                    timeStamptoString(resumo_sinalizadores[x].time_ended)\n                ],\n                val: resumo_sinalizadores[x].current_status\n            }\n            ++y;\n        }\n    }\n    return arr\n}\n\nfor(var i=0; i<sinalizadores.length; i++){  //varre o vetor sinalizadores\n    dataItems[i] = {\n        group: sinalizadores[i].name,\n        data: [\n            {\n                label: \"\",\n                data: getdataArr(sinalizadores[i].name)\n            }\n        ]\n    }\n}\n\nfor(var j=0; j<dataItems.length; j++){\n    dataItems[j].data[0].data[dataItems[j].data[0].data.length - 1].timeRange[1] = timeStamptoString(date.getTime())\n}\n\n\n\nmsg.payload = {};\n//msg.payload = dataItems\nmsg.payload.dataItems = dataItems\nreturn msg;",
+        "func": "var date = new Date()\n\nvar full_date = date.toLocaleString('pt-BR', {\n    timeZone: 'America/Sao_Paulo',\n})\nvar date_separator = full_date.split(\" \")\nvar new_date = date_separator[0]    //Ex: \"18/10/2022\"\nvar new_time = date_separator[1]    //Ex: \"15:45:05\"\n\nvar sinalizadores = flow.get(\"sinalizadores\", \"bank1\")\nvar resumo_sinalizadores = flow.get(\"resumo_sinalizadores\", \"bank1\")\n\nvar dataItems = new Array(sinalizadores.length)\n\nfunction timeStamptoString(timestamp){\n    var date = new Date(timestamp)\n    var day = date.getDate().toString().padStart(2, '0')\n    var month = (date.getMonth()+1).toString().padStart(2, '0')\n    var year = date.getFullYear()\n    var hours = (date.getHours()-3).toString().padStart(2, '0')\n    var minutes = date.getMinutes().toString().padStart(2, '0')\n    var seconds = date.getSeconds().toString().padStart(2, '0')\n    return year+\"-\"+month+\"-\"+day+\"T\"+hours+\":\"+minutes+\":\"+seconds+\"-03:00\"\n}\n\nfunction getdataArr(id){\n    var arr = []\n    var y=0\n    for(var x=0; x<resumo_sinalizadores.length; x++){\n        if(resumo_sinalizadores[x].clientID == id){   //achou evento do sinalizador especificado\n            arr[y] = {\n                timeRange:[\n                    timeStamptoString(resumo_sinalizadores[x].time_started), \n                    timeStamptoString(resumo_sinalizadores[x].time_ended)\n                ],\n                val: resumo_sinalizadores[x].current_status\n            }\n            ++y;\n        }\n    }\n    return arr\n}\n\nfor(var i=0; i<sinalizadores.length; i++){  //varre o vetor sinalizadores\n    dataItems[i] = {\n        group: sinalizadores[i].name,\n        data: [\n            {\n                label: \"\",\n                data: getdataArr(sinalizadores[i].clientID)\n            }\n        ]\n    }\n}\n\nfor(var j=0; j<dataItems.length; j++){\n    dataItems[j].data[0].data[dataItems[j].data[0].data.length - 1].timeRange[1] = timeStamptoString(date.getTime())\n}\n\n\n\nmsg.payload = {};\n//msg.payload = dataItems\nmsg.payload.dataItems = dataItems\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -4897,7 +4867,7 @@
         "y": 560,
         "wires": [
             [
-                "1d5be367.89640d"
+                "fb2ce33434415ee8"
             ]
         ]
     },
@@ -5129,8 +5099,8 @@
         "links": [
             "9e8a4c4a.e692c"
         ],
-        "x": 1335,
-        "y": 1700,
+        "x": 1285,
+        "y": 1660,
         "wires": [
             [
                 "bc2f7a13ddee397c"
@@ -5370,8 +5340,8 @@
         "z": "986afd82ee909974",
         "name": "Refresh V2",
         "group": "79b4d5c2.bfe4ac",
-        "order": 6,
-        "width": "2",
+        "order": 5,
+        "width": 2,
         "height": 1,
         "passthru": false,
         "label": "Refresh",
@@ -5389,35 +5359,6 @@
         "wires": [
             [
                 "9e8a4c4a.e692c"
-            ]
-        ]
-    },
-    {
-        "id": "670deef0.7fdb7",
-        "type": "ui_button",
-        "z": "986afd82ee909974",
-        "d": true,
-        "name": "ENTER V2",
-        "group": "79b4d5c2.bfe4ac",
-        "order": 2,
-        "width": 2,
-        "height": 1,
-        "passthru": false,
-        "label": "Enter",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "",
-        "topicType": "str",
-        "x": 1290,
-        "y": 1640,
-        "wires": [
-            [
-                "bc2f7a13ddee397c"
             ]
         ]
     },
@@ -5532,7 +5473,7 @@
         "place": "Selecione um Sinalizador",
         "group": "79b4d5c2.bfe4ac",
         "order": 1,
-        "width": "6",
+        "width": 6,
         "height": 1,
         "passthru": true,
         "multiple": false,
@@ -5600,12 +5541,12 @@
         "z": "986afd82ee909974",
         "name": "pie chart V2",
         "group": "2c09e8f6e779fc72",
-        "order": 3,
-        "width": "7",
-        "height": "4",
+        "order": 1,
+        "width": "11",
+        "height": "5",
         "label": "{{msg.topic}}",
         "chartType": "pie",
-        "legend": "false",
+        "legend": "true",
         "xformat": "HH:mm:ss",
         "interpolate": "linear",
         "nodata": "",
@@ -5632,8 +5573,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 2210,
-        "y": 1580,
+        "x": 2150,
+        "y": 1600,
         "wires": [
             []
         ]
@@ -5758,7 +5699,7 @@
         "format": "<ul>\n <li ng-repeat=\"x in msg.payload\">\n <font color=\"red\"><b>{{x.name}}</b></font>\n    <ul>\n        <li><b>{{x.current_status}}</b></li>\n        <li><b>{{x.time_change_str}}</b></li>\n    </ul>\n </li>\n</ul>",
         "storeOutMessages": true,
         "fwdInMessages": true,
-        "resendOnRefresh": false,
+        "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
         "x": 2090,
@@ -5798,8 +5739,8 @@
         "name": "Timeline Sinalizadores",
         "order": 2,
         "label": "Timeline Sinalizadores",
-        "width": "0",
-        "height": "0",
+        "width": "25",
+        "height": "12",
         "lineColors": [
             {
                 "statusColor": "#2cb805",
@@ -5837,7 +5778,7 @@
         "enableAnimations": false,
         "enableDateMarker": false,
         "forwardInputMessages": true,
-        "x": 1700,
+        "x": 1900,
         "y": 560,
         "wires": [
             []
@@ -5852,7 +5793,7 @@
         "name": "Lista Equipamentos",
         "order": 1,
         "width": 16,
-        "height": 10,
+        "height": "4",
         "columns": [
             {
                 "field": "clientID",
@@ -6091,9 +6032,9 @@
         "z": "986afd82ee909974",
         "group": "0896cba727c33420",
         "name": "Tabela Resumo V2",
-        "order": 5,
-        "width": "7",
-        "height": "4",
+        "order": 1,
+        "width": "11",
+        "height": 4,
         "columns": [
             {
                 "field": "current_status",
@@ -6128,7 +6069,7 @@
         ],
         "outputs": 0,
         "cts": false,
-        "x": 2230,
+        "x": 2170,
         "y": 1480,
         "wires": []
     },
@@ -6818,18 +6759,18 @@
         "type": "ui_template",
         "z": "986afd82ee909974",
         "group": "4f6f68f22969f7d5",
-        "name": "",
-        "order": 0,
-        "width": 0,
-        "height": 0,
+        "name": "Descrição Sinalizador",
+        "order": 1,
+        "width": "10",
+        "height": 6,
         "format": "<style>\n    h1 {\n        font-size: 30px;\n    }\n\n    h2 {\n        font-size: 20px;\n    }\n\n    body.nr-dashboard-theme md-content md-card {\n        border-radius: 10px;\n    }\n\n    .nr-dashboard-theme ui-card-panel {\n        border-radius: 10px;\n    }\n</style>\n\n<h2>Sinalizador {{msg.payload.name}}</h2>\n\n<ul>\n    <li>\n        <b>ID: </b>{{msg.payload.clientID}}\n    </li>\n    <li>\n        <b>Status Atual: </b>{{msg.payload.current_status}}\n    </li>\n    <li>\n        <b>Torre: </b>\n        <ul>\n            <li>Conexão: {{msg.payload.tower_connectivity}}</li>\n            <li>MAC Address: {{msg.payload.tower_mac}}</li>\n            <li>Data Cadastro: {{msg.payload.tower_registration_date}}</li>\n        </ul>\n    </li>\n    <li>\n        <b>IHM: </b>\n        <ul>\n            <li>Conexão: {{msg.payload.ihm_connectivity}}</li>\n            <li>Mac Address: {{msg.payload.ihm_mac}}</li>\n            <li>Data Cadastro: {{msg.payload.ihm_registration_date}}</li>\n        </ul>\n    </li>\n</ul>\n\n",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 2200,
-        "y": 1680,
+        "x": 2180,
+        "y": 1700,
         "wires": [
             []
         ]
@@ -6840,8 +6781,8 @@
         "z": "986afd82ee909974",
         "name": "Descrição",
         "info": "",
-        "x": 2200,
-        "y": 1640,
+        "x": 2140,
+        "y": 1660,
         "wires": []
     },
     {
@@ -6855,8 +6796,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1980,
-        "y": 1680,
+        "x": 1660,
+        "y": 1700,
         "wires": [
             [
                 "e151f051682dee15"
@@ -6956,14 +6897,14 @@
                 "label": "Data Início",
                 "value": "date_begin",
                 "type": "date",
-                "required": true,
+                "required": false,
                 "rows": null
             },
             {
                 "label": "Data Fim",
                 "value": "date_end",
                 "type": "date",
-                "required": true,
+                "required": false,
                 "rows": null
             }
         ],
@@ -6978,8 +6919,8 @@
         "topicType": "msg",
         "splitLayout": "",
         "className": "",
-        "x": 1270,
-        "y": 660,
+        "x": 1250,
+        "y": 720,
         "wires": [
             [
                 "1041f965165ecbf5"
@@ -6991,36 +6932,20 @@
         "type": "function",
         "z": "986afd82ee909974",
         "name": "Config date",
-        "func": "var date_begin = msg.payload.date_begin\nvar date_end = msg.payload.date_end\n\nvar separator_date_begin = date_begin.split(\"T\")\nvar separator_date_end = date_end.split(\"T\")\n\nvar new_date_begin = separator_date_begin[0]\nvar new_date_end = separator_date_end[0]\n\nvar new_separator_date_begin = new_date_begin.split(\"-\")\nvar new_separator_date_end = new_date_end.split(\"-\")\n\nvar day_begin = new_separator_date_begin[2]\nvar month_begin = new_separator_date_begin[1]\nvar year_begin = new_separator_date_begin[0]\n\nvar day_end = new_separator_date_end[2]\nvar month_end = new_separator_date_end[1]\nvar year_end = new_separator_date_end[0]\n\nvar formated_date_begin = day_begin + \"/\" + month_begin + \"/\" + year_begin\nvar formated_date_end = day_end + \"/\" + month_end + \"/\" + year_end\n\nmsg.payload = {}\nmsg.payload.begin = formated_date_begin\nmsg.payload.end = formated_date_end\n\nreturn msg;",
+        "func": "var date_begin = msg.payload.date_begin\nvar date_end = msg.payload.date_end\n\nfunction formatDate(date) {\n    var separator_date = date.split(\"T\")\n    var new_date = separator_date[0]\n    var new_separator_date = new_date.split(\"-\")\n    var day_begin = new_separator_date[2]\n    var month_begin = new_separator_date[1]\n    var year_begin = new_separator_date[0]\n    return day_begin + \"/\" + month_begin + \"/\" + year_begin\n}\n\nmsg.payload = {}\n//caso o usuario nao passe nenhuma data\nif (date_begin == null && date_end == null) {\n    msg.payload.begin = date_begin\n    msg.payload.end = date_end\n\n}\n//usuario passou apenas data final\nelse if (date_begin == null && date_end != null) {\n    msg.payload.begin = date_begin\n    msg.payload.end = formatDate(date_end)\n}\n//usuario passou apenas data de inicio\nelse if (date_begin != null && date_end == null) {\n    msg.payload.begin = formatDate(date_begin)\n    msg.payload.end = date_end\n}\nelse {\n    msg.payload.begin = formatDate(date_begin)\n    msg.payload.end = formatDate(date_end)\n}\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1430,
-        "y": 660,
+        "x": 1410,
+        "y": 720,
         "wires": [
             [
-                "c68b8bd1807720bd"
+                "d0fe25719d86c492"
             ]
         ],
         "info": "Pega data de inicio e de fim e arruma no formato: \"dd/mm/aaaa\""
-    },
-    {
-        "id": "c68b8bd1807720bd",
-        "type": "debug",
-        "z": "986afd82ee909974",
-        "name": "debug 5",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1600,
-        "y": 620,
-        "wires": []
     },
     {
         "id": "1ea0783d02a0484f",
@@ -7029,9 +6954,9 @@
         "name": "",
         "label": "",
         "group": "79b4d5c2.bfe4ac",
-        "order": 1,
-        "width": 0,
-        "height": 0,
+        "order": 3,
+        "width": 6,
+        "height": 1,
         "options": [
             {
                 "label": "Data Início",
@@ -7059,8 +6984,8 @@
         "topicType": "msg",
         "splitLayout": "",
         "className": "",
-        "x": 1270,
-        "y": 1480,
+        "x": 1250,
+        "y": 1600,
         "wires": [
             [
                 "9888af06fbea5354"
@@ -7072,18 +6997,17 @@
         "type": "function",
         "z": "986afd82ee909974",
         "name": "Config date",
-        "func": "//coloca o payload em outras variaveis\nvar date_begin = msg.payload.date_begin\nvar date_end = msg.payload.date_end\n\nfunction formatDate(date){\n    var separator_date = date.split(\"T\")\n    var new_date = separator_date[0]\n    var new_separator_date = new_date.split(\"-\")\n    var day_begin = new_separator_date[2]\n    var month_begin = new_separator_date[1]\n    var year_begin = new_separator_date[0]\n    return day_begin + \"/\" + month_begin + \"/\" + year_begin\n}\n\nmsg.payload = {}\n//caso o usuario nao passe nenhuma data\nif (date_begin == null && date_end == null) {\n    msg.payload.begin = date_begin\n    msg.payload.end = date_end\n\n}\n//usuario passou apenas data final\nelse if(date_begin == null && date_end != null){\n    msg.payload.begin = date_begin\n    msg.payload.end = formatDate(date_end)\n}\n//usuario passou apenas data de inicio\nelse if(date_begin != null && date_end == null){\n    msg.payload.begin = formatDate(date_begin)\n    msg.payload.end = date_end\n}\nelse{\n    msg.payload.begin = formatDate(date_begin)\n    msg.payload.end = formatDate(date_end)\n}\n\n/*\n//separa a string\nvar separator_date_begin = date_begin.split(\"T\")\nvar separator_date_end = date_end.split(\"T\")\n\n//add em uma nova variavel apenas a data\nvar new_date_begin = separator_date_begin[0]\nvar new_date_end = separator_date_end[0]\n\n//separa novamente a data onde tem '-'\nvar new_separator_date_begin = new_date_begin.split(\"-\")\nvar new_separator_date_end = new_date_end.split(\"-\")\n\n//coloca em variaveis os valores do dia, mes e ano\nvar day_begin = new_separator_date_begin[2]\nvar month_begin = new_separator_date_begin[1]\nvar year_begin = new_separator_date_begin[0]\n\nvar day_end = new_separator_date_end[2]\nvar month_end = new_separator_date_end[1]\nvar year_end = new_separator_date_end[0]\n\n//formata a data como: dd/mm/aaaa\nvar formated_date_begin = day_begin + \"/\" + month_begin + \"/\" + year_begin\nvar formated_date_end = day_end + \"/\" + month_end + \"/\" + year_end\n\nmsg.payload = {}\nmsg.payload.begin = formated_date_begin\nmsg.payload.end = formated_date_end\n*/\nreturn msg;",
+        "func": "//coloca o payload em outras variaveis\nvar date_begin = msg.payload.date_begin\nvar date_end = msg.payload.date_end\n\nfunction formatDate(date){\n    var separator_date = date.split(\"T\")\n    var new_date = separator_date[0]\n    var new_separator_date = new_date.split(\"-\")\n    var day_begin = new_separator_date[2]\n    var month_begin = new_separator_date[1]\n    var year_begin = new_separator_date[0]\n    return day_begin + \"/\" + month_begin + \"/\" + year_begin\n}\n\nmsg.payload = {}\n//caso o usuario nao passe nenhuma data\nif (date_begin == null && date_end == null) {\n    msg.payload.begin = date_begin\n    msg.payload.end = date_end\n\n}\n//usuario passou apenas data final\nelse if(date_begin == null && date_end != null){\n    msg.payload.begin = date_begin\n    msg.payload.end = formatDate(date_end)\n}\n//usuario passou apenas data de inicio\nelse if(date_begin != null && date_end == null){\n    msg.payload.begin = formatDate(date_begin)\n    msg.payload.end = date_end\n}\nelse{\n    msg.payload.begin = formatDate(date_begin)\n    msg.payload.end = formatDate(date_end)\n}\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1430,
-        "y": 1480,
+        "x": 1410,
+        "y": 1600,
         "wires": [
             [
-                "239802e9717738e1",
-                "a42e5b0ca9cb0498"
+                "bc2f7a13ddee397c"
             ]
         ],
         "info": "Pega data de inicio e de fim e arruma no formato: \"dd/mm/aaaa\""
@@ -7093,14 +7017,14 @@
         "type": "function",
         "z": "986afd82ee909974",
         "name": "Sel Tabela Resumo",
-        "func": "var date_begin = msg.payload.begin\nvar date_end = msg.payload.end\nvar sinalizador_name = flow.get(\"parada_table\", \"bank1\")\nvar resumo_sinalizadores = flow.get(\"resumo_sinalizadores\", \"bank1\")\n\n//verifica se a data esta entre duas datas\nfunction checkDate(date_resumo_str, date_begin, date_end) {\n\n    var d1 = date_begin.split(\"/\");\n    var d2 = date_end.split(\"/\");\n    var c = date_resumo_str.split(\"/\");\n\n    var from = new Date(d1[2], parseInt(d1[1]) - 1, d1[0]);  // -1 because months are from 0 to 11\n    var to = new Date(d2[2], parseInt(d2[1]) - 1, d2[0]);\n    var check = new Date(c[2], parseInt(c[1]) - 1, c[0]);\n\n    if (check >= from && check <= to) {\n        return true\n    }\n    else {\n        return false\n    }\n}\n\nvar tabela_individual = []\n\n//nao passou nenhuma das datas - recolhe todos os dados\nif(date_begin == null && date_end == null){\n    for (var i = 0; i < resumo_sinalizadores.length; i++) {\n        if (resumo_sinalizadores[i].name == sinalizador_name) {\n            tabela_individual.push(resumo_sinalizadores[i])\n            \n        }\n    }\n}\n//passou apenas data de fim\nelse if(date_begin == null && date_end != null){\n    //encontra o sinalizador selecionado pelo usuario\n    for (var i = 0; i < resumo_sinalizadores.length; i++) {\n        if (resumo_sinalizadores[i].name == sinalizador_name) {\n            var flag = checkDate(resumo_sinalizadores[i].current_date, resumo_sinalizadores[0].current_date, date_end)\n\n            if (flag == true) {\n                tabela_individual.push(resumo_sinalizadores[i])\n            }\n        }\n    }\n}\n//passou apenas data de inicio\nelse if(date_begin != null && date_end == null){\n    //encontra o sinalizador selecionado pelo usuario\n    for (var i = 0; i < resumo_sinalizadores.length; i++) {\n        if (resumo_sinalizadores[i].name == sinalizador_name) {\n            var flag = checkDate(resumo_sinalizadores[i].current_date, date_begin, resumo_sinalizadores[resumo_sinalizadores.length - 1].current_date)\n\n            if (flag == true) {\n                tabela_individual.push(resumo_sinalizadores[i])\n            }\n        }\n    }\n}\n//passou as duas datas\nelse{\n    //encontra o sinalizador selecionado pelo usuario\n    for (var i = 0; i < resumo_sinalizadores.length; i++) {\n        if (resumo_sinalizadores[i].name == sinalizador_name) {\n            var flag = checkDate(resumo_sinalizadores[i].current_date, date_begin, date_end)\n\n            if (flag == true) {\n                tabela_individual.push(resumo_sinalizadores[i])\n            }\n        }\n    }\n}\n\nmsg = {};\nmsg.payload = tabela_individual\nreturn msg;",
+        "func": "var date_begin = msg.payload.begin\nvar date_end = msg.payload.end\nvar sinalizador_name = flow.get(\"parada_table\", \"bank1\")\nvar resumo_sinalizadores = flow.get(\"resumo_sinalizadores\", \"bank1\")\n\n//verifica se a data esta entre duas datas\nfunction checkDate(date_resumo_str, date_begin, date_end) {\n\n    var d1 = date_begin.split(\"/\");\n    var d2 = date_end.split(\"/\");\n    var c = date_resumo_str.split(\"/\");\n\n    var from = new Date(d1[2], parseInt(d1[1]) - 1, d1[0]);  // -1 because months are from 0 to 11\n    var to = new Date(d2[2], parseInt(d2[1]) - 1, d2[0]);\n    var check = new Date(c[2], parseInt(c[1]) - 1, c[0]);\n\n    if (check >= from && check <= to) {\n        return true\n    }\n    else {\n        return false\n    }\n}\n\nvar tabela_individual = []\n\n//nao passou nenhuma das datas - recolhe todos os dados\nif(date_begin == null && date_end == null){\n    for (var i = 0; i < resumo_sinalizadores.length; i++) {\n        if (resumo_sinalizadores[i].clientID == sinalizador_name) {\n            tabela_individual.push(resumo_sinalizadores[i])\n            \n        }\n    }\n}\n//passou apenas data de fim\nelse if(date_begin == null && date_end != null){\n    //encontra o sinalizador selecionado pelo usuario\n    for (var i = 0; i < resumo_sinalizadores.length; i++) {\n        if (resumo_sinalizadores[i].clientID == sinalizador_name) {\n            var flag = checkDate(resumo_sinalizadores[i].current_date, resumo_sinalizadores[0].current_date, date_end)\n\n            if (flag == true) {\n                tabela_individual.push(resumo_sinalizadores[i])\n            }\n        }\n    }\n}\n//passou apenas data de inicio\nelse if(date_begin != null && date_end == null){\n    //encontra o sinalizador selecionado pelo usuario\n    for (var i = 0; i < resumo_sinalizadores.length; i++) {\n        if (resumo_sinalizadores[i].clientID == sinalizador_name) {\n            var flag = checkDate(resumo_sinalizadores[i].current_date, date_begin, resumo_sinalizadores[resumo_sinalizadores.length - 1].current_date)\n\n            if (flag == true) {\n                tabela_individual.push(resumo_sinalizadores[i])\n            }\n        }\n    }\n}\n//passou as duas datas\nelse{\n    //encontra o sinalizador selecionado pelo usuario\n    for (var i = 0; i < resumo_sinalizadores.length; i++) {\n        if (resumo_sinalizadores[i].clientID == sinalizador_name) {\n            var flag = checkDate(resumo_sinalizadores[i].current_date, date_begin, date_end)\n\n            if (flag == true) {\n                tabela_individual.push(resumo_sinalizadores[i])\n            }\n        }\n    }\n}\n\nmsg = {};\nmsg.payload = tabela_individual\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1650,
-        "y": 1480,
+        "x": 1670,
+        "y": 1500,
         "wires": [
             [
                 "aa95499224ace9b0",
@@ -7113,14 +7037,14 @@
         "type": "function",
         "z": "986afd82ee909974",
         "name": "Config time for graph",
-        "func": "var date_begin = msg.payload.begin\nvar date_end = msg.payload.end\nvar sinalizador_name = flow.get(\"parada_table\", \"bank1\")\nvar resumo_sinalizadores = flow.get(\"resumo_sinalizadores\", \"bank1\")\nvar color_values = flow.get(\"color_values\", \"bank1\")\n\nvar d = new Date()\n\nvar t_green_total = 0\nvar t_red_total = 0\nvar t_yellow_total = 0\nvar t_blue_total = 0\nvar t_gray_total = 0\n\nfunction checkDate(date_resumo_str, date_begin, date_end) {\n\n    var d1 = date_begin.split(\"/\");\n    var d2 = date_end.split(\"/\");\n    var c = date_resumo_str.split(\"/\");\n\n    var from = new Date(d1[2], parseInt(d1[1]) - 1, d1[0]);  // -1 because months are from 0 to 11\n    var to = new Date(d2[2], parseInt(d2[1]) - 1, d2[0]);\n    var check = new Date(c[2], parseInt(c[1]) - 1, c[0]);\n\n    if (check >= from && check <= to) {\n        return true\n    }\n    else {\n        return false\n    }\n}\n\n\n//encontra o sinalizador selecionado pelo usuario e soma os tempos\nfor (var i = 0; i < resumo_sinalizadores.length; i++) {\n    if (resumo_sinalizadores[i].name == sinalizador_name) {\n        var flag = checkDate(resumo_sinalizadores[i].current_date, date_begin, date_end)\n\n        if (flag == true) {\n            if (resumo_sinalizadores[i].time_ended == 0){\n                resumo_sinalizadores[i].time_ended = d.getTime()\n            }\n            if (resumo_sinalizadores[i].current_status == color_values.green){\n                t_green_total = t_green_total + (resumo_sinalizadores[i].time_ended - resumo_sinalizadores[i].time_started)\n            }\n            else if (resumo_sinalizadores[i].current_status == color_values.red){\n                t_red_total = t_red_total + (resumo_sinalizadores[i].time_ended - resumo_sinalizadores[i].time_started)\n            }\n            else if (resumo_sinalizadores[i].current_status == color_values.yellow){\n                t_yellow_total = t_yellow_total + (resumo_sinalizadores[i].time_ended - resumo_sinalizadores[i].time_started)\n            }\n            else if (resumo_sinalizadores[i].current_status == color_values.blue){\n                t_blue_total = t_blue_total + (resumo_sinalizadores[i].time_ended - resumo_sinalizadores[i].time_started)\n            }\n            else if (resumo_sinalizadores[i].current_status == color_values.gray) {\n                t_gray_total = t_gray_total + (resumo_sinalizadores[i].time_ended - resumo_sinalizadores[i].time_started)\n            }\n        }\n    }\n}\n\n\nmsg.payload = {};\nmsg.payload.name = sinalizador_name\nmsg.payload.time_green = t_green_total\nmsg.payload.time_red = t_red_total\nmsg.payload.time_yellow = t_yellow_total\nmsg.payload.time_blue = t_blue_total\nmsg.payload.time_gray = t_gray_total\n\nreturn msg;",
+        "func": "var date_begin = msg.payload.begin\nvar date_end = msg.payload.end\nvar sinalizador_id = flow.get(\"parada_table\", \"bank1\")\nvar resumo_sinalizadores = flow.get(\"resumo_sinalizadores\", \"bank1\")\nvar sinalizadores = flow.get(\"sinalizadores\", \"bank1\")\nvar color_values = flow.get(\"color_values\", \"bank1\")\n\nvar d = new Date()\n\nvar t_green_total = 0\nvar t_red_total = 0\nvar t_yellow_total = 0\nvar t_blue_total = 0\nvar t_gray_total = 0\n\nfunction checkDate(date_resumo_str, date_begin, date_end) {\n\n    var d1 = date_begin.split(\"/\");\n    var d2 = date_end.split(\"/\");\n    var c = date_resumo_str.split(\"/\");\n\n    var from = new Date(d1[2], parseInt(d1[1]) - 1, d1[0]);  // -1 because months are from 0 to 11\n    var to = new Date(d2[2], parseInt(d2[1]) - 1, d2[0]);\n    var check = new Date(c[2], parseInt(c[1]) - 1, c[0]);\n\n    if (check >= from && check <= to) {\n        return true\n    }\n    else {\n        return false\n    }\n}\n\nfunction calculateTime(current_status, time_ended, time_started){\n    \n    if (time_ended == 0) {\n        time_ended = d.getTime()\n    }\n    if (current_status == color_values.green) {\n        t_green_total = t_green_total + (time_ended - time_started)\n    }\n    else if (current_status == color_values.red) {\n        t_red_total = t_red_total + (time_ended - time_started)\n    }\n    else if (current_status == color_values.yellow) {\n        t_yellow_total = t_yellow_total + (time_ended - time_started)\n    }\n    else if (current_status == color_values.blue) {\n        t_blue_total = t_blue_total + (time_ended - time_started)\n    }\n    else if (current_status == color_values.gray) {\n        t_gray_total = t_gray_total + (time_ended - time_started)\n    }\n}\n\n//nao passou nenhuma das datas - recolhe de todo periodo \nif(date_begin == null && date_end == null){\n    //encontra o sinalizador selecionado pelo usuario e soma os tempos\n    for (var i = 0; i < resumo_sinalizadores.length; i++) {\n        if (resumo_sinalizadores[i].clientID == sinalizador_id) {\n            calculateTime(resumo_sinalizadores[i].current_status, resumo_sinalizadores[i].time_ended, resumo_sinalizadores[i].time_started)\n        }\n    }\n}\n//passou apenas data de fim\nelse if (date_begin == null && date_end != null) {\n    //encontra o sinalizador selecionado pelo usuario\n    for (var i = 0; i < resumo_sinalizadores.length; i++) {\n        if (resumo_sinalizadores[i].clientID == sinalizador_id) {\n            var flag = checkDate(resumo_sinalizadores[i].current_date, resumo_sinalizadores[0].current_date, date_end)\n\n            if (flag == true) {\n                calculateTime(resumo_sinalizadores[i].current_status, resumo_sinalizadores[i].time_ended, resumo_sinalizadores[i].time_started)\n            }\n        }\n    }\n}\n//passou apenas data de inicio\nelse if (date_begin != null && date_end == null) {\n    //encontra o sinalizador selecionado pelo usuario\n    for (var i = 0; i < resumo_sinalizadores.length; i++) {\n        if (resumo_sinalizadores[i].clientID == sinalizador_id) {\n            var flag = checkDate(resumo_sinalizadores[i].current_date, date_begin, resumo_sinalizadores[resumo_sinalizadores.length - 1].current_date)\n\n            if (flag == true) {\n                calculateTime(resumo_sinalizadores[i].current_status, resumo_sinalizadores[i].time_ended, resumo_sinalizadores[i].time_started)\n            }\n        }\n    }\n}\n//passou as duas datas\nelse {\n    //encontra o sinalizador selecionado pelo usuario\n    for (var i = 0; i < resumo_sinalizadores.length; i++) {\n        if (resumo_sinalizadores[i].clientID == sinalizador_id) {\n            var flag = checkDate(resumo_sinalizadores[i].current_date, date_begin, date_end)\n\n            if (flag == true) {\n                calculateTime(resumo_sinalizadores[i].current_status, resumo_sinalizadores[i].time_ended, resumo_sinalizadores[i].time_started)\n            }\n        }\n    }\n}\n\nfor(var x=0; x<sinalizadores.length; x++){\n    if(sinalizadores[x].clientID == sinalizador_id){\n        var sinalizador_name = sinalizadores[x].name\n    }\n}\n\nmsg.payload = {};\nmsg.payload.name = sinalizador_name\nmsg.payload.time_green = t_green_total\nmsg.payload.time_red = t_red_total\nmsg.payload.time_yellow = t_yellow_total\nmsg.payload.time_blue = t_blue_total\nmsg.payload.time_gray = t_gray_total\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1660,
-        "y": 1540,
+        "x": 1680,
+        "y": 1600,
         "wires": [
             [
                 "63724ab6a4ba01f2"
@@ -7128,10 +7052,49 @@
         ]
     },
     {
-        "id": "9ea9c1991e0f7109",
+        "id": "e6401f0a865462b8",
+        "type": "comment",
+        "z": "986afd82ee909974",
+        "name": "Select interval",
+        "info": "",
+        "x": 1270,
+        "y": 1560,
+        "wires": []
+    },
+    {
+        "id": "b74ee7f06dd661d3",
+        "type": "comment",
+        "z": "986afd82ee909974",
+        "name": "Select interval",
+        "info": "",
+        "x": 1270,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "d0fe25719d86c492",
+        "type": "function",
+        "z": "986afd82ee909974",
+        "name": "function 6",
+        "func": "var date_begin = msg.payload.begin\nvar date_end = msg.payload.end\nvar sinalizadores = flow.get(\"sinalizadores\", \"bank1\")\nvar resumo_sinalizadores = flow.get(\"resumo_sinalizadores\", \"bank1\")\nvar color_values = flow.get(\"color_values\", \"bank1\")\n\nvar d = new Date()\n\nvar table = new Array(sinalizadores.length) //vetor que sera passado para o node da tabela\n\nvar t_green_total = 0\nvar t_red_total = 0\nvar t_yellow_total = 0\nvar t_blue_total = 0\nvar t_gray_total = 0\n\nvar stop_counter = 0\n\nfunction checkDate(date_resumo_str, date_begin, date_end) {\n\n    var d1 = date_begin.split(\"/\");\n    var d2 = date_end.split(\"/\");\n    var c = date_resumo_str.split(\"/\");\n\n    var from = new Date(d1[2], parseInt(d1[1]) - 1, d1[0]);  // -1 because months are from 0 to 11\n    var to = new Date(d2[2], parseInt(d2[1]) - 1, d2[0]);\n    var check = new Date(c[2], parseInt(c[1]) - 1, c[0]);\n\n    if (check >= from && check <= to) {\n        return true\n    }\n    else {\n        return false\n    }\n}\n\nfunction calculateTime(current_status, time_ended, time_started) {\n\n    if (time_ended == 0) {\n        time_ended = d.getTime()\n    }\n    if (current_status == color_values.green) {\n        t_green_total = t_green_total + (time_ended - time_started)\n    }\n    else if (current_status == color_values.red) {\n        t_red_total = t_red_total + (time_ended - time_started)\n        stop_counter = stop_counter + 1\n    }\n    else if (current_status == color_values.yellow) {\n        t_yellow_total = t_yellow_total + (time_ended - time_started)\n    }\n    else if (current_status == color_values.blue) {\n        t_blue_total = t_blue_total + (time_ended - time_started)\n        stop_counter = stop_counter + 1\n    }\n    else if (current_status == color_values.gray) {\n        t_gray_total = t_gray_total + (time_ended - time_started)\n    }\n}\n\nfunction clearVariables(){\n    t_gray_total = 0\n    t_red_total = 0\n    t_yellow_total = 0\n    t_blue_total = 0\n    t_gray_total = 0\n    stop_counter = 0\n}\n\n//nao passou nenhuma das datas - recolhe de todo periodo \nif (date_begin == null && date_end == null) {\n    for(var j=0; j<sinalizadores.length; j++){\n        for (var i = 0; i < resumo_sinalizadores.length; i++) {\n            if (resumo_sinalizadores[i].clientID == sinalizadores[j].clientID) {\n                calculateTime(resumo_sinalizadores[i].current_status, resumo_sinalizadores[i].time_ended, resumo_sinalizadores[i].time_started)\n            }\n        }\n        table[j] = {\n            clientID: sinalizadores[j].clientID,\n            t_green_total: t_green_total,\n            t_red_total: t_red_total,\n            t_yellow_total: t_yellow_total,\n            t_blue_total: t_blue_total,\n            t_gray_total: t_gray_total,\n            stop_counter: stop_counter\n        }\n        clearVariables();\n    }\n}\n//passou apenas data de fim\nelse if (date_begin == null && date_end != null) {\n    //encontra o sinalizador selecionado pelo usuario\n    for (var j = 0; j < sinalizadores.length; j++) {\n        for (var i = 0; i < resumo_sinalizadores.length; i++) {\n            if (resumo_sinalizadores[i].clientID == sinalizadores[j].clientID) {\n                var flag = checkDate(resumo_sinalizadores[i].current_date, resumo_sinalizadores[0].current_date, date_end)\n\n                if(flag == true){\n                    calculateTime(resumo_sinalizadores[i].current_status, resumo_sinalizadores[i].time_ended, resumo_sinalizadores[i].time_started)\n                }\n            }\n        }\n        table[j] = {\n            clientID: sinalizadores[j].clientID,\n            t_green_total: t_green_total,\n            t_red_total: t_red_total,\n            t_yellow_total: t_yellow_total,\n            t_blue_total: t_blue_total,\n            t_gray_total: t_gray_total,\n            stop_counter: stop_counter\n        }\n        clearVariables();\n    }\n}\n//passou apenas data de inicio\nelse if (date_begin != null && date_end == null) {\n    //encontra o sinalizador selecionado pelo usuario\n    for (var j = 0; j < sinalizadores.length; j++) {\n        for (var i = 0; i < resumo_sinalizadores.length; i++) {\n            if (resumo_sinalizadores[i].name == sinalizadores[j].clientID) {\n                var flag = checkDate(resumo_sinalizadores[i].current_date, date_begin, resumo_sinalizadores[resumo_sinalizadores.length - 1].current_date)\n\n                if (flag == true) {\n                    calculateTime(resumo_sinalizadores[i].current_status, resumo_sinalizadores[i].time_ended, resumo_sinalizadores[i].time_started)\n                }\n            }\n        }\n        table[j] = {\n            clientID: sinalizadores[j].clientID,\n            t_green_total: t_green_total,\n            t_red_total: t_red_total,\n            t_yellow_total: t_yellow_total,\n            t_blue_total: t_blue_total,\n            t_gray_total: t_gray_total,\n            stop_counter: stop_counter\n        }\n        clearVariables();\n    }\n}\n//passou as duas datas\nelse {\n    //encontra o sinalizador selecionado pelo usuario\n    for (var j = 0; j < sinalizadores.length; j++) {\n        for (var i = 0; i < resumo_sinalizadores.length; i++) {\n            if (resumo_sinalizadores[i].name == sinalizadores[j].clientID) {\n                var flag = checkDate(resumo_sinalizadores[i].current_date, date_begin, date_end)\n\n                if (flag == true) {\n                    calculateTime(resumo_sinalizadores[i].current_status, resumo_sinalizadores[i].time_ended, resumo_sinalizadores[i].time_started)\n                }\n            }\n        }\n        table[j] = {\n            clientID: sinalizadores[j].clientID,\n            t_green_total: t_green_total,\n            t_red_total: t_red_total,\n            t_yellow_total: t_yellow_total,\n            t_blue_total: t_blue_total,\n            t_gray_total: t_gray_total,\n            stop_counter: stop_counter\n        }\n        clearVariables();\n    }\n}\n\nmsg = {}\nmsg.payload = table\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1620,
+        "y": 680,
+        "wires": [
+            [
+                "50b43a5a32ec1e02"
+            ]
+        ]
+    },
+    {
+        "id": "50b43a5a32ec1e02",
         "type": "debug",
         "z": "986afd82ee909974",
-        "name": "debug 6",
+        "name": "debug 4",
         "active": true,
         "tosidebar": true,
         "console": false,
@@ -7139,9 +7102,72 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1480,
-        "y": 1580,
+        "x": 1780,
+        "y": 620,
         "wires": []
+    },
+    {
+        "id": "db542acc44f8718d",
+        "type": "ui_template",
+        "z": "986afd82ee909974",
+        "group": "79b4d5c2.bfe4ac",
+        "name": "Display Date Interval",
+        "order": 2,
+        "width": 4,
+        "height": 2,
+        "format": "<p><b>Data Início:</b>{{msg.payload.begin}}</p>\n\n<p><b> Data Final:</b> {{msg.payload.end}}</p>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 2180,
+        "y": 1760,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "562ad9cf6ffef88a",
+        "type": "function",
+        "z": "986afd82ee909974",
+        "name": "function 7",
+        "func": "var date_begin = msg.payload.begin\nvar date_end = msg.payload.end\n\nvar date = new Date()\n\nvar full_date = date.toLocaleString('pt-BR', {\n    timeZone: 'America/Sao_Paulo',\n})\nvar date_separator = full_date.split(\" \")\nvar new_date = date_separator[0]    //Ex: \"18/10/2022\"\nvar new_time = date_separator[1]    //Ex: \"15:45:05\"\n\nvar sinalizador_id = flow.get(\"parada_table\", \"bank1\")\nvar resumo_sinalizadores = flow.get(\"resumo_sinalizadores\", \"bank1\")\n\nif(date_begin == null){\n    for(var i=0; i<resumo_sinalizadores.length; i++){\n        if(resumo_sinalizadores[i].clientID == sinalizador_id){\n            date_begin = resumo_sinalizadores[i].current_date\n            break\n        }\n    }\n}\nif(date_end == null){\n    date_end = new_date\n}\n\nmsg.payload.begin = date_begin\nmsg.payload.end = date_end\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1640,
+        "y": 1760,
+        "wires": [
+            [
+                "db542acc44f8718d"
+            ]
+        ]
+    },
+    {
+        "id": "fb2ce33434415ee8",
+        "type": "ui_template",
+        "z": "986afd82ee909974",
+        "group": "ead3fc9.832a3",
+        "name": "",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "format": "<style>\n    body.nr-dashboard-theme md-content md-card {\n        border-radius: 10px;\n    }\n\n    .nr-dashboard-theme ui-card-panel {\n        border-radius: 10px;\n    }\n</style>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1680,
+        "y": 560,
+        "wires": [
+            [
+                "1d5be367.89640d"
+            ]
+        ]
     },
     {
         "id": "688cddae.069644",
