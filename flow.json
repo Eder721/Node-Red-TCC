@@ -466,54 +466,6 @@
         "h": 142
     },
     {
-        "id": "a0d85c94.8d631",
-        "type": "group",
-        "z": "986afd82ee909974",
-        "name": "Configuração Produto",
-        "style": {
-            "label": true,
-            "stroke": "#000000",
-            "fill": "#bfdbef",
-            "color": "#000000"
-        },
-        "nodes": [
-            "0ee165efa3e9a6e7",
-            "c48c485455f3bef1",
-            "aa55b154f711f5e4",
-            "ab6509ee71a5ccb7",
-            "effd9e0f8c88bc45",
-            "c1582c55cbee06fc",
-            "5a33bc3b2a4775b3",
-            "6bcdd152.6258a",
-            "10f0149063340a3c",
-            "af4bf9c8.041158",
-            "acb56509.d35378",
-            "297cc793.e52118",
-            "6117f459.9ed8dc",
-            "bc2a2fd6.cc499",
-            "29c7f485.1eab0c",
-            "f57884c1.34b248",
-            "848fe849.c216e8",
-            "99fe6a68.94aa68",
-            "c2592d82.0954",
-            "31bd603a.0a4c2",
-            "2d7adbbe.106514",
-            "5ce3fe80.ebb2d",
-            "ca1e2b57.702fc8",
-            "24302e8f.c58b02",
-            "a805550e.521c18",
-            "6f36f15d.4a451",
-            "712da170.ac1f2",
-            "34540a23.ec7106",
-            "e239bb66.dce908",
-            "71a310297ef075ad"
-        ],
-        "x": 1174,
-        "y": 2059,
-        "w": 1102,
-        "h": 502
-    },
-    {
         "id": "7321907a.ee288",
         "type": "group",
         "z": "986afd82ee909974",
@@ -642,14 +594,187 @@
             "a4fa91d68005c75c"
         ],
         "x": 114,
-        "y": 1019,
+        "y": 1059,
         "w": 712,
         "h": 222
+    },
+    {
+        "id": "822c3780a45a9041",
+        "type": "group",
+        "z": "986afd82ee909974",
+        "name": "Dashboard Individual",
+        "style": {
+            "stroke": "#000000",
+            "fill": "#bfdbef",
+            "label": true,
+            "color": "#000000"
+        },
+        "nodes": [
+            "d59d38012e7b4aaa",
+            "5073046078bc8633",
+            "88dc9aec1d9026cd",
+            "aa95499224ace9b0",
+            "47493818d817e28b",
+            "7c7a19a64f40d0af",
+            "63724ab6a4ba01f2",
+            "0c30b63f883016f4",
+            "5ffe12ff40787a4c",
+            "d3cbcda1.c274b",
+            "a8f298c5.155fd8",
+            "98723328.bd031",
+            "cd8db1af.5eefb",
+            "e151f051682dee15",
+            "5c6b2155ea6bbb67",
+            "a42e5b0ca9cb0498",
+            "1ea0783d02a0484f",
+            "9888af06fbea5354",
+            "239802e9717738e1",
+            "b6ca060716a4f878",
+            "e6401f0a865462b8",
+            "db542acc44f8718d",
+            "562ad9cf6ffef88a",
+            "bc2f7a13ddee397c"
+        ],
+        "x": 1174,
+        "y": 1319,
+        "w": 1132,
+        "h": 482
+    },
+    {
+        "id": "3717a59d168d826b",
+        "type": "group",
+        "z": "986afd82ee909974",
+        "name": "Dashboard Geral",
+        "style": {
+            "stroke": "#000000",
+            "fill": "#bfdbef",
+            "label": true,
+            "color": "#000000"
+        },
+        "nodes": [
+            "d447f70d1bd2549e",
+            "cc6626c1f5abdb4d",
+            "677ac102c233ddee",
+            "316e6b2b045f09a8",
+            "fa3d3c37ea37fd91",
+            "8d95535f975e9375",
+            "784567b1707f266a",
+            "d0232751d7d8859b",
+            "7f1e2efd5d613af9",
+            "85ec293f8710ac09",
+            "d688812a.1acd5",
+            "3449de0a.70f5c2",
+            "28a9130e.8ff01c",
+            "2c31b7be.e7a598",
+            "82fe9082.4b3b8",
+            "eba00348117a10a1",
+            "12f73deb.db3af2",
+            "d0c836bf9a9a535c",
+            "79dfd895.9821d8",
+            "284fa71e8da0b6e9",
+            "1041f965165ecbf5",
+            "b74ee7f06dd661d3",
+            "d0fe25719d86c492",
+            "8e8486fc2dbeb83a"
+        ],
+        "x": 1174,
+        "y": 639,
+        "w": 1202,
+        "h": 502
+    },
+    {
+        "id": "352edda8f59a3cab",
+        "type": "group",
+        "z": "986afd82ee909974",
+        "name": "Configurações",
+        "style": {
+            "stroke": "#000000",
+            "fill": "#bfdbef",
+            "label": true,
+            "color": "#000000"
+        },
+        "nodes": [
+            "c48c485455f3bef1",
+            "aa55b154f711f5e4",
+            "ab6509ee71a5ccb7",
+            "6bcdd152.6258a",
+            "10f0149063340a3c",
+            "297cc793.e52118",
+            "6117f459.9ed8dc",
+            "bc2a2fd6.cc499",
+            "29c7f485.1eab0c",
+            "f57884c1.34b248",
+            "848fe849.c216e8",
+            "c2592d82.0954",
+            "31bd603a.0a4c2",
+            "2d7adbbe.106514",
+            "5ce3fe80.ebb2d",
+            "ca1e2b57.702fc8",
+            "a805550e.521c18",
+            "712da170.ac1f2",
+            "34540a23.ec7106",
+            "e239bb66.dce908",
+            "5a33bc3b2a4775b3",
+            "acb56509.d35378",
+            "99fe6a68.94aa68",
+            "0ee165efa3e9a6e7",
+            "af4bf9c8.041158",
+            "effd9e0f8c88bc45",
+            "c1582c55cbee06fc",
+            "24302e8f.c58b02",
+            "6f36f15d.4a451",
+            "815ba61b32d31833",
+            "71a310297ef075ad",
+            "0ee6eb7d932046c7",
+            "f36a1277d750c653",
+            "3106013f6ebd2435",
+            "1c55be19a8c9fd17",
+            "598063c8b28f9650",
+            "8ab5a928c3ad0ddc",
+            "797b9c61b8647a5c",
+            "f2222e4d8c0add6a",
+            "233c036ea98d016f",
+            "48951c0a55e91a72",
+            "f86c8f593b9d6d2a",
+            "68b8b9caeac92ec6",
+            "1f3b47b7053c8409",
+            "a494bf8233d61c28",
+            "3480bec80c1422e0",
+            "e95389ef51a73ed5",
+            "de233bd3d1ea564c",
+            "63091b79b208f34f",
+            "c3531fa1671a52e4",
+            "762558374619fb9a",
+            "9c2ae7ca7ae94e81",
+            "71f6e1a76f253672",
+            "2a6e0ce883925f77",
+            "40b2d8ef052d9f59",
+            "454bb2c7a57826ec",
+            "5807098756557cf9",
+            "684c6dc4b967cd09",
+            "106763079d8a471a",
+            "78c28a4569ba1999",
+            "4d9bcf9bcc04b7f1",
+            "1bd4de93037badd5",
+            "1deb1d0e8b3c56f7",
+            "da13b5efb38a8cbe",
+            "07d48c4273ec8942",
+            "b791dd8afc66e827",
+            "f1372b28009e7be4",
+            "796d2a59c4c12f9d",
+            "6177e9f7beff6420",
+            "a70707a51bf50683"
+        ],
+        "x": 1174,
+        "y": 2059,
+        "w": 1102,
+        "h": 1042
     },
     {
         "id": "8e8486fc2dbeb83a",
         "type": "junction",
         "z": "986afd82ee909974",
+        "g": "3717a59d168d826b",
         "x": 1680,
         "y": 1000,
         "wires": [
@@ -665,6 +790,7 @@
         "id": "bc2f7a13ddee397c",
         "type": "junction",
         "z": "986afd82ee909974",
+        "g": "822c3780a45a9041",
         "x": 1520,
         "y": 1600,
         "wires": [
@@ -680,8 +806,9 @@
         "id": "b791dd8afc66e827",
         "type": "junction",
         "z": "986afd82ee909974",
-        "x": 2200,
-        "y": 2960,
+        "g": "352edda8f59a3cab",
+        "x": 2100,
+        "y": 2940,
         "wires": [
             [
                 "5807098756557cf9"
@@ -692,8 +819,9 @@
         "id": "f1372b28009e7be4",
         "type": "junction",
         "z": "986afd82ee909974",
-        "x": 2200,
-        "y": 3000,
+        "g": "352edda8f59a3cab",
+        "x": 2100,
+        "y": 2980,
         "wires": [
             [
                 "684c6dc4b967cd09"
@@ -704,8 +832,9 @@
         "id": "796d2a59c4c12f9d",
         "type": "junction",
         "z": "986afd82ee909974",
-        "x": 2200,
-        "y": 3040,
+        "g": "352edda8f59a3cab",
+        "x": 2100,
+        "y": 3020,
         "wires": [
             [
                 "106763079d8a471a"
@@ -716,8 +845,9 @@
         "id": "6177e9f7beff6420",
         "type": "junction",
         "z": "986afd82ee909974",
-        "x": 2200,
-        "y": 3080,
+        "g": "352edda8f59a3cab",
+        "x": 2100,
+        "y": 3060,
         "wires": [
             [
                 "78c28a4569ba1999"
@@ -728,8 +858,9 @@
         "id": "a70707a51bf50683",
         "type": "junction",
         "z": "986afd82ee909974",
-        "x": 1960,
-        "y": 3020,
+        "g": "352edda8f59a3cab",
+        "x": 1860,
+        "y": 3000,
         "wires": [
             [
                 "1bd4de93037badd5",
@@ -1879,7 +2010,7 @@
         "z": "986afd82ee909974",
         "g": "7321907a.ee288",
         "name": "Conf_Principal",
-        "func": "var date = new Date()\n\nvar full_date = date.toLocaleString('pt-BR', {\n    timeZone: 'America/Sao_Paulo',\n})\nvar date_separator = full_date.split(\" \")\nvar new_date = date_separator[0]    //Ex: \"18/10/2022\"\nvar new_time = date_separator[1]    //Ex: \"15:45:05\"\n\nvar day = date.getDate().toString().padStart(2, '0')\nvar month = (date.getMonth()+1).toString().padStart(2, '0')\nvar year = date.getFullYear()\nvar hours = (date.getHours()-3).toString().padStart(2, '0')\nvar minutes = date.getMinutes().toString().padStart(2, '0')\nvar seconds = date.getSeconds().toString().padStart(2, '0')\nvar current_date = day+\"/\"+month+\"/\"+year;\n\nvar color_values = flow.get(\"color_values\", \"bank1\")\nvar sinalizadores = flow.get('sinalizadores', \"bank1\")\nvar pos_atual = flow.get(\"pos_atual\", \"bank1\")\nvar allClients = flow.get(\"allClients\", \"bank1\")\n\nfunction calculaTempo(totalTime){   //recebe em milisegundos\n    var diffDays = Math.floor(totalTime / 86400000); // days\n    var diffHrs = Math.floor((totalTime % 86400000) / 3600000); // hours\n    diffHrs = diffHrs < 10 ? \"0\" + diffHrs : diffHrs;\n    var diffMins = Math.floor(((totalTime % 86400000) % 3600000) / 60000); // minutes\n    diffMins = diffMins < 10 ? \"0\" + diffMins : diffMins;\n    var diffSecs = Math.floor((((totalTime % 86400000) % 3600000) % 60000)/1000);  //seconds\n    diffSecs = diffSecs < 10 ? \"0\" + diffSecs : diffSecs;\n    var testvar = diffHrs + (diffDays*24)\n    var calculatedTime = diffHrs+\":\"+diffMins+\":\"+diffSecs\n    return calculatedTime;\n}\n\n\nvar mensagem = msg.payload  //Ex.: VT300-green\nvar separator = mensagem.split(\"-\")  //separa o cliente do status\n\nvar current_status = separator[1]  //status Ex.: green\nvar clientID = separator[0] //cliente   Ex.: VT300\n\nvar pos_clientNome\nfor(var j=0; j<allClients.length; j++){\n    if(allClients[j].clientID == clientID){\n        pos_clientNome = j\n    }\n}\n    \nvar i\nfor(i=0; i<sinalizadores.length; i++){ //varre o vetor\n    if(sinalizadores[i].clientID == clientID){   //encontra o sinalizador no vetor\n        pos_atual = i   //guarda a posição desse sinalizador no vetor\n    }\n}\n\n//atualiza o tempo \nvar time_status_change = date.getTime()\nvar total_time_last_status = time_status_change - sinalizadores[pos_atual].time_current_status  //tempo total em milisegundos\n\nif(sinalizadores[pos_atual].current_status == color_values.yellow){\n    sinalizadores[pos_atual].time_yellow = total_time_last_status + sinalizadores[pos_atual].time_yellow;\n    sinalizadores[pos_atual].time_yellow_str = calculaTempo(sinalizadores[pos_atual].time_yellow)\n}\nelse if(sinalizadores[pos_atual].current_status == color_values.green){\n    sinalizadores[pos_atual].time_green = total_time_last_status + sinalizadores[pos_atual].time_green;\n    sinalizadores[pos_atual].time_green_str = calculaTempo(sinalizadores[pos_atual].time_green)\n}\nelse if(sinalizadores[pos_atual].current_status == color_values.blue){\n    sinalizadores[pos_atual].time_blue = total_time_last_status + sinalizadores[pos_atual].time_blue;\n    sinalizadores[pos_atual].time_blue_str = calculaTempo(sinalizadores[pos_atual].time_blue)\n}\nelse if(sinalizadores[pos_atual].current_status == color_values.red){\n    sinalizadores[pos_atual].time_red = total_time_last_status + sinalizadores[pos_atual].time_red;\n    sinalizadores[pos_atual].time_red_str= calculaTempo(sinalizadores[pos_atual].time_red)\n}\nelse if(sinalizadores[pos_atual].current_status == color_values.gray){\n    sinalizadores[pos_atual].time_gray = total_time_last_status + sinalizadores[pos_atual].time_gray;\n    sinalizadores[pos_atual].time_gray_str= calculaTempo(sinalizadores[pos_atual].time_gray)\n}\n\n//atualiza o status e incrementa contador de paradas se for o caso\nif(current_status == \"green\"){\n    //current_status = \"Em operação\"\n    current_status = color_values.green\n}\nelse if(current_status == \"red\"){\n    //current_status = \"Parada não programada\"\n    current_status = color_values.red\n    sinalizadores[pos_atual].stop_counter = sinalizadores[pos_atual].stop_counter + 1 //add contagem de paradas\n}\nelse if(current_status == \"yellow\"){\n    //current_status = \"Setup\"\n    current_status = color_values.yellow\n}\nelse if(current_status == \"blue\"){\n    //current_status = \"Parada programada\"\n    current_status = color_values.blue\n    sinalizadores[pos_atual].stop_counter = sinalizadores[pos_atual].stop_counter + 1 //add contagem de paradas\n}\nelse if(current_status == \"gray\"){\n    //current_status = \"Setup\"\n    current_status = color_values.gray\n}\n\nsinalizadores[pos_atual].current_status = current_status  //atualiza status\nsinalizadores[pos_atual].time_current_status = date.getTime()    //atualiza o tempo em milisegundos\nsinalizadores[pos_atual].time_change_str = new_time //atualiza o tempo formatado\nsinalizadores[pos_atual].current_date = new_date   //atualiza a data\n\nflow.set(\"sinalizadores\", sinalizadores, \"bank1\")\nflow.set(\"pos_atual\", pos_atual, \"bank1\")\n\nmsg = {};\nmsg.payload = sinalizadores\n\nreturn msg;",
+        "func": "var date = new Date()\n\nvar full_date = date.toLocaleString('pt-BR', {\n    timeZone: 'America/Sao_Paulo',\n})\nvar date_separator = full_date.split(\" \")\nvar new_date = date_separator[0]    //Ex: \"18/10/2022\"\nvar new_time = date_separator[1]    //Ex: \"15:45:05\"\n\nvar day = date.getDate().toString().padStart(2, '0')\nvar month = (date.getMonth()+1).toString().padStart(2, '0')\nvar year = date.getFullYear()\nvar hours = (date.getHours()-3).toString().padStart(2, '0')\nvar minutes = date.getMinutes().toString().padStart(2, '0')\nvar seconds = date.getSeconds().toString().padStart(2, '0')\nvar current_date = day+\"/\"+month+\"/\"+year;\n\nvar color_values = flow.get(\"color_values\", \"bank1\")\nvar sinalizadores = flow.get('sinalizadores', \"bank1\")\nvar pos_atual = flow.get(\"pos_atual\", \"bank1\")\nvar allClients = flow.get(\"allClients\", \"bank1\")\n\nfunction calculaTempo(totalTime){   //recebe em milisegundos\n    var diffDays = Math.floor(totalTime / 86400000); // days\n    var diffHrs = Math.floor((totalTime % 86400000) / 3600000); // hours\n    diffHrs = diffHrs < 10 ? \"0\" + diffHrs : diffHrs;\n    var diffMins = Math.floor(((totalTime % 86400000) % 3600000) / 60000); // minutes\n    diffMins = diffMins < 10 ? \"0\" + diffMins : diffMins;\n    var diffSecs = Math.floor((((totalTime % 86400000) % 3600000) % 60000)/1000);  //seconds\n    diffSecs = diffSecs < 10 ? \"0\" + diffSecs : diffSecs;\n    var testvar = diffHrs + (diffDays*24)\n    var calculatedTime = diffHrs+\":\"+diffMins+\":\"+diffSecs\n    return calculatedTime;\n}\n\n\nvar mensagem = msg.payload  //Ex.: VT300-green\nvar separator = mensagem.split(\"-\")  //separa o cliente do status\n\nvar current_status = separator[1]  //status Ex.: green\nvar clientID = separator[0] //cliente   Ex.: VT300\n\nvar pos_clientNome\nfor(var j=0; j<allClients.length; j++){\n    if(allClients[j].clientID == clientID){\n        pos_clientNome = j\n    }\n}\n    \nfor(var i=0; i<sinalizadores.length; i++){ //varre o vetor\n    if(sinalizadores[i].clientID == clientID){   //encontra o sinalizador no vetor\n        pos_atual = i   //guarda a posição desse sinalizador no vetor\n    }\n}\n\n//atualiza o status. Ex: green vira Em operação\nif (current_status == \"green\") {\n    current_status = color_values.green\n}\nelse if (current_status == \"red\") {\n    current_status = color_values.red\n    sinalizadores[pos_atual].stop_counter = sinalizadores[pos_atual].stop_counter + 1 //add contagem de paradas\n}\nelse if (current_status == \"yellow\") {\n    current_status = color_values.yellow\n}\nelse if (current_status == \"blue\") {\n    current_status = color_values.blue\n    sinalizadores[pos_atual].stop_counter = sinalizadores[pos_atual].stop_counter + 1 //add contagem de paradas\n}\nelse if (current_status == \"gray\") {\n    current_status = color_values.gray\n}\n\n//verifica se veio o mesmo status que ja estava\nif(sinalizadores[pos_atual].current_status == current_status){  \n    node.warn(\"Mesmo status para este sinalizador\")\n}\nelse{\n    node.warn(\"Atualizei\")\n    //atualiza o tempo \n    var time_status_change = date.getTime()\n    var total_time_last_status = time_status_change - sinalizadores[pos_atual].time_current_status  //tempo total em milisegundos\n\n    if (sinalizadores[pos_atual].current_status == color_values.yellow) {\n        sinalizadores[pos_atual].time_yellow = total_time_last_status + sinalizadores[pos_atual].time_yellow;\n        sinalizadores[pos_atual].time_yellow_str = calculaTempo(sinalizadores[pos_atual].time_yellow)\n    }\n    else if (sinalizadores[pos_atual].current_status == color_values.green) {\n        sinalizadores[pos_atual].time_green = total_time_last_status + sinalizadores[pos_atual].time_green;\n        sinalizadores[pos_atual].time_green_str = calculaTempo(sinalizadores[pos_atual].time_green)\n    }\n    else if (sinalizadores[pos_atual].current_status == color_values.blue) {\n        sinalizadores[pos_atual].time_blue = total_time_last_status + sinalizadores[pos_atual].time_blue;\n        sinalizadores[pos_atual].time_blue_str = calculaTempo(sinalizadores[pos_atual].time_blue)\n    }\n    else if (sinalizadores[pos_atual].current_status == color_values.red) {\n        sinalizadores[pos_atual].time_red = total_time_last_status + sinalizadores[pos_atual].time_red;\n        sinalizadores[pos_atual].time_red_str = calculaTempo(sinalizadores[pos_atual].time_red)\n    }\n    else if (sinalizadores[pos_atual].current_status == color_values.gray) {\n        sinalizadores[pos_atual].time_gray = total_time_last_status + sinalizadores[pos_atual].time_gray;\n        sinalizadores[pos_atual].time_gray_str = calculaTempo(sinalizadores[pos_atual].time_gray)\n    }\n\n    //Se foi uma parada, incrementa o contador de paradas\n    if(current_status == color_values.red || current_status == color_values.blue){\n        ++sinalizadores[pos_atual].stop_counter;\n    }\n\n    //att variaveis\n    sinalizadores[pos_atual].current_status = current_status  //atualiza status\n    sinalizadores[pos_atual].time_current_status = date.getTime()    //atualiza o tempo em milisegundos\n    sinalizadores[pos_atual].time_change_str = new_time //atualiza o tempo formatado\n    sinalizadores[pos_atual].current_date = new_date   //atualiza a data\n}\n\n\nflow.set(\"sinalizadores\", sinalizadores, \"bank1\")\nflow.set(\"pos_atual\", pos_atual, \"bank1\")\n\nmsg = {};\nmsg.payload = sinalizadores\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "// Code added here will be run once\n// whenever the node is started.\nvar pos_atual = 0;\nflow.set(\"pos_atual\", pos_atual, \"bank1\")\n\nvar color_values = {\n    green   : \"Em operação\",\n    red     : \"Parada não programada\",\n    yellow  : \"Setup\",\n    blue    : \"Parada programada\",\n    gray    : \"Offline\"\n}\n\nflow.set(\"color_values\", color_values, \"bank1\")\n\n",
@@ -2194,7 +2325,7 @@
         "finalize": "",
         "libs": [],
         "x": 290,
-        "y": 1100,
+        "y": 1140,
         "wires": [
             [
                 "d2e8ed9e8e177e17"
@@ -2224,7 +2355,7 @@
         "repair": false,
         "outputs": 2,
         "x": 250,
-        "y": 1180,
+        "y": 1220,
         "wires": [
             [
                 "0d9e7426178f8bef"
@@ -2255,7 +2386,7 @@
         "to": "",
         "reg": false,
         "x": 440,
-        "y": 1200,
+        "y": 1240,
         "wires": [
             [
                 "202437dd29801716"
@@ -2279,7 +2410,7 @@
         "include_empty_strings": "",
         "include_null_values": "",
         "x": 590,
-        "y": 1200,
+        "y": 1240,
         "wires": [
             [
                 "372d856f5ede5f0b"
@@ -2307,7 +2438,7 @@
         "to": "",
         "reg": false,
         "x": 440,
-        "y": 1160,
+        "y": 1200,
         "wires": [
             [
                 "35b16469ed35b179"
@@ -2331,7 +2462,7 @@
         "include_empty_strings": "",
         "include_null_values": "",
         "x": 590,
-        "y": 1160,
+        "y": 1200,
         "wires": [
             [
                 "372d856f5ede5f0b"
@@ -2350,7 +2481,7 @@
         "overwriteFile": "false",
         "encoding": "none",
         "x": 730,
-        "y": 1200,
+        "y": 1240,
         "wires": [
             []
         ]
@@ -2370,7 +2501,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 730,
-        "y": 1160,
+        "y": 1200,
         "wires": []
     },
     {
@@ -2384,7 +2515,7 @@
             "1489764.8783b8a"
         ],
         "x": 155,
-        "y": 1100,
+        "y": 1140,
         "wires": [
             [
                 "ead8d2a45ff35148"
@@ -2399,7 +2530,7 @@
         "name": "CSV File",
         "info": "Estrutura para gerar o arquivo .csv\n\nestrutura unica para cada sinalizador\n\n",
         "x": 200,
-        "y": 1060,
+        "y": 1100,
         "wires": []
     },
     {
@@ -2475,7 +2606,7 @@
         "id": "c48c485455f3bef1",
         "type": "link in",
         "z": "986afd82ee909974",
-        "g": "a0d85c94.8d631",
+        "g": "352edda8f59a3cab",
         "name": "",
         "links": [
             "462a057fd489911e",
@@ -2500,7 +2631,7 @@
         "id": "aa55b154f711f5e4",
         "type": "comment",
         "z": "986afd82ee909974",
-        "g": "a0d85c94.8d631",
+        "g": "352edda8f59a3cab",
         "name": "Renomear Sinalizador",
         "info": "",
         "x": 1500,
@@ -2511,12 +2642,12 @@
         "id": "ab6509ee71a5ccb7",
         "type": "function",
         "z": "986afd82ee909974",
-        "g": "a0d85c94.8d631",
+        "g": "352edda8f59a3cab",
         "name": "Att variavel para mudar",
-        "func": "var id_para_mudar = flow.get(\"id_para_mudar\", \"bank1\")\n\nid_para_mudar = msg.payload\n\nflow.set(\"id_para_mudar\", id_para_mudar, \"bank1\")\n\nreturn msg;",
+        "func": "var id_to_change_name = flow.get(\"id_to_change_name\", \"bank1\")||\" \"\nvar sinalizadores = flow.get(\"sinalizadores\", \"bank1\")\n\nvar name_to_change = msg.payload\n\nfor(var i=0; i<sinalizadores.length; i++){\n    if(sinalizadores[i].name == name_to_change){\n        id_to_change_name = sinalizadores[i].clientID\n    }\n}\n\nflow.set(\"id_to_change_name\", id_to_change_name, \"bank1\")\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "initialize": "// Code added here will be run once\n// whenever the node is started.\nvar id_para_mudar = \" \"\nflow.set(\"id_para_mudar\", id_para_mudar, \"bank1\")",
+        "initialize": "// Code added here will be run once\n// whenever the node is started.\n//var id_para_mudar = \" \"0\n//flow.set(\"id_para_mudar\", id_para_mudar, \"bank1\")",
         "finalize": "",
         "libs": [],
         "x": 1950,
@@ -2874,7 +3005,7 @@
         "z": "986afd82ee909974",
         "g": "7321907a.ee288",
         "name": "Preenche chamada",
-        "func": "var chamada = flow.get(\"chamada\")||[];\n\nvar objChamada = {};\n\nvar mensagem = msg.payload  //Ex.: AA100-IHM\nvar separator = mensagem.split(\"-\")  //separa o cliente do status\n\nobjChamada.type = separator[1]  //Ex: IHM \nobjChamada.clientID = separator[0] //cliente   Ex.: AA100\n\nvar podeAdicionar = true\n\nfor(var j=0; j<chamada.length; j++){\n    if(chamada[j].clientID == objChamada.clientID && chamada[j].type == objChamada.type){ //se ja existe no vetor\n        podeAdicionar = false\n    }\n}\n\nif(podeAdicionar == true){\n    chamada.push(objChamada)\n}\n\n\nflow.set(\"chamada\", chamada)\n\nmsg.payload = chamada\n\nreturn msg;",
+        "func": "var chamada = flow.get(\"chamada\")||[];\n\nvar objChamada = {};\n\nvar mensagem = msg.payload  //Ex.: AA100-IHM\nvar separator = mensagem.split(\"-\")  //separa o cliente do status\n\nobjChamada.clientID = separator[0] //cliente   Ex.: AA100\nobjChamada.type = separator[1]  //Ex: IHM \n\nvar podeAdicionar = true\n\nfor(var j=0; j<chamada.length; j++){\n    if(chamada[j].clientID == objChamada.clientID && chamada[j].type == objChamada.type){ //se ja existe no vetor\n        podeAdicionar = false\n    }\n}\n\nif(podeAdicionar == true){\n    chamada.push(objChamada)\n}\n\n\nflow.set(\"chamada\", chamada)\n\nmsg.payload = chamada\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -2988,7 +3119,7 @@
         "z": "986afd82ee909974",
         "g": "7321907a.ee288",
         "name": "Cadastra equipamento",
-        "func": "var date = new Date()\n\nvar full_date = date.toLocaleString('pt-BR', {\n    timeZone: 'America/Sao_Paulo',\n})\nvar date_separator = full_date.split(\" \")\nvar new_date = date_separator[0]    //Ex: \"18/10/2022\"\nvar new_time = date_separator[1]    //Ex: \"15:45:05\"\n\nvar day = date.getDate().toString().padStart(2, '0')\nvar month = (date.getMonth()+1).toString().padStart(2, '0')\nvar year = date.getFullYear()\nvar hours = (date.getHours()-3).toString().padStart(2, '0')\nvar minutes = date.getMinutes().toString().padStart(2, '0')\nvar seconds = date.getSeconds().toString().padStart(2, '0')\nvar current_date = day+\"/\"+month+\"/\"+year;\n\nvar podeAdd = true\nvar allClients = flow.get(\"allClients\", \"bank1\")||[]\n\nvar cliente = {};\n\nvar mensagem = msg.payload  //Ex.: AA100-IHM-00:11:22:33:44:55\nvar separator = mensagem.split(\"-\")  //separa a mensagem\n\nvar pos\n\n//verifica se esse cliente eh novo ou nao\nfor(var j=0; j<allClients.length; j++){\n    if(allClients[j].macAdd == separator[2]){   //equipamento ja cadastrado\n        pos = j;\n        podeAdd = false\n        allClients[j].connectivity = true\n        allClients[j].current_date = new_date\n    }\n}\n\ncliente.clientID = separator[0] //cliente   Ex.: AA100\ncliente.name = separator[0]     //nome. Default = ID\ncliente.type = separator[1]  //Ex: IHM \ncliente.macAdd = separator[2]   //Ex: 00:11:22:33:44:55\ncliente.connectivity = true\ncliente.registration_date = new_date\ncliente.registration_time = new_time\ncliente.current_date = new_date\ncliente.connection_lost = 0\n\nif(podeAdd == true){    //novo equipamento - insere na lista\n    allClients.push(cliente)\n}\n\nflow.set(\"allClients\", allClients, \"bank1\")\n\nmsg.payload = allClients\nreturn msg;",
+        "func": "var date = new Date()\n\nvar full_date = date.toLocaleString('pt-BR', {\n    timeZone: 'America/Sao_Paulo',\n})\nvar date_separator = full_date.split(\" \")\nvar new_date = date_separator[0]    //Ex: \"18/10/2022\"\nvar new_time = date_separator[1]    //Ex: \"15:45:05\"\n\nvar day = date.getDate().toString().padStart(2, '0')\nvar month = (date.getMonth()+1).toString().padStart(2, '0')\nvar year = date.getFullYear()\nvar hours = (date.getHours()-3).toString().padStart(2, '0')\nvar minutes = date.getMinutes().toString().padStart(2, '0')\nvar seconds = date.getSeconds().toString().padStart(2, '0')\nvar current_date = day+\"/\"+month+\"/\"+year;\n\nvar podeAdd = true\nvar allClients = flow.get(\"allClients\", \"bank1\")||[]\n\nvar cliente = {};\n\nvar mensagem = msg.payload  //Ex.: AA100-IHM-00:11:22:33:44:55\nvar separator = mensagem.split(\"-\")  //separa a mensagem\n\nvar pos\n\n//verifica se esse cliente eh novo ou nao\nfor(var j=0; j<allClients.length; j++){\n    if(allClients[j].macAdd == separator[2]){   //equipamento ja cadastrado\n        pos = j;\n        podeAdd = false\n        allClients[j].connectivity = true   //atualiza status de conexão\n        allClients[j].current_date = new_date   //atualiza data atual\n    }\n}\n\ncliente.clientID = separator[0] //cliente   Ex.: AA100\ncliente.name = separator[0]     //nome. Default = ID\ncliente.type = separator[1]  //Ex: IHM \ncliente.macAdd = separator[2]   //Ex: 00:11:22:33:44:55\ncliente.connectivity = true\ncliente.registration_date = new_date\ncliente.registration_time = new_time\ncliente.current_date = new_date\ncliente.connection_lost = 0\n\nif(podeAdd == true){    //novo equipamento - insere na lista\n    allClients.push(cliente)\n}\n\nflow.set(\"allClients\", allClients, \"bank1\")\n\nmsg.payload = allClients\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -3212,7 +3343,7 @@
         "type": "function",
         "z": "986afd82ee909974",
         "name": "Full events array",
-        "func": "var pos_atual = flow.get(\"pos_atual\", \"bank1\")\n\nvar newPayload = {}\n\n//passa os parametros para outra variavel\nnewPayload.clientID = msg.payload[pos_atual].clientID                   //ID do cliente (String)\nnewPayload.name = msg.payload[pos_atual].name                           //nome do cliente (String)\nnewPayload.current_status = msg.payload[pos_atual].current_status       //status atual (String)\nnewPayload.time_change_str = msg.payload[pos_atual].time_change_str     //tempo da mudança de status (String)\nnewPayload.current_date = msg.payload[pos_atual].current_date           //data atual (String)\nnewPayload.time_started = msg.payload[pos_atual].time_current_status    //tempo que esse status iniciou (int milisegundos)\nnewPayload.time_ended = 0                                               //tempo que esse status finalizou (int)\n\n\nvar resumo_sinalizadores = flow.get(\"resumo_sinalizadores\", \"bank1\")||[]\n\nresumo_sinalizadores.push(newPayload)\nif (resumo_sinalizadores.length > 1000){\n    // Delete oldest message if > 1000\n    resumo_sinalizadores.shift();\n    resumo_sinalizadores.length = 1000;\n} \n\nfor(var i=resumo_sinalizadores.length - 2; i>=0; i--){\n    if(resumo_sinalizadores[i].name == newPayload.name){//achou o evento anterior do mesmo sinalizador\n        resumo_sinalizadores[i].time_ended = newPayload.time_started    //att tempo de fim daquele evento\n        break;\n    } \n}\n\n\nflow.set(\"resumo_sinalizadores\", resumo_sinalizadores, \"bank1\")\n\n\nmsg = {}\nmsg.payload = resumo_sinalizadores\nreturn msg;",
+        "func": "var pos_atual = flow.get(\"pos_atual\", \"bank1\")\n\nvar newPayload = {}\n\n//passa os parametros para outra variavel\nnewPayload.clientID = msg.payload[pos_atual].clientID                   //ID do cliente (String)\nnewPayload.name = msg.payload[pos_atual].name                           //nome do cliente (String)\nnewPayload.current_status = msg.payload[pos_atual].current_status       //status atual (String)\nnewPayload.time_change_str = msg.payload[pos_atual].time_change_str     //tempo da mudança de status (String)\nnewPayload.current_date = msg.payload[pos_atual].current_date           //data atual (String)\nnewPayload.time_started = msg.payload[pos_atual].time_current_status    //tempo que esse status iniciou (int milisegundos)\nnewPayload.time_ended = 0                                               //tempo que esse status finalizou (int)\n\n\nvar resumo_sinalizadores = flow.get(\"resumo_sinalizadores\", \"bank1\")||[]\nvar new_line = true\n\nfor(var j=resumo_sinalizadores.length-1; j>=0; j--){\n    if(resumo_sinalizadores[j].clientID == newPayload.clientID){\n        if (resumo_sinalizadores[j].current_status == newPayload.current_status) {\n            new_line = false\n            break\n        }\n        break\n    }\n    \n}\n\nif(new_line == true){\n    resumo_sinalizadores.push(newPayload)\n    if (resumo_sinalizadores.length > 1000) {\n        // Delete oldest message if > 1000\n        resumo_sinalizadores.shift();\n        resumo_sinalizadores.length = 1000;\n    }\n\n    for (var i = resumo_sinalizadores.length - 2; i >= 0; i--) {\n        if (resumo_sinalizadores[i].clientID == newPayload.clientID) {//achou o evento anterior do mesmo sinalizador\n            resumo_sinalizadores[i].time_ended = newPayload.time_started    //att tempo de fim daquele evento\n            break;\n        }\n    }\n}\nelse{\n    node.warn(\"Sinalizador ja estava neste status - nao add log\")\n}\n\n\nflow.set(\"resumo_sinalizadores\", resumo_sinalizadores, \"bank1\")\n\n\nmsg = {}\nmsg.payload = resumo_sinalizadores\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -3259,6 +3390,7 @@
         "z": "986afd82ee909974",
         "g": "7321907a.ee288",
         "name": "",
+        "mode": "link",
         "links": [
             "391890a05e4e7ce6",
             "69a29a44.5a2594",
@@ -3266,7 +3398,8 @@
             "858736762d7b2457",
             "88dc9aec1d9026cd",
             "c48c485455f3bef1",
-            "d0232751d7d8859b"
+            "d0232751d7d8859b",
+            "d3cbcda1.c274b"
         ],
         "x": 995,
         "y": 360,
@@ -3409,7 +3542,7 @@
         "id": "6bcdd152.6258a",
         "type": "comment",
         "z": "986afd82ee909974",
-        "g": "a0d85c94.8d631",
+        "g": "352edda8f59a3cab",
         "name": "Excluir Sinalizador",
         "info": "",
         "x": 1490,
@@ -3420,9 +3553,9 @@
         "id": "10f0149063340a3c",
         "type": "function",
         "z": "986afd82ee909974",
-        "g": "a0d85c94.8d631",
+        "g": "352edda8f59a3cab",
         "name": "List Clients",
-        "func": "var allClients = flow.get(\"allClients\", \"bank1\")\nvar i\nvar client_array = []\n\n\nfunction removeDuplicates(arr) {\n    return arr.filter((item, \n        index) => arr.indexOf(item) === index);\n}\n\nfor(var j=0; j<allClients.length; j++){\n    client_array[j] = allClients[j].name\n}\n\nclient_array = removeDuplicates(client_array)\n\nmsg = {};\nmsg.options = client_array\n\nreturn msg;",
+        "func": "var allClients = flow.get(\"allClients\", \"bank1\")\nvar i\nvar client_array = []\n\n\nfunction removeDuplicates(arr) {\n    return arr.filter((item, \n        index) => arr.indexOf(item) === index);\n}\n\nfor(var j=0; j<allClients.length; j++){\n    client_array[j] = allClients[j].name\n}\n\nclient_array = removeDuplicates(client_array)\nclient_array = client_array.sort()\n\nmsg = {};\nmsg.options = client_array\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -3442,12 +3575,12 @@
         "id": "297cc793.e52118",
         "type": "function",
         "z": "986afd82ee909974",
-        "g": "a0d85c94.8d631",
+        "g": "352edda8f59a3cab",
         "name": "Att Variavel para excluir",
-        "func": "var id_para_excluir = flow.get(\"id_para_excluir\", \"bank1\")\n\nid_para_excluir = msg.payload\n\nflow.set(\"id_para_excluir\", id_para_excluir, \"bank1\")\n\nreturn msg;",
+        "func": "var id_to_delete = flow.get(\"id_to_delete\", \"bank1\")||\" \"\nvar sinalizadores = flow.get(\"sinalizadores\",\"bank1\")\nvar name_to_delete = msg.payload    //reccebe o nome do sinalizador para excluir\n\n//procura pelo sinalizador cujo nome foi passado, e pega o ID dele\nfor(var i=0; i<sinalizadores.length; i++){ \n    if(sinalizadores[i].name == name_to_delete){\n        id_to_delete = sinalizadores[i].clientID\n    }\n}\n\nflow.set(\"id_to_delete\", id_to_delete, \"bank1\")\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "initialize": "// Code added here will be run once\n// whenever the node is started.\nvar id_para_excluir = \" \"\nflow.set(\"id_para_excluir\", id_para_excluir, \"bank1\")",
+        "initialize": "// Code added here will be run once\n// whenever the node is started.\n\n//var id_para_excluir = \" \"\n//flow.set(\"id_para_excluir\", id_para_excluir, \"bank1\")",
         "finalize": "",
         "libs": [],
         "x": 1950,
@@ -3461,16 +3594,16 @@
         "id": "6117f459.9ed8dc",
         "type": "function",
         "z": "986afd82ee909974",
-        "g": "a0d85c94.8d631",
+        "g": "352edda8f59a3cab",
         "name": "Exclui Sinalizador ",
-        "func": "var id_para_excluir = flow.get(\"id_para_excluir\", \"bank1\")\nvar sinalizadores = flow.get(\"sinalizadores\", \"bank1\")\nvar allClients = flow.get(\"allClients\", \"bank1\")\n\nfor(var i=0; i<sinalizadores.length; i++){\n    if(sinalizadores[i].name == id_para_excluir){\n        sinalizadores.splice(i, 1);\n    }\n}\n\nfor(var j=0; j<allClients.length; j++){\n    if(allClients[j].name == id_para_excluir){\n        allClients.splice(j, 1);\n        --j;\n    }\n}\n\nflow.set(\"sinalizadores\", sinalizadores, \"bank1\")\nflow.set(\"allClients\", allClients, \"bank1\")\n\n\nreturn msg;",
+        "func": "var id_to_delete = flow.get(\"id_to_delete\", \"bank1\")\nvar sinalizadores = flow.get(\"sinalizadores\", \"bank1\")\nvar allClients = flow.get(\"allClients\", \"bank1\")\nvar resumo_sinalizadores = flow.get(\"resumo_sinalizadores\", \"bank1\")\n\n//deleta do vetor sinalizadores\nfor(var i=0; i<sinalizadores.length; i++){\n    if (sinalizadores[i].clientID == id_to_delete){\n        sinalizadores.splice(i, 1);\n    }\n}\n\n//deleta do vetor allClients\nfor(var j=0; j<allClients.length; j++){\n    if (allClients[j].clientID == id_to_delete){\n        allClients.splice(j, 1);\n        --j;\n    }\n}\n\n//deleta do vetor resumo_sinalizadores\nfor(var k=0; k<resumo_sinalizadores.length; k++){\n    if(resumo_sinalizadores[k].clientID == id_to_delete){\n        resumo_sinalizadores.splice(k, 1)\n        --k;\n    }\n}\n\n//att vetores flow\nflow.set(\"sinalizadores\", sinalizadores, \"bank1\")\nflow.set(\"allClients\", allClients, \"bank1\")\nflow.set(\"resumo_sinalizadores\", resumo_sinalizadores, \"bank1\")\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
         "x": 2110,
-        "y": 2520,
+        "y": 2480,
         "wires": [
             [
                 "34540a23.ec7106"
@@ -3482,7 +3615,7 @@
         "id": "bc2a2fd6.cc499",
         "type": "function",
         "z": "986afd82ee909974",
-        "g": "a0d85c94.8d631",
+        "g": "352edda8f59a3cab",
         "name": "Clear input ",
         "func": "msg = {}\nmsg.payload = \" \"\nreturn msg;",
         "outputs": 1,
@@ -3502,7 +3635,7 @@
         "id": "29c7f485.1eab0c",
         "type": "link in",
         "z": "986afd82ee909974",
-        "g": "a0d85c94.8d631",
+        "g": "352edda8f59a3cab",
         "name": "",
         "links": [
             "f57884c1.34b248",
@@ -3521,7 +3654,7 @@
         "id": "f57884c1.34b248",
         "type": "link out",
         "z": "986afd82ee909974",
-        "g": "a0d85c94.8d631",
+        "g": "352edda8f59a3cab",
         "name": "",
         "mode": "link",
         "links": [
@@ -3537,7 +3670,7 @@
         "id": "848fe849.c216e8",
         "type": "function",
         "z": "986afd82ee909974",
-        "g": "a0d85c94.8d631",
+        "g": "352edda8f59a3cab",
         "name": "Confere novo nome",
         "func": "var new_name = flow.get(\"new_name\")\nnew_name = msg.payload\n//var id_para_mudar = flow.get(\"id_para_mudar\", \"bank1\")\nvar position\n\nvar allClients = flow.get(\"allClients\", \"bank1\")\n\nnode.warn(new_name)\n\nvar name_can_change = flow.get(\"name_can_change\")\nname_can_change = true\n\nfor(var i=0; i<allClients.length; i++){\n    if(allClients[i].name == new_name){\n        node.warn(\"Esse nome ja esta sendo utilizado por outro equipamento!\")\n        name_can_change = false\n    }\n}\n\nflow.set(\"new_name\", new_name)\nflow.set(\"name_can_change\", name_can_change)\nmsg = {};\nmsg.payload = name_can_change\n\n\nreturn msg;",
         "outputs": 1,
@@ -3555,7 +3688,7 @@
         "id": "c2592d82.0954",
         "type": "function",
         "z": "986afd82ee909974",
-        "g": "a0d85c94.8d631",
+        "g": "352edda8f59a3cab",
         "name": "",
         "func": "var name_can_change = flow.get(\"name_can_change\")\n\nmsg = {}\nmsg.payload = name_can_change\nreturn msg;",
         "outputs": 1,
@@ -3575,7 +3708,7 @@
         "id": "31bd603a.0a4c2",
         "type": "switch",
         "z": "986afd82ee909974",
-        "g": "a0d85c94.8d631",
+        "g": "352edda8f59a3cab",
         "name": "",
         "property": "payload",
         "propertyType": "msg",
@@ -3605,9 +3738,9 @@
         "id": "2d7adbbe.106514",
         "type": "function",
         "z": "986afd82ee909974",
-        "g": "a0d85c94.8d631",
+        "g": "352edda8f59a3cab",
         "name": "Att novo nome",
-        "func": "var allClients = flow.get(\"allClients\", \"bank1\")\nvar sinalizadores = flow.get(\"sinalizadores\", \"bank1\")\n//var resumo_sinalizadores = flow.get(\"resumo_sinalizadores\", \"bank1\")\nvar id_para_mudar = flow.get(\"id_para_mudar\", \"bank1\")\nvar new_name = flow.get(\"new_name\")\n\n\nfor(var j=0; j<allClients.length; j++){\n    if(allClients[j].name == id_para_mudar){\n        allClients[j].name = new_name\n    }\n}\n\nfor(var i=0; i<sinalizadores.length; i++){\n    if(sinalizadores[i].name == id_para_mudar){\n        sinalizadores[i].name = new_name\n    }\n}\n\n/*\nfor(var l=0; l<resumo_sinalizadores.length; l++){\n    if(resumo_sinalizadores[l].nome == id_para_mudar){\n        resumo_sinalizadores[l].nome = new_name\n    }\n}\n*/\n\nflow.set(\"allClients\", allClients, \"bank1\")\nflow.set(\"sinalizadores\", sinalizadores, \"bank1\")\n//flow.set(\"resumo_sinalizadores\", resumo_sinalizadores, \"bank1\")\nreturn msg;",
+        "func": "var allClients = flow.get(\"allClients\", \"bank1\")\nvar sinalizadores = flow.get(\"sinalizadores\", \"bank1\")\n//var resumo_sinalizadores = flow.get(\"resumo_sinalizadores\", \"bank1\")\nvar id_to_change_name = flow.get(\"id_to_change_name\", \"bank1\")\nvar new_name = flow.get(\"new_name\")\n\n\nfor(var j=0; j<allClients.length; j++){\n    if (allClients[j].clientID == id_to_change_name){\n        allClients[j].name = new_name\n    }\n}\n\nfor(var i=0; i<sinalizadores.length; i++){\n    if (sinalizadores[i].clientID == id_to_change_name){\n        sinalizadores[i].name = new_name\n    }\n}\n\n/*\nfor(var l=0; l<resumo_sinalizadores.length; l++){\n    if(resumo_sinalizadores[l].nome == id_para_mudar){\n        resumo_sinalizadores[l].nome = new_name\n    }\n}\n*/\n\nflow.set(\"allClients\", allClients, \"bank1\")\nflow.set(\"sinalizadores\", sinalizadores, \"bank1\")\n//flow.set(\"resumo_sinalizadores\", resumo_sinalizadores, \"bank1\")\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -3626,7 +3759,7 @@
         "id": "5ce3fe80.ebb2d",
         "type": "function",
         "z": "986afd82ee909974",
-        "g": "a0d85c94.8d631",
+        "g": "352edda8f59a3cab",
         "name": "Nome ja usado",
         "func": "msg = {}\nmsg.topic = \"AVISO\"\nmsg.payload = \"Este nome já está sendo utilizado. Digite outro nome.\"\nreturn msg;",
         "outputs": 1,
@@ -3646,7 +3779,7 @@
         "id": "ca1e2b57.702fc8",
         "type": "link out",
         "z": "986afd82ee909974",
-        "g": "a0d85c94.8d631",
+        "g": "352edda8f59a3cab",
         "name": "",
         "links": [
             "29c7f485.1eab0c",
@@ -3662,7 +3795,7 @@
         "id": "a805550e.521c18",
         "type": "change",
         "z": "986afd82ee909974",
-        "g": "a0d85c94.8d631",
+        "g": "352edda8f59a3cab",
         "name": "Set message",
         "rules": [
             {
@@ -3686,7 +3819,7 @@
         "to": "",
         "reg": false,
         "x": 1610,
-        "y": 2520,
+        "y": 2480,
         "wires": [
             [
                 "6f36f15d.4a451"
@@ -3697,7 +3830,7 @@
         "id": "712da170.ac1f2",
         "type": "switch",
         "z": "986afd82ee909974",
-        "g": "a0d85c94.8d631",
+        "g": "352edda8f59a3cab",
         "name": "",
         "property": "payload",
         "propertyType": "msg",
@@ -3712,7 +3845,7 @@
         "repair": false,
         "outputs": 1,
         "x": 1930,
-        "y": 2520,
+        "y": 2480,
         "wires": [
             [
                 "6117f459.9ed8dc"
@@ -3723,7 +3856,7 @@
         "id": "34540a23.ec7106",
         "type": "link out",
         "z": "986afd82ee909974",
-        "g": "a0d85c94.8d631",
+        "g": "352edda8f59a3cab",
         "name": "",
         "links": [
             "29c7f485.1eab0c",
@@ -3732,7 +3865,7 @@
             "784567b1707f266a"
         ],
         "x": 2235,
-        "y": 2520,
+        "y": 2480,
         "wires": []
     },
     {
@@ -3949,7 +4082,7 @@
         "z": "986afd82ee909974",
         "g": "7321907a.ee288",
         "name": "Att conectividade",
-        "func": "var allClients = flow.get(\"allClients\", \"bank1\")\nvar sinalizadores = flow.get(\"sinalizadores\", \"bank1\")\n\nvar mensagem = msg.payload  //Ex: AA100-IHM-00:11:22:33:44:55\nvar separator = mensagem.split(\"-\")  //separa a mensagem\n\nvar id = separator[0]\nvar type = separator[1]\n\nmsg = {};\n\nfor(var i=0; i<allClients.length; i++){\n    if(allClients[i].clientID == id && allClients[i].type == type){\n        allClients[i].connectivity = false\n        msg.payload = allClients[i].clientID+\"-gray\"\n        ++allClients[i].connection_lost;\n    }\n}\nfor (var j=0; j< sinalizadores.length; j++){\n    if(sinalizadores[j].clientID == id){\n        if(type == \"IHM\"){\n            sinalizadores[j].ihm_connectivity = false\n        }\n        else{\n            sinalizadores[j].tower_connectivity = false\n        }\n    }\n}\n\nflow.set(\"allClients\", allClients, \"bank1\")\nflow.set(\"sinalizadores\", sinalizadores, \"bank1\")\n\nreturn msg;",
+        "func": "var allClients = flow.get(\"allClients\", \"bank1\")\nvar sinalizadores = flow.get(\"sinalizadores\", \"bank1\")\n\nvar mensagem = msg.payload  //Ex: AA100-IHM-00:11:22:33:44:55\nvar separator = mensagem.split(\"-\")  //separa a mensagem\n\nvar id = separator[0]\nvar type = separator[1]\n\nmsg = {};\n\nfor(var i=0; i<allClients.length; i++){\n    if(allClients[i].clientID == id && allClients[i].type == type){\n\n        if(allClients[i].connectivity != false){    //confere se ja nao estava em falso\n            allClients[i].connectivity = false\n            msg.payload = allClients[i].clientID + \"-gray\"\n            ++allClients[i].connection_lost;\n        }\n    }\n}\nfor (var j=0; j< sinalizadores.length; j++){\n    if(sinalizadores[j].clientID == id){\n        if(type == \"IHM\" && sinalizadores[j].ihm_connectivity != false){\n            sinalizadores[j].ihm_connectivity = false\n        }\n        else if (type == \"Torre\" && sinalizadores[j].tower_connectivity != false){\n            sinalizadores[j].tower_connectivity = false\n        }\n    }\n}\n\nflow.set(\"allClients\", allClients, \"bank1\")\nflow.set(\"sinalizadores\", sinalizadores, \"bank1\")\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -4308,7 +4441,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1440,
+        "x": 1460,
         "y": 3340,
         "wires": [
             [
@@ -4325,7 +4458,7 @@
         "links": [
             "e239bb66.dce908"
         ],
-        "x": 1195,
+        "x": 1215,
         "y": 3280,
         "wires": [
             [
@@ -4337,6 +4470,7 @@
         "id": "d447f70d1bd2549e",
         "type": "change",
         "z": "986afd82ee909974",
+        "g": "3717a59d168d826b",
         "name": "clear out the table",
         "rules": [
             {
@@ -4364,6 +4498,7 @@
         "id": "cc6626c1f5abdb4d",
         "type": "delay",
         "z": "986afd82ee909974",
+        "g": "3717a59d168d826b",
         "name": "",
         "pauseType": "delay",
         "timeout": "1",
@@ -4388,11 +4523,12 @@
         "id": "d59d38012e7b4aaa",
         "type": "function",
         "z": "986afd82ee909974",
+        "g": "822c3780a45a9041",
         "name": "Att variavel",
-        "func": "var parada_table = flow.get(\"parada_table\", \"bank1\")\nvar sinalizadores = flow.get(\"sinalizadores\", \"bank1\")\n\nfor(var i=0; i<sinalizadores.length; i++){\n    if(sinalizadores[i].name == msg.payload){\n        parada_table = sinalizadores[i].clientID\n    }\n}\n\nflow.set(\"parada_table\",parada_table, \"bank1\")\nreturn msg;\n\n",
+        "func": "var id_to_show = flow.get(\"id_to_show\", \"bank1\")|| \" \"\nvar sinalizadores = flow.get(\"sinalizadores\", \"bank1\")\n\nvar name_to_show = msg.payload\n\nfor(var i=0; i<sinalizadores.length; i++){\n    if (sinalizadores[i].name == name_to_show){\n        id_to_show = sinalizadores[i].clientID\n    }\n}\n\nflow.set(\"id_to_show\", id_to_show, \"bank1\")\nreturn msg;\n\n",
         "outputs": 1,
         "noerr": 0,
-        "initialize": "// Code added here will be run once\n// whenever the node is started.\nvar parada_table = \" \"\nflow.set(\"parada_table\",parada_table, \"bank1\")",
+        "initialize": "// Code added here will be run once\n// whenever the node is started.\n//var parada_table = \" \"\n//flow.set(\"parada_table\",parada_table, \"bank1\")",
         "finalize": "",
         "libs": [],
         "x": 1810,
@@ -4406,6 +4542,7 @@
         "id": "677ac102c233ddee",
         "type": "comment",
         "z": "986afd82ee909974",
+        "g": "3717a59d168d826b",
         "name": "LOG Paradas",
         "info": "LOG com intuito de apresentar apenas os eventos de paradas, seja ela programada, ou não programada.",
         "x": 1270,
@@ -4416,6 +4553,7 @@
         "id": "316e6b2b045f09a8",
         "type": "switch",
         "z": "986afd82ee909974",
+        "g": "3717a59d168d826b",
         "name": "Somente paradas",
         "property": "payload.current_status",
         "propertyType": "msg",
@@ -4450,6 +4588,7 @@
         "id": "fa3d3c37ea37fd91",
         "type": "function",
         "z": "986afd82ee909974",
+        "g": "3717a59d168d826b",
         "name": "",
         "func": "var pos_atual = flow.get(\"pos_atual\", \"bank1\")\nvar sinalizadores = msg.payload\n\nmsg = {};\nmsg.payload = sinalizadores[pos_atual]\nreturn msg;",
         "outputs": 1,
@@ -4469,6 +4608,7 @@
         "id": "8d95535f975e9375",
         "type": "function",
         "z": "986afd82ee909974",
+        "g": "3717a59d168d826b",
         "name": "Config Log Paradas",
         "func": "// initialise the counter to 0 if it doesn't exist already\nvar stopLog = flow.get('stopLog', \"bank1\")|| [];\n\nstopLog.push(msg.payload);\nif (stopLog.length > 1000){\n    // Delete oldest message if > 20\n    stopLog.shift();\n    stopLog.length = 1000;\n} \n\n// store the value back\nflow.set('stopLog',stopLog, \"bank1\");\n\n// make it part of the outgoing msg object\nmsg = {};\nmsg.payload = stopLog;\nreturn msg;\n",
         "outputs": 1,
@@ -4489,8 +4629,9 @@
         "id": "5073046078bc8633",
         "type": "function",
         "z": "986afd82ee909974",
+        "g": "822c3780a45a9041",
         "name": "Select Clients",
-        "func": "var sinalizadores = flow.get(\"sinalizadores\", \"bank1\")\nvar i\nvar client_array = []\n\nfor(i=0; i<sinalizadores.length; i++){\n    client_array[i] = sinalizadores[i].name\n}\n\nmsg = {};\nmsg.options = client_array\nreturn msg;\n",
+        "func": "var sinalizadores = flow.get(\"sinalizadores\", \"bank1\")\nvar i\nvar client_array = []\n\nfor(i=0; i<sinalizadores.length; i++){\n    client_array[i] = sinalizadores[i].name\n}\n\nclient_array = client_array.sort()\n\nmsg = {};\nmsg.options = client_array\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -4509,6 +4650,7 @@
         "id": "88dc9aec1d9026cd",
         "type": "link in",
         "z": "986afd82ee909974",
+        "g": "822c3780a45a9041",
         "name": "IN_Select_Sinalizador",
         "links": [
             "462a057fd489911e",
@@ -4529,6 +4671,7 @@
         "id": "aa95499224ace9b0",
         "type": "change",
         "z": "986afd82ee909974",
+        "g": "822c3780a45a9041",
         "name": "clear out the table",
         "rules": [
             {
@@ -4556,6 +4699,7 @@
         "id": "47493818d817e28b",
         "type": "delay",
         "z": "986afd82ee909974",
+        "g": "822c3780a45a9041",
         "name": "",
         "pauseType": "delay",
         "timeout": "1",
@@ -4580,6 +4724,7 @@
         "id": "7c7a19a64f40d0af",
         "type": "comment",
         "z": "986afd82ee909974",
+        "g": "822c3780a45a9041",
         "name": "Tabela Resumo Individual",
         "info": "Tabela criada para mostrar o reusmo de todas as atividades de cada sinalizador.\n\nDados da tabela:\n- Status da ação\n- Hora da ação/mudança de status\n- \n\nEssa tabela mostra os dados de apenas um sinalizador, que é selecionado no Dropdown Menu",
         "x": 2150,
@@ -4590,6 +4735,7 @@
         "id": "784567b1707f266a",
         "type": "link in",
         "z": "986afd82ee909974",
+        "g": "3717a59d168d826b",
         "name": "IN_Tabela_Geral",
         "links": [
             "462a057fd489911e",
@@ -4611,6 +4757,7 @@
         "id": "d0232751d7d8859b",
         "type": "link in",
         "z": "986afd82ee909974",
+        "g": "3717a59d168d826b",
         "name": "",
         "links": [
             "462a057fd489911e",
@@ -4628,6 +4775,7 @@
         "id": "63724ab6a4ba01f2",
         "type": "function",
         "z": "986afd82ee909974",
+        "g": "822c3780a45a9041",
         "name": "Conf gráfico",
         "func": "var color_values = flow.get(\"color_values\", \"bank1\")\n\nvar t_green = msg.payload.time_green\nvar t_red = msg.payload.time_red\nvar t_yellow = msg.payload.time_yellow\nvar t_blue = msg.payload.time_blue\nvar t_gray = msg.payload.time_gray\n\nvar t_total = t_green + t_red + t_yellow + t_blue + t_gray\n\nvar per_green = (t_green/t_total)*100\nvar per_red = (t_red/t_total)*100\nvar per_yellow = (t_yellow/t_total)*100\nvar per_blue = (t_blue/t_total)*100\nvar per_gray = (t_gray/t_total)*100\n\nper_green = per_green.toFixed(2)\nper_red = per_red.toFixed(2)\nper_yellow = per_yellow.toFixed(2)\nper_blue = per_blue.toFixed(2)\nper_gray = per_gray.toFixed(2)\n\nmsg.topic = msg.payload.name+\"(%)\"\n// make it part of the outgoing msg object\nmsg.payload=[{\n    \"series\": [\"Tempo\"],\n    \"data\": [ [per_green,per_red,per_yellow,per_blue,per_gray] ],\n    //\"labels\": [\"\", \"\", \"\", \"\", \"\"]\n    \"labels\": [color_values.green, color_values.red, color_values.yellow, color_values.blue, color_values.gray]\n}];\n\n\n\nreturn msg;",
         "outputs": 1,
@@ -4648,6 +4796,7 @@
         "id": "0c30b63f883016f4",
         "type": "comment",
         "z": "986afd82ee909974",
+        "g": "822c3780a45a9041",
         "name": "Chart",
         "info": "Configurações para os gráficos pizzas ou de barra.\n\nDados: Porcentagem dos tempos de cada status.",
         "x": 2130,
@@ -4658,6 +4807,7 @@
         "id": "7f1e2efd5d613af9",
         "type": "comment",
         "z": "986afd82ee909974",
+        "g": "3717a59d168d826b",
         "name": "Tabela Geral",
         "info": "",
         "x": 1270,
@@ -4668,6 +4818,7 @@
         "id": "85ec293f8710ac09",
         "type": "function",
         "z": "986afd82ee909974",
+        "g": "3717a59d168d826b",
         "name": "Conf msg Telegram",
         "func": "var resumo_sinalizadores = flow.get(\"resumo_sinalizadores\", \"bank1\")\n\nvar size = resumo_sinalizadores.length\n\nvar sinalizador = resumo_sinalizadores[size-1].name\nvar status = resumo_sinalizadores[size-1].current_status\nvar horario = resumo_sinalizadores[size-1].time_change_str\n\nvar chatID = flow.get(\"chatID\", \"bank1\")\n\nvar message = \"Sinalizador: \"+sinalizador+\"\\r\\nStatus: \"+status+\"\\r\\nHorário: \"+horario\n\n//msg.payload = {chatId : -556367846, type : 'message', content : message};\nmsg.payload = {chatId : chatID, type : 'message', content : message};\n\nreturn msg;",
         "outputs": 1,
@@ -4687,6 +4838,7 @@
         "id": "d688812a.1acd5",
         "type": "function",
         "z": "986afd82ee909974",
+        "g": "3717a59d168d826b",
         "name": "",
         "func": "var sinalizadores = flow.get(\"sinalizadores\", \"bank1\")\n\nmsg = {};\nmsg.payload = sinalizadores\nreturn msg;",
         "outputs": 1,
@@ -4707,6 +4859,7 @@
         "id": "5ffe12ff40787a4c",
         "type": "comment",
         "z": "986afd82ee909974",
+        "g": "822c3780a45a9041",
         "name": "Dropdown Menu",
         "info": "Utilizado para selecionar o sinalizador que deseja verificar a tabela de paradas e o grafico de pizza.\n\n1) Select Sinalizador\n    Nesse nó estão cadastrados as opções possiveis.\n    Para cada sinalizador novo, deve-se cadastrar uma nova opção neste nó\n    \n2) Função Att variável\n    Com a seleção no dropdown menu, esta função vai atualizar uma variavel flow.\n    Esta variavel é responsavel por indicar qual sinalizador foi selecionado.\n    \n3)ENTER\n    Botão criado para fazer um inject após o usuário selecionar o sinalizador no dropdown menu.\n    Este inject entra na função Sel Tabela Parada, que a partir da variavel flow setada no nó \"Att varivavel\", pega o veto de objetos do sinalizador escolhido.\n    Este vetor de objetos é gerado nas estruturas \"Tabela Paradas\".\n    Retorna então este vetor de objetos para o nó da tabela de paradas\n    \n4) Refresh\n    Botão que atualiza a tabela e o grafico ques estão sendo mostrados na dashboard",
         "x": 1300,
@@ -4717,6 +4870,7 @@
         "id": "3449de0a.70f5c2",
         "type": "link out",
         "z": "986afd82ee909974",
+        "g": "3717a59d168d826b",
         "name": "",
         "links": [
             "366812e1.4d83fe"
@@ -4729,7 +4883,7 @@
         "id": "e239bb66.dce908",
         "type": "link out",
         "z": "986afd82ee909974",
-        "g": "a0d85c94.8d631",
+        "g": "352edda8f59a3cab",
         "name": "",
         "links": [
             "b399e85c.ad7698"
@@ -4749,7 +4903,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1480,
+        "x": 1500,
         "y": 3280,
         "wires": [
             []
@@ -4771,7 +4925,7 @@
         "strings": true,
         "include_empty_strings": "",
         "include_null_values": "",
-        "x": 1830,
+        "x": 1850,
         "y": 3340,
         "wires": [
             [
@@ -4790,7 +4944,7 @@
         "createDir": false,
         "overwriteFile": "false",
         "encoding": "none",
-        "x": 1970,
+        "x": 1990,
         "y": 3340,
         "wires": [
             []
@@ -4808,8 +4962,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1990,
-        "y": 3300,
+        "x": 1970,
+        "y": 3260,
         "wires": []
     },
     {
@@ -4825,7 +4979,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1650,
+        "x": 1670,
         "y": 3300,
         "wires": []
     },
@@ -4848,7 +5002,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1680,
+        "x": 1700,
         "y": 3340,
         "wires": [
             [
@@ -4910,7 +5064,8 @@
         "z": "986afd82ee909974",
         "name": "",
         "links": [
-            "9d54fb4c.b5b728"
+            "9d54fb4c.b5b728",
+            "1962862a2130f2cb"
         ],
         "x": 1395,
         "y": 600,
@@ -5079,28 +5234,13 @@
         ]
     },
     {
-        "id": "ed7d72a3.739f9",
-        "type": "function",
-        "z": "986afd82ee909974",
-        "name": "",
-        "func": "var color_values = flow.get(\"color_values\", \"bank1\")\n\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1480,
-        "y": 2700,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "d3cbcda1.c274b",
         "type": "link in",
         "z": "986afd82ee909974",
+        "g": "822c3780a45a9041",
         "name": "",
         "links": [
+            "1489764.8783b8a",
             "9e8a4c4a.e692c"
         ],
         "x": 1285,
@@ -5112,36 +5252,10 @@
         ]
     },
     {
-        "id": "81b916c6fdd4313a",
-        "type": "inject",
-        "z": "986afd82ee909974",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "00 00 * * *",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 1730,
-        "y": 3680,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "28a9130e.8ff01c",
         "type": "function",
         "z": "986afd82ee909974",
+        "g": "3717a59d168d826b",
         "name": "conf msg led",
         "func": "var status = msg.payload.current_status\n\nmsg={}\nmsg.payload = status\nreturn msg;",
         "outputs": 1,
@@ -5161,6 +5275,7 @@
         "id": "2c31b7be.e7a598",
         "type": "switch",
         "z": "986afd82ee909974",
+        "g": "3717a59d168d826b",
         "name": "",
         "property": "payload",
         "propertyType": "msg",
@@ -5184,8 +5299,9 @@
         "id": "82fe9082.4b3b8",
         "type": "function",
         "z": "986afd82ee909974",
+        "g": "3717a59d168d826b",
         "name": "",
-        "func": "var resumo_sinalizadores = flow.get(\"resumo_sinalizadores\", \"bank1\")\nvar color_values = flow.get(\"color_values\", \"bank1\")\n\nvar name = msg.payload.name\nvar flag = true\n\nfor(var i=resumo_sinalizadores.length - 2; i>=0; i--){\n    if(name == resumo_sinalizadores[i].name){\n        if(resumo_sinalizadores[i].current_status == color_values.gray){\n            flag = false\n            \n        }\n        break;\n    }\n}\n\nmsg = {}\nmsg.payload = flag\nreturn msg;",
+        "func": "var resumo_sinalizadores = flow.get(\"resumo_sinalizadores\", \"bank1\")\nvar color_values = flow.get(\"color_values\", \"bank1\")\n\nvar clientiD = msg.payload.clientID\nvar flag = true\n\nfor(var i=resumo_sinalizadores.length - 2; i>=0; i--){\n    if (clientiD == resumo_sinalizadores[i].clientiD){\n        if(resumo_sinalizadores[i].current_status == color_values.gray){\n            flag = false\n            \n        }\n        break;\n    }\n}\n\nmsg = {}\nmsg.payload = flag\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -5230,7 +5346,7 @@
         "id": "5a33bc3b2a4775b3",
         "type": "ui_button",
         "z": "986afd82ee909974",
-        "g": "a0d85c94.8d631",
+        "g": "352edda8f59a3cab",
         "name": "",
         "group": "8669d6dc222f6a40",
         "order": 2,
@@ -5286,7 +5402,7 @@
         "id": "acb56509.d35378",
         "type": "ui_button",
         "z": "986afd82ee909974",
-        "g": "a0d85c94.8d631",
+        "g": "352edda8f59a3cab",
         "name": "",
         "group": "1e7a6209.a38a7e",
         "order": 2,
@@ -5303,7 +5419,7 @@
         "topic": "topic",
         "topicType": "msg",
         "x": 1450,
-        "y": 2520,
+        "y": 2480,
         "wires": [
             [
                 "a805550e.521c18"
@@ -5314,7 +5430,7 @@
         "id": "99fe6a68.94aa68",
         "type": "ui_button",
         "z": "986afd82ee909974",
-        "g": "a0d85c94.8d631",
+        "g": "352edda8f59a3cab",
         "name": "",
         "group": "8669d6dc222f6a40",
         "order": 5,
@@ -5371,7 +5487,7 @@
         "id": "0ee165efa3e9a6e7",
         "type": "ui_dropdown",
         "z": "986afd82ee909974",
-        "g": "a0d85c94.8d631",
+        "g": "352edda8f59a3cab",
         "name": "",
         "label": "",
         "tooltip": "",
@@ -5405,7 +5521,7 @@
         "id": "af4bf9c8.041158",
         "type": "ui_dropdown",
         "z": "986afd82ee909974",
-        "g": "a0d85c94.8d631",
+        "g": "352edda8f59a3cab",
         "name": "",
         "label": "",
         "tooltip": "",
@@ -5460,7 +5576,7 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 1300,
+        "x": 1320,
         "y": 3280,
         "wires": [
             [
@@ -5472,6 +5588,7 @@
         "id": "a8f298c5.155fd8",
         "type": "ui_dropdown",
         "z": "986afd82ee909974",
+        "g": "822c3780a45a9041",
         "name": "Select Sinalizador V2",
         "label": "",
         "tooltip": "",
@@ -5499,7 +5616,7 @@
         "id": "effd9e0f8c88bc45",
         "type": "ui_text_input",
         "z": "986afd82ee909974",
-        "g": "a0d85c94.8d631",
+        "g": "352edda8f59a3cab",
         "name": "",
         "label": "Novo nome",
         "tooltip": "",
@@ -5526,7 +5643,7 @@
         "id": "c1582c55cbee06fc",
         "type": "ui_text",
         "z": "986afd82ee909974",
-        "g": "a0d85c94.8d631",
+        "g": "352edda8f59a3cab",
         "group": "8669d6dc222f6a40",
         "order": 3,
         "width": 9,
@@ -5544,6 +5661,7 @@
         "id": "98723328.bd031",
         "type": "ui_chart",
         "z": "986afd82ee909974",
+        "g": "822c3780a45a9041",
         "name": "pie chart V2",
         "group": "2c09e8f6e779fc72",
         "order": 1,
@@ -5620,7 +5738,7 @@
         "topic": "topic",
         "topicType": "msg",
         "splitLayout": "",
-        "x": 1230,
+        "x": 1250,
         "y": 3340,
         "wires": [
             [
@@ -5654,7 +5772,7 @@
         "id": "24302e8f.c58b02",
         "type": "ui_toast",
         "z": "986afd82ee909974",
-        "g": "a0d85c94.8d631",
+        "g": "352edda8f59a3cab",
         "position": "top right",
         "displayTime": "5",
         "highlight": "",
@@ -5674,7 +5792,7 @@
         "id": "6f36f15d.4a451",
         "type": "ui_toast",
         "z": "986afd82ee909974",
-        "g": "a0d85c94.8d631",
+        "g": "352edda8f59a3cab",
         "position": "dialog",
         "displayTime": "3",
         "highlight": "",
@@ -5683,10 +5801,11 @@
         "ok": "Yes",
         "cancel": "No",
         "raw": false,
+        "className": "",
         "topic": "",
         "name": "Confirmation",
         "x": 1790,
-        "y": 2520,
+        "y": 2480,
         "wires": [
             [
                 "712da170.ac1f2"
@@ -5697,6 +5816,7 @@
         "id": "eba00348117a10a1",
         "type": "ui_template",
         "z": "986afd82ee909974",
+        "g": "3717a59d168d826b",
         "group": "2514b6c1.23661a",
         "name": "Log Paradas",
         "order": 1,
@@ -5719,6 +5839,7 @@
         "id": "12f73deb.db3af2",
         "type": "ui_template",
         "z": "986afd82ee909974",
+        "g": "3717a59d168d826b",
         "group": "2514b6c1.23661a",
         "name": "Aviso de Parada",
         "order": 2,
@@ -5794,6 +5915,7 @@
         "id": "d0c836bf9a9a535c",
         "type": "ui_table",
         "z": "986afd82ee909974",
+        "g": "3717a59d168d826b",
         "group": "ba2b6bb3631a7eac",
         "name": "Tabela Tempo e Status",
         "order": 1,
@@ -5958,12 +6080,23 @@
         "id": "cd8db1af.5eefb",
         "type": "ui_table",
         "z": "986afd82ee909974",
+        "g": "822c3780a45a9041",
         "group": "0896cba727c33420",
         "name": "Tabela Resumo V2",
         "order": 1,
         "width": "11",
         "height": 4,
         "columns": [
+            {
+                "field": "name",
+                "title": "Nome",
+                "width": "",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
             {
                 "field": "current_status",
                 "title": "Status",
@@ -6288,6 +6421,7 @@
         "id": "79dfd895.9821d8",
         "type": "ui_led",
         "z": "986afd82ee909974",
+        "g": "3717a59d168d826b",
         "order": 3,
         "group": "2514b6c1.23661a",
         "width": "4",
@@ -6350,7 +6484,7 @@
         "stat": true,
         "showWarnings": false,
         "x": 480,
-        "y": 1100,
+        "y": 1140,
         "wires": [
             [
                 "9f2ab65af5ae388e"
@@ -6686,6 +6820,7 @@
         "id": "e151f051682dee15",
         "type": "ui_template",
         "z": "986afd82ee909974",
+        "g": "822c3780a45a9041",
         "group": "4f6f68f22969f7d5",
         "name": "Descrição Sinalizador",
         "order": 1,
@@ -6707,6 +6842,7 @@
         "id": "5c6b2155ea6bbb67",
         "type": "comment",
         "z": "986afd82ee909974",
+        "g": "822c3780a45a9041",
         "name": "Descrição",
         "info": "",
         "x": 2140,
@@ -6717,8 +6853,9 @@
         "id": "a42e5b0ca9cb0498",
         "type": "function",
         "z": "986afd82ee909974",
+        "g": "822c3780a45a9041",
         "name": "Conf Descrição",
-        "func": "var allClients = flow.get(\"allClients\", \"bank1\")\nvar parada_table = flow.get(\"parada_table\", \"bank1\")\nvar sinalizadores = flow.get(\"sinalizadores\", \"bank1\")\nvar position = 0\n\nfor (var i = 0; i < sinalizadores.length; i++) {\n    if (parada_table == sinalizadores[i].clientID) {\n        position = i\n    }\n}\n\nvar newPayload = {}\nnewPayload.name = sinalizadores[position].name\nnewPayload.clientID = sinalizadores[position].clientID\nnewPayload.current_status = sinalizadores[position].current_status\nnewPayload.tower_mac = sinalizadores[position].tower_mac\nnewPayload.ihm_mac = sinalizadores[position].ihm_mac\n\nif (sinalizadores[position].tower_connectivity == true){\n    newPayload.tower_connectivity = \" ✔️\"\n}\nelse{\n    newPayload.tower_connectivity = \" ❌\"\n}\n\nif (sinalizadores[position].ihm_connectivity == true) {\n    newPayload.ihm_connectivity = \" ✔️\"\n}\nelse {\n    newPayload.ihm_connectivity = \" ❌\"\n}\n\nfor(var i=0; i<allClients.length; i++){\n    if(allClients[i].name == newPayload.name){\n        if(allClients[i].type == \"Torre\"){\n            newPayload.tower_registration_date = allClients[i].registration_date\n        }\n        else if (allClients[i].type == \"IHM\") {\n            newPayload.ihm_registration_date = allClients[i].registration_date\n        }\n    }\n}\n\n\nmsg = {}\nmsg.payload = newPayload\nreturn msg;",
+        "func": "var allClients = flow.get(\"allClients\", \"bank1\")\nvar id_to_show = flow.get(\"id_to_show\", \"bank1\")\nvar sinalizadores = flow.get(\"sinalizadores\", \"bank1\")\nvar position = 0\n\nfor (var i = 0; i < sinalizadores.length; i++) {\n    if (id_to_show == sinalizadores[i].clientID) {\n        position = i\n    }\n}\n\nvar newPayload = {}\nnewPayload.name = sinalizadores[position].name\nnewPayload.clientID = sinalizadores[position].clientID\nnewPayload.current_status = sinalizadores[position].current_status\nnewPayload.tower_mac = sinalizadores[position].tower_mac\nnewPayload.ihm_mac = sinalizadores[position].ihm_mac\n\nif (sinalizadores[position].tower_connectivity == true){\n    newPayload.tower_connectivity = \" ✔️\"\n}\nelse{\n    newPayload.tower_connectivity = \" ❌\"\n}\n\nif (sinalizadores[position].ihm_connectivity == true) {\n    newPayload.ihm_connectivity = \" ✔️\"\n}\nelse {\n    newPayload.ihm_connectivity = \" ❌\"\n}\n\nfor(var i=0; i<allClients.length; i++){\n    if(allClients[i].name == newPayload.name){\n        if(allClients[i].type == \"Torre\"){\n            newPayload.tower_registration_date = allClients[i].registration_date\n        }\n        else if (allClients[i].type == \"IHM\") {\n            newPayload.ihm_registration_date = allClients[i].registration_date\n        }\n    }\n}\n\n\nmsg = {}\nmsg.payload = newPayload\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -6736,10 +6873,11 @@
         "id": "815ba61b32d31833",
         "type": "comment",
         "z": "986afd82ee909974",
+        "g": "352edda8f59a3cab",
         "name": "Config Valor Cores",
         "info": "",
-        "x": 1490,
-        "y": 2660,
+        "x": 1510,
+        "y": 2560,
         "wires": []
     },
     {
@@ -6790,7 +6928,7 @@
         "id": "71a310297ef075ad",
         "type": "ui_template",
         "z": "986afd82ee909974",
-        "g": "a0d85c94.8d631",
+        "g": "352edda8f59a3cab",
         "group": "8669d6dc222f6a40",
         "name": "",
         "order": 6,
@@ -6812,6 +6950,7 @@
         "id": "284fa71e8da0b6e9",
         "type": "ui_form",
         "z": "986afd82ee909974",
+        "g": "3717a59d168d826b",
         "name": "",
         "label": "",
         "group": "b7c768d637ef6fce",
@@ -6857,6 +6996,7 @@
         "id": "1041f965165ecbf5",
         "type": "function",
         "z": "986afd82ee909974",
+        "g": "3717a59d168d826b",
         "name": "Config date",
         "func": "var date_begin = msg.payload.date_begin\nvar date_end = msg.payload.date_end\n\nfunction formatDate(date) {\n    var separator_date = date.split(\"T\")\n    var new_date = separator_date[0]\n    var new_separator_date = new_date.split(\"-\")\n    var day_begin = new_separator_date[2]\n    var month_begin = new_separator_date[1]\n    var year_begin = new_separator_date[0]\n    return day_begin + \"/\" + month_begin + \"/\" + year_begin\n}\n\nmsg.payload = {}\n//caso o usuario nao passe nenhuma data\nif (date_begin == null && date_end == null) {\n    msg.payload.begin = date_begin\n    msg.payload.end = date_end\n\n}\n//usuario passou apenas data final\nelse if (date_begin == null && date_end != null) {\n    msg.payload.begin = date_begin\n    msg.payload.end = formatDate(date_end)\n}\n//usuario passou apenas data de inicio\nelse if (date_begin != null && date_end == null) {\n    msg.payload.begin = formatDate(date_begin)\n    msg.payload.end = date_end\n}\nelse {\n    msg.payload.begin = formatDate(date_begin)\n    msg.payload.end = formatDate(date_end)\n}\n\nreturn msg;",
         "outputs": 1,
@@ -6877,6 +7017,7 @@
         "id": "1ea0783d02a0484f",
         "type": "ui_form",
         "z": "986afd82ee909974",
+        "g": "822c3780a45a9041",
         "name": "",
         "label": "",
         "group": "79b4d5c2.bfe4ac",
@@ -6922,8 +7063,9 @@
         "id": "9888af06fbea5354",
         "type": "function",
         "z": "986afd82ee909974",
+        "g": "822c3780a45a9041",
         "name": "Config date",
-        "func": "//coloca o payload em outras variaveis\nvar date_begin = msg.payload.date_begin\nvar date_end = msg.payload.date_end\n\nfunction formatDate(date){\n    var separator_date = date.split(\"T\")\n    var new_date = separator_date[0]\n    var new_separator_date = new_date.split(\"-\")\n    var day_begin = new_separator_date[2]\n    var month_begin = new_separator_date[1]\n    var year_begin = new_separator_date[0]\n    return day_begin + \"/\" + month_begin + \"/\" + year_begin\n}\n\nmsg.payload = {}\n//caso o usuario nao passe nenhuma data\nif (date_begin == null && date_end == null) {\n    msg.payload.begin = date_begin\n    msg.payload.end = date_end\n\n}\n//usuario passou apenas data final\nelse if(date_begin == null && date_end != null){\n    msg.payload.begin = date_begin\n    msg.payload.end = formatDate(date_end)\n}\n//usuario passou apenas data de inicio\nelse if(date_begin != null && date_end == null){\n    msg.payload.begin = formatDate(date_begin)\n    msg.payload.end = date_end\n}\nelse{\n    msg.payload.begin = formatDate(date_begin)\n    msg.payload.end = formatDate(date_end)\n}\n\nreturn msg;",
+        "func": "//coloca o payload em outras variaveis\nvar date_begin_flow = flow.get(\"date_begin_flow\")|| \"\"\nvar date_end_flow = flow.get(\"date_end_flow\") || \"\"\n\nvar date_begin = msg.payload.date_begin\nvar date_end = msg.payload.date_end\n\nfunction formatDate(date){\n    var separator_date = date.split(\"T\")\n    var new_date = separator_date[0]\n    var new_separator_date = new_date.split(\"-\")\n    var day_begin = new_separator_date[2]\n    var month_begin = new_separator_date[1]\n    var year_begin = new_separator_date[0]\n    return day_begin + \"/\" + month_begin + \"/\" + year_begin\n}\n\nmsg.payload = {}\n//caso o usuario nao passe nenhuma data\nif (date_begin == null && date_end == null) {\n    msg.payload.begin = date_begin\n    msg.payload.end = date_end\n\n}\n//usuario passou apenas data final\nelse if(date_begin == null && date_end != null){\n    msg.payload.begin = date_begin\n    msg.payload.end = formatDate(date_end)\n}\n//usuario passou apenas data de inicio\nelse if(date_begin != null && date_end == null){\n    msg.payload.begin = formatDate(date_begin)\n    msg.payload.end = date_end\n}\nelse{\n    msg.payload.begin = formatDate(date_begin)\n    msg.payload.end = formatDate(date_end)\n}\n\ndate_begin_flow = msg.payload.begin\ndate_end_flow = msg.payload.end\n\nflow.set(\"date_begin_flow\", date_begin_flow)\nflow.set(\"date_end_flow\", date_end_flow)\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -6942,8 +7084,9 @@
         "id": "239802e9717738e1",
         "type": "function",
         "z": "986afd82ee909974",
+        "g": "822c3780a45a9041",
         "name": "Sel Tabela Resumo",
-        "func": "var date_begin = msg.payload.begin\nvar date_end = msg.payload.end\nvar sinalizador_name = flow.get(\"parada_table\", \"bank1\")\nvar resumo_sinalizadores = flow.get(\"resumo_sinalizadores\", \"bank1\")\n\n//verifica se a data esta entre duas datas\nfunction checkDate(date_resumo_str, date_begin, date_end) {\n\n    var d1 = date_begin.split(\"/\");\n    var d2 = date_end.split(\"/\");\n    var c = date_resumo_str.split(\"/\");\n\n    var from = new Date(d1[2], parseInt(d1[1]) - 1, d1[0]);  // -1 because months are from 0 to 11\n    var to = new Date(d2[2], parseInt(d2[1]) - 1, d2[0]);\n    var check = new Date(c[2], parseInt(c[1]) - 1, c[0]);\n\n    if (check >= from && check <= to) {\n        return true\n    }\n    else {\n        return false\n    }\n}\n\nvar tabela_individual = []\n\n//nao passou nenhuma das datas - recolhe todos os dados\nif(date_begin == null && date_end == null){\n    for (var i = 0; i < resumo_sinalizadores.length; i++) {\n        if (resumo_sinalizadores[i].clientID == sinalizador_name) {\n            tabela_individual.push(resumo_sinalizadores[i])\n            \n        }\n    }\n}\n//passou apenas data de fim\nelse if(date_begin == null && date_end != null){\n    //encontra o sinalizador selecionado pelo usuario\n    for (var i = 0; i < resumo_sinalizadores.length; i++) {\n        if (resumo_sinalizadores[i].clientID == sinalizador_name) {\n            var flag = checkDate(resumo_sinalizadores[i].current_date, resumo_sinalizadores[0].current_date, date_end)\n\n            if (flag == true) {\n                tabela_individual.push(resumo_sinalizadores[i])\n            }\n        }\n    }\n}\n//passou apenas data de inicio\nelse if(date_begin != null && date_end == null){\n    //encontra o sinalizador selecionado pelo usuario\n    for (var i = 0; i < resumo_sinalizadores.length; i++) {\n        if (resumo_sinalizadores[i].clientID == sinalizador_name) {\n            var flag = checkDate(resumo_sinalizadores[i].current_date, date_begin, resumo_sinalizadores[resumo_sinalizadores.length - 1].current_date)\n\n            if (flag == true) {\n                tabela_individual.push(resumo_sinalizadores[i])\n            }\n        }\n    }\n}\n//passou as duas datas\nelse{\n    //encontra o sinalizador selecionado pelo usuario\n    for (var i = 0; i < resumo_sinalizadores.length; i++) {\n        if (resumo_sinalizadores[i].clientID == sinalizador_name) {\n            var flag = checkDate(resumo_sinalizadores[i].current_date, date_begin, date_end)\n\n            if (flag == true) {\n                tabela_individual.push(resumo_sinalizadores[i])\n            }\n        }\n    }\n}\n\nmsg = {};\nmsg.payload = tabela_individual\nreturn msg;",
+        "func": "var date_begin = flow.get(\"date_begin_flow\")\nvar date_end = flow.get(\"date_end_flow\")\n//var date_begin = msg.payload.begin\n//var date_end = msg.payload.end\nvar id_to_show = flow.get(\"id_to_show\", \"bank1\")\nvar resumo_sinalizadores = flow.get(\"resumo_sinalizadores\", \"bank1\")\n\n//verifica se a data esta entre duas datas\nfunction checkDate(date_resumo_str, date_begin, date_end) {\n\n    var d1 = date_begin.split(\"/\");\n    var d2 = date_end.split(\"/\");\n    var c = date_resumo_str.split(\"/\");\n\n    var from = new Date(d1[2], parseInt(d1[1]) - 1, d1[0]);  // -1 because months are from 0 to 11\n    var to = new Date(d2[2], parseInt(d2[1]) - 1, d2[0]);\n    var check = new Date(c[2], parseInt(c[1]) - 1, c[0]);\n\n    if (check >= from && check <= to) {\n        return true\n    }\n    else {\n        return false\n    }\n}\n\nvar tabela_individual = []\n\n//nao passou nenhuma das datas - recolhe todos os dados\nif(date_begin == null && date_end == null){\n    for (var i = 0; i < resumo_sinalizadores.length; i++) {\n        if (resumo_sinalizadores[i].clientID == id_to_show) {\n            tabela_individual.push(resumo_sinalizadores[i])\n            \n        }\n    }\n}\n//passou apenas data de fim\nelse if(date_begin == null && date_end != null){\n    //encontra o sinalizador selecionado pelo usuario\n    for (var i = 0; i < resumo_sinalizadores.length; i++) {\n        if (resumo_sinalizadores[i].clientID == id_to_show) {\n            var flag = checkDate(resumo_sinalizadores[i].current_date, resumo_sinalizadores[0].current_date, date_end)\n\n            if (flag == true) {\n                tabela_individual.push(resumo_sinalizadores[i])\n            }\n        }\n    }\n}\n//passou apenas data de inicio\nelse if(date_begin != null && date_end == null){\n    //encontra o sinalizador selecionado pelo usuario\n    for (var i = 0; i < resumo_sinalizadores.length; i++) {\n        if (resumo_sinalizadores[i].clientID == id_to_show) {\n            var flag = checkDate(resumo_sinalizadores[i].current_date, date_begin, resumo_sinalizadores[resumo_sinalizadores.length - 1].current_date)\n\n            if (flag == true) {\n                tabela_individual.push(resumo_sinalizadores[i])\n            }\n        }\n    }\n}\n//passou as duas datas\nelse{\n    //encontra o sinalizador selecionado pelo usuario\n    for (var i = 0; i < resumo_sinalizadores.length; i++) {\n        if (resumo_sinalizadores[i].clientID == id_to_show) {\n            var flag = checkDate(resumo_sinalizadores[i].current_date, date_begin, date_end)\n\n            if (flag == true) {\n                tabela_individual.push(resumo_sinalizadores[i])\n            }\n        }\n    }\n}\n\nmsg = {};\nmsg.payload = tabela_individual\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -6962,8 +7105,9 @@
         "id": "b6ca060716a4f878",
         "type": "function",
         "z": "986afd82ee909974",
+        "g": "822c3780a45a9041",
         "name": "Config time for graph",
-        "func": "var date_begin = msg.payload.begin\nvar date_end = msg.payload.end\nvar sinalizador_id = flow.get(\"parada_table\", \"bank1\")\nvar resumo_sinalizadores = flow.get(\"resumo_sinalizadores\", \"bank1\")\nvar sinalizadores = flow.get(\"sinalizadores\", \"bank1\")\nvar color_values = flow.get(\"color_values\", \"bank1\")\n\nvar d = new Date()\n\nvar t_green_total = 0\nvar t_red_total = 0\nvar t_yellow_total = 0\nvar t_blue_total = 0\nvar t_gray_total = 0\n\nfunction checkDate(date_resumo_str, date_begin, date_end) {\n\n    var d1 = date_begin.split(\"/\");\n    var d2 = date_end.split(\"/\");\n    var c = date_resumo_str.split(\"/\");\n\n    var from = new Date(d1[2], parseInt(d1[1]) - 1, d1[0]);  // -1 because months are from 0 to 11\n    var to = new Date(d2[2], parseInt(d2[1]) - 1, d2[0]);\n    var check = new Date(c[2], parseInt(c[1]) - 1, c[0]);\n\n    if (check >= from && check <= to) {\n        return true\n    }\n    else {\n        return false\n    }\n}\n\nfunction calculateTime(current_status, time_ended, time_started){\n    \n    if (time_ended == 0) {\n        time_ended = d.getTime()\n    }\n    if (current_status == color_values.green) {\n        t_green_total = t_green_total + (time_ended - time_started)\n    }\n    else if (current_status == color_values.red) {\n        t_red_total = t_red_total + (time_ended - time_started)\n    }\n    else if (current_status == color_values.yellow) {\n        t_yellow_total = t_yellow_total + (time_ended - time_started)\n    }\n    else if (current_status == color_values.blue) {\n        t_blue_total = t_blue_total + (time_ended - time_started)\n    }\n    else if (current_status == color_values.gray) {\n        t_gray_total = t_gray_total + (time_ended - time_started)\n    }\n}\n\n//nao passou nenhuma das datas - recolhe de todo periodo \nif(date_begin == null && date_end == null){\n    //encontra o sinalizador selecionado pelo usuario e soma os tempos\n    for (var i = 0; i < resumo_sinalizadores.length; i++) {\n        if (resumo_sinalizadores[i].clientID == sinalizador_id) {\n            calculateTime(resumo_sinalizadores[i].current_status, resumo_sinalizadores[i].time_ended, resumo_sinalizadores[i].time_started)\n        }\n    }\n}\n//passou apenas data de fim\nelse if (date_begin == null && date_end != null) {\n    //encontra o sinalizador selecionado pelo usuario\n    for (var i = 0; i < resumo_sinalizadores.length; i++) {\n        if (resumo_sinalizadores[i].clientID == sinalizador_id) {\n            var flag = checkDate(resumo_sinalizadores[i].current_date, resumo_sinalizadores[0].current_date, date_end)\n\n            if (flag == true) {\n                calculateTime(resumo_sinalizadores[i].current_status, resumo_sinalizadores[i].time_ended, resumo_sinalizadores[i].time_started)\n            }\n        }\n    }\n}\n//passou apenas data de inicio\nelse if (date_begin != null && date_end == null) {\n    //encontra o sinalizador selecionado pelo usuario\n    for (var i = 0; i < resumo_sinalizadores.length; i++) {\n        if (resumo_sinalizadores[i].clientID == sinalizador_id) {\n            var flag = checkDate(resumo_sinalizadores[i].current_date, date_begin, resumo_sinalizadores[resumo_sinalizadores.length - 1].current_date)\n\n            if (flag == true) {\n                calculateTime(resumo_sinalizadores[i].current_status, resumo_sinalizadores[i].time_ended, resumo_sinalizadores[i].time_started)\n            }\n        }\n    }\n}\n//passou as duas datas\nelse {\n    //encontra o sinalizador selecionado pelo usuario\n    for (var i = 0; i < resumo_sinalizadores.length; i++) {\n        if (resumo_sinalizadores[i].clientID == sinalizador_id) {\n            var flag = checkDate(resumo_sinalizadores[i].current_date, date_begin, date_end)\n\n            if (flag == true) {\n                calculateTime(resumo_sinalizadores[i].current_status, resumo_sinalizadores[i].time_ended, resumo_sinalizadores[i].time_started)\n            }\n        }\n    }\n}\n\nfor(var x=0; x<sinalizadores.length; x++){\n    if(sinalizadores[x].clientID == sinalizador_id){\n        var sinalizador_name = sinalizadores[x].name\n    }\n}\n\nmsg.payload = {};\nmsg.payload.name = sinalizador_name\nmsg.payload.time_green = t_green_total\nmsg.payload.time_red = t_red_total\nmsg.payload.time_yellow = t_yellow_total\nmsg.payload.time_blue = t_blue_total\nmsg.payload.time_gray = t_gray_total\n\nreturn msg;",
+        "func": "var date_begin = flow.get(\"date_begin_flow\")\nvar date_end = flow.get(\"date_end_flow\")\n//var date_begin = msg.payload.begin\n//var date_end = msg.payload.end\nvar id_to_show = flow.get(\"id_to_show\", \"bank1\")\nvar resumo_sinalizadores = flow.get(\"resumo_sinalizadores\", \"bank1\")\nvar sinalizadores = flow.get(\"sinalizadores\", \"bank1\")\nvar color_values = flow.get(\"color_values\", \"bank1\")\n\nvar d = new Date()\n\nvar t_green_total = 0\nvar t_red_total = 0\nvar t_yellow_total = 0\nvar t_blue_total = 0\nvar t_gray_total = 0\n\nfunction checkDate(date_resumo_str, date_begin, date_end) {\n\n    var d1 = date_begin.split(\"/\");\n    var d2 = date_end.split(\"/\");\n    var c = date_resumo_str.split(\"/\");\n\n    var from = new Date(d1[2], parseInt(d1[1]) - 1, d1[0]);  // -1 because months are from 0 to 11\n    var to = new Date(d2[2], parseInt(d2[1]) - 1, d2[0]);\n    var check = new Date(c[2], parseInt(c[1]) - 1, c[0]);\n\n    if (check >= from && check <= to) {\n        return true\n    }\n    else {\n        return false\n    }\n}\n\nfunction calculateTime(current_status, time_ended, time_started){\n    \n    if (time_ended == 0) {\n        time_ended = d.getTime()\n    }\n    if (current_status == color_values.green) {\n        t_green_total = t_green_total + (time_ended - time_started)\n    }\n    else if (current_status == color_values.red) {\n        t_red_total = t_red_total + (time_ended - time_started)\n    }\n    else if (current_status == color_values.yellow) {\n        t_yellow_total = t_yellow_total + (time_ended - time_started)\n    }\n    else if (current_status == color_values.blue) {\n        t_blue_total = t_blue_total + (time_ended - time_started)\n    }\n    else if (current_status == color_values.gray) {\n        t_gray_total = t_gray_total + (time_ended - time_started)\n    }\n}\n\n//nao passou nenhuma das datas - recolhe de todo periodo \nif(date_begin == null && date_end == null){\n    //encontra o sinalizador selecionado pelo usuario e soma os tempos\n    for (var i = 0; i < resumo_sinalizadores.length; i++) {\n        if (resumo_sinalizadores[i].clientID == id_to_show) {\n            calculateTime(resumo_sinalizadores[i].current_status, resumo_sinalizadores[i].time_ended, resumo_sinalizadores[i].time_started)\n        }\n    }\n}\n//passou apenas data de fim\nelse if (date_begin == null && date_end != null) {\n    //encontra o sinalizador selecionado pelo usuario\n    for (var i = 0; i < resumo_sinalizadores.length; i++) {\n        if (resumo_sinalizadores[i].clientID == id_to_show) {\n            var flag = checkDate(resumo_sinalizadores[i].current_date, resumo_sinalizadores[0].current_date, date_end)\n\n            if (flag == true) {\n                calculateTime(resumo_sinalizadores[i].current_status, resumo_sinalizadores[i].time_ended, resumo_sinalizadores[i].time_started)\n            }\n        }\n    }\n}\n//passou apenas data de inicio\nelse if (date_begin != null && date_end == null) {\n    //encontra o sinalizador selecionado pelo usuario\n    for (var i = 0; i < resumo_sinalizadores.length; i++) {\n        if (resumo_sinalizadores[i].clientID == id_to_show) {\n            var flag = checkDate(resumo_sinalizadores[i].current_date, date_begin, resumo_sinalizadores[resumo_sinalizadores.length - 1].current_date)\n\n            if (flag == true) {\n                calculateTime(resumo_sinalizadores[i].current_status, resumo_sinalizadores[i].time_ended, resumo_sinalizadores[i].time_started)\n            }\n        }\n    }\n}\n//passou as duas datas\nelse {\n    //encontra o sinalizador selecionado pelo usuario\n    for (var i = 0; i < resumo_sinalizadores.length; i++) {\n        if (resumo_sinalizadores[i].clientID == id_to_show) {\n            var flag = checkDate(resumo_sinalizadores[i].current_date, date_begin, date_end)\n\n            if (flag == true) {\n                calculateTime(resumo_sinalizadores[i].current_status, resumo_sinalizadores[i].time_ended, resumo_sinalizadores[i].time_started)\n            }\n        }\n    }\n}\n\nfor(var x=0; x<sinalizadores.length; x++){\n    if(sinalizadores[x].clientID == id_to_show){\n        var sinalizador_name = sinalizadores[x].name\n    }\n}\n\nmsg.payload = {};\nmsg.payload.name = sinalizador_name\nmsg.payload.time_green = t_green_total\nmsg.payload.time_red = t_red_total\nmsg.payload.time_yellow = t_yellow_total\nmsg.payload.time_blue = t_blue_total\nmsg.payload.time_gray = t_gray_total\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -6981,6 +7125,7 @@
         "id": "e6401f0a865462b8",
         "type": "comment",
         "z": "986afd82ee909974",
+        "g": "822c3780a45a9041",
         "name": "Select interval",
         "info": "",
         "x": 1270,
@@ -6991,6 +7136,7 @@
         "id": "b74ee7f06dd661d3",
         "type": "comment",
         "z": "986afd82ee909974",
+        "g": "3717a59d168d826b",
         "name": "Select interval",
         "info": "",
         "x": 1270,
@@ -7001,6 +7147,7 @@
         "id": "d0fe25719d86c492",
         "type": "function",
         "z": "986afd82ee909974",
+        "g": "3717a59d168d826b",
         "name": "function 6",
         "func": "var date_begin = msg.payload.begin\nvar date_end = msg.payload.end\nvar sinalizadores = flow.get(\"sinalizadores\", \"bank1\")\nvar resumo_sinalizadores = flow.get(\"resumo_sinalizadores\", \"bank1\")\nvar color_values = flow.get(\"color_values\", \"bank1\")\n\nvar d = new Date()\n\nvar table = new Array(sinalizadores.length) //vetor que sera passado para o node da tabela\n\nvar t_green_total = 0\nvar t_red_total = 0\nvar t_yellow_total = 0\nvar t_blue_total = 0\nvar t_gray_total = 0\n\nvar stop_counter = 0\n\nfunction formatTime(totalTime) {   //recebe em milisegundos\n    var diffDays = Math.floor(totalTime / 86400000); // days\n    var diffHrs = Math.floor((totalTime % 86400000) / 3600000); // hours\n    \n    var diffMins = Math.floor(((totalTime % 86400000) % 3600000) / 60000); // minutes\n    diffMins = diffMins < 10 ? \"0\" + diffMins : diffMins;\n    var diffSecs = Math.floor((((totalTime % 86400000) % 3600000) % 60000) / 1000);  //seconds\n    diffSecs = diffSecs < 10 ? \"0\" + diffSecs : diffSecs;\n    diffHrs = diffHrs + (diffDays * 24)\n    diffHrs = diffHrs < 10 ? \"0\" + diffHrs : diffHrs;\n    var formatedTime = diffHrs + \":\" + diffMins + \":\" + diffSecs\n    return formatedTime;\n}\n\nfunction checkDate(date_resumo_str, date_begin, date_end) {\n\n    var d1 = date_begin.split(\"/\");\n    var d2 = date_end.split(\"/\");\n    var c = date_resumo_str.split(\"/\");\n\n    var from = new Date(d1[2], parseInt(d1[1]) - 1, d1[0]);  // -1 because months are from 0 to 11\n    var to = new Date(d2[2], parseInt(d2[1]) - 1, d2[0]);\n    var check = new Date(c[2], parseInt(c[1]) - 1, c[0]);\n\n    if (check >= from && check <= to) {\n        return true\n    }\n    else {\n        return false\n    }\n}\n\nfunction calculateTime(current_status, time_ended, time_started) {\n\n    if (time_ended == 0) {\n        time_ended = d.getTime()\n    }\n    if (current_status == color_values.green) {\n        t_green_total = t_green_total + (time_ended - time_started)\n    }\n    else if (current_status == color_values.red) {\n        t_red_total = t_red_total + (time_ended - time_started)\n        stop_counter = stop_counter + 1\n    }\n    else if (current_status == color_values.yellow) {\n        t_yellow_total = t_yellow_total + (time_ended - time_started)\n    }\n    else if (current_status == color_values.blue) {\n        t_blue_total = t_blue_total + (time_ended - time_started)\n        stop_counter = stop_counter + 1\n    }\n    else if (current_status == color_values.gray) {\n        t_gray_total = t_gray_total + (time_ended - time_started)\n    }\n}\n\nfunction clearVariables(){\n    t_gray_total = 0\n    t_red_total = 0\n    t_yellow_total = 0\n    t_blue_total = 0\n    t_gray_total = 0\n    stop_counter = 0\n}\n\n//nao passou nenhuma das datas - recolhe de todo periodo \nif (date_begin == null && date_end == null) {\n    for(var j=0; j<sinalizadores.length; j++){\n        for (var i = 0; i < resumo_sinalizadores.length; i++) {\n            if (resumo_sinalizadores[i].clientID == sinalizadores[j].clientID) {\n                calculateTime(resumo_sinalizadores[i].current_status, resumo_sinalizadores[i].time_ended, resumo_sinalizadores[i].time_started)\n            }\n        }\n        table[j] = {\n            clientID: sinalizadores[j].clientID,\n            name: sinalizadores[j].name,\n            time_green_str: formatTime(t_green_total),\n            time_red_str: formatTime(t_red_total),\n            time_yellow_str: formatTime(t_yellow_total),\n            time_blue_str: formatTime(t_blue_total),\n            time_gray_str: formatTime(t_gray_total),\n            stop_counter: stop_counter\n        }\n        clearVariables();\n    }\n}\n//passou apenas data de fim\nelse if (date_begin == null && date_end != null) {\n    //encontra o sinalizador selecionado pelo usuario\n    for (var j = 0; j < sinalizadores.length; j++) {\n        for (var i = 0; i < resumo_sinalizadores.length; i++) {\n            if (resumo_sinalizadores[i].clientID == sinalizadores[j].clientID) {\n                var flag = checkDate(resumo_sinalizadores[i].current_date, resumo_sinalizadores[0].current_date, date_end)\n\n                if(flag == true){\n                    calculateTime(resumo_sinalizadores[i].current_status, resumo_sinalizadores[i].time_ended, resumo_sinalizadores[i].time_started)\n                }\n            }\n        }\n        table[j] = {\n            clientID: sinalizadores[j].clientID,\n            name: sinalizadores[j].name,\n            time_green_str: formatTime(t_green_total),\n            time_red_str: formatTime(t_red_total),\n            time_yellow_str: formatTime(t_yellow_total),\n            time_blue_str: formatTime(t_blue_total),\n            time_gray_str: formatTime(t_gray_total),\n            stop_counter: stop_counter\n        }\n        clearVariables();\n    }\n}\n//passou apenas data de inicio\nelse if (date_begin != null && date_end == null) {\n    //encontra o sinalizador selecionado pelo usuario\n    for (var j = 0; j < sinalizadores.length; j++) {\n        for (var i = 0; i < resumo_sinalizadores.length; i++) {\n            if (resumo_sinalizadores[i].clientID == sinalizadores[j].clientID) {\n                var flag = checkDate(resumo_sinalizadores[i].current_date, date_begin, resumo_sinalizadores[resumo_sinalizadores.length - 1].current_date)\n\n                if (flag == true) {\n                    calculateTime(resumo_sinalizadores[i].current_status, resumo_sinalizadores[i].time_ended, resumo_sinalizadores[i].time_started)\n                }\n            }\n        }\n        table[j] = {\n            clientID: sinalizadores[j].clientID,\n            name: sinalizadores[j].name,\n            time_green_str: formatTime(t_green_total),\n            time_red_str: formatTime(t_red_total),\n            time_yellow_str: formatTime(t_yellow_total),\n            time_blue_str: formatTime(t_blue_total),\n            time_gray_str: formatTime(t_gray_total),\n            stop_counter: stop_counter\n        }\n        clearVariables();\n    }\n}\n//passou as duas datas\nelse {\n    //encontra o sinalizador selecionado pelo usuario\n    for (var j = 0; j < sinalizadores.length; j++) {\n        for (var i = 0; i < resumo_sinalizadores.length; i++) {\n            if (resumo_sinalizadores[i].clientID == sinalizadores[j].clientID) {\n                var flag = checkDate(resumo_sinalizadores[i].current_date, date_begin, date_end)\n\n                if (flag == true) {\n                    calculateTime(resumo_sinalizadores[i].current_status, resumo_sinalizadores[i].time_ended, resumo_sinalizadores[i].time_started)\n                }\n            }\n        }\n        table[j] = {\n            clientID: sinalizadores[j].clientID,\n            name: sinalizadores[j].name,\n            time_green_str: formatTime(t_green_total) ,\n            time_red_str: formatTime(t_red_total),\n            time_yellow_str: formatTime(t_yellow_total),\n            time_blue_str: formatTime(t_blue_total),\n            time_gray_str: formatTime(t_gray_total),\n            stop_counter: stop_counter\n        }\n        clearVariables();\n    }\n}\n\nmsg = {}\nmsg.payload = table\nreturn msg;",
         "outputs": 1,
@@ -7008,8 +7155,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1620,
-        "y": 680,
+        "x": 1580,
+        "y": 720,
         "wires": [
             [
                 "d447f70d1bd2549e",
@@ -7021,6 +7168,7 @@
         "id": "db542acc44f8718d",
         "type": "ui_template",
         "z": "986afd82ee909974",
+        "g": "822c3780a45a9041",
         "group": "79b4d5c2.bfe4ac",
         "name": "Display Date Interval",
         "order": 2,
@@ -7042,8 +7190,9 @@
         "id": "562ad9cf6ffef88a",
         "type": "function",
         "z": "986afd82ee909974",
+        "g": "822c3780a45a9041",
         "name": "function 7",
-        "func": "var date_begin = msg.payload.begin\nvar date_end = msg.payload.end\n\nvar date = new Date()\n\nvar full_date = date.toLocaleString('pt-BR', {\n    timeZone: 'America/Sao_Paulo',\n})\nvar date_separator = full_date.split(\" \")\nvar new_date = date_separator[0]    //Ex: \"18/10/2022\"\nvar new_time = date_separator[1]    //Ex: \"15:45:05\"\n\nvar sinalizador_id = flow.get(\"parada_table\", \"bank1\")\nvar resumo_sinalizadores = flow.get(\"resumo_sinalizadores\", \"bank1\")\n\nif(date_begin == null){\n    for(var i=0; i<resumo_sinalizadores.length; i++){\n        if(resumo_sinalizadores[i].clientID == sinalizador_id){\n            date_begin = resumo_sinalizadores[i].current_date\n            break\n        }\n    }\n}\nif(date_end == null){\n    date_end = new_date\n}\n\nmsg.payload.begin = date_begin\nmsg.payload.end = date_end\nreturn msg;",
+        "func": "var date_begin = flow.get(\"date_begin_flow\")\nvar date_end = flow.get(\"date_end_flow\")\n//var date_begin = msg.payload.begin\n//var date_end = msg.payload.end\n\nvar date = new Date()\n\nvar full_date = date.toLocaleString('pt-BR', {\n    timeZone: 'America/Sao_Paulo',\n})\nvar date_separator = full_date.split(\" \")\nvar new_date = date_separator[0]    //Ex: \"18/10/2022\"\nvar new_time = date_separator[1]    //Ex: \"15:45:05\"\n\nvar id_to_show = flow.get(\"id_to_show\", \"bank1\")\nvar resumo_sinalizadores = flow.get(\"resumo_sinalizadores\", \"bank1\")\n\nif(date_begin == null){\n    for(var i=0; i<resumo_sinalizadores.length; i++){\n        if (resumo_sinalizadores[i].clientID == id_to_show){\n            date_begin = resumo_sinalizadores[i].current_date\n            break\n        }\n    }\n}\nif(date_end == null){\n    date_end = new_date\n}\n\nmsg.payload.begin = date_begin\nmsg.payload.end = date_end\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -7084,6 +7233,7 @@
         "id": "0ee6eb7d932046c7",
         "type": "ui_dropdown",
         "z": "986afd82ee909974",
+        "g": "352edda8f59a3cab",
         "name": "",
         "label": "",
         "tooltip": "",
@@ -7105,8 +7255,8 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 1620,
-        "y": 2620,
+        "x": 1640,
+        "y": 2600,
         "wires": [
             [
                 "1c55be19a8c9fd17"
@@ -7117,6 +7267,7 @@
         "id": "f36a1277d750c653",
         "type": "function",
         "z": "986afd82ee909974",
+        "g": "352edda8f59a3cab",
         "name": "function 8",
         "func": "\nvar cores = [4]\n\ncores[0] = \"Verde\"\ncores[1] = \"Vermelho\"\ncores[2] = \"Amarelo\"\ncores[3] = \"Azul\"\n\nmsg = {}\nmsg.options = cores\nreturn msg;",
         "outputs": 1,
@@ -7124,8 +7275,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1460,
-        "y": 2620,
+        "x": 1480,
+        "y": 2600,
         "wires": [
             [
                 "0ee6eb7d932046c7"
@@ -7136,6 +7287,7 @@
         "id": "3106013f6ebd2435",
         "type": "inject",
         "z": "986afd82ee909974",
+        "g": "352edda8f59a3cab",
         "name": "",
         "props": [
             {
@@ -7153,8 +7305,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 1290,
-        "y": 2620,
+        "x": 1310,
+        "y": 2600,
         "wires": [
             [
                 "f36a1277d750c653"
@@ -7165,6 +7317,7 @@
         "id": "1c55be19a8c9fd17",
         "type": "function",
         "z": "986afd82ee909974",
+        "g": "352edda8f59a3cab",
         "name": "Att cor para mudar",
         "func": "var color_values = flow.get(\"color_values\", \"bank1\")\nvar color_to_change = flow.get(\"color_to_change\")\n\ncolor_to_change = msg.payload\n\n\nmsg = {}\n\nif (color_to_change == \"Verde\"){\n    msg.payload = color_values.green\n}\nelse if (color_to_change == \"Vermelho\"){\n    msg.payload = color_values.red\n}\nelse if (color_to_change == \"Amarelo\") {\n    msg.payload = color_values.yellow\n}\nelse if (color_to_change == \"Azul\") {\n    msg.payload = color_values.blue\n}\n\nflow.set(\"color_to_change\", color_to_change)\nreturn msg;",
         "outputs": 1,
@@ -7172,8 +7325,8 @@
         "initialize": "// Code added here will be run once\n// whenever the node is started.\nvar color_to_change = \" \"\nflow.set(\"color_to_change\", color_to_change)",
         "finalize": "",
         "libs": [],
-        "x": 1830,
-        "y": 2620,
+        "x": 1850,
+        "y": 2600,
         "wires": [
             []
         ]
@@ -7182,6 +7335,7 @@
         "id": "598063c8b28f9650",
         "type": "ui_text",
         "z": "986afd82ee909974",
+        "g": "352edda8f59a3cab",
         "group": "f4f6b202d5b20fa6",
         "order": 4,
         "width": 6,
@@ -7191,14 +7345,15 @@
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "className": "",
-        "x": 1890,
-        "y": 2700,
+        "x": 1730,
+        "y": 2640,
         "wires": []
     },
     {
         "id": "8ab5a928c3ad0ddc",
         "type": "function",
         "z": "986afd82ee909974",
+        "g": "352edda8f59a3cab",
         "name": "Clear input ",
         "func": "msg = {}\nmsg.payload = \" \"\nreturn msg;",
         "outputs": 1,
@@ -7206,8 +7361,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1490,
-        "y": 2780,
+        "x": 1470,
+        "y": 2740,
         "wires": [
             [
                 "797b9c61b8647a5c"
@@ -7218,6 +7373,7 @@
         "id": "797b9c61b8647a5c",
         "type": "ui_text_input",
         "z": "986afd82ee909974",
+        "g": "352edda8f59a3cab",
         "name": "",
         "label": "Novo significado",
         "tooltip": "",
@@ -7232,8 +7388,8 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 1700,
-        "y": 2780,
+        "x": 1680,
+        "y": 2740,
         "wires": [
             [
                 "233c036ea98d016f"
@@ -7244,12 +7400,13 @@
         "id": "f2222e4d8c0add6a",
         "type": "link in",
         "z": "986afd82ee909974",
+        "g": "352edda8f59a3cab",
         "name": "link in 1",
         "links": [
             "e95389ef51a73ed5"
         ],
-        "x": 1375,
-        "y": 2780,
+        "x": 1355,
+        "y": 2740,
         "wires": [
             [
                 "8ab5a928c3ad0ddc"
@@ -7260,6 +7417,7 @@
         "id": "233c036ea98d016f",
         "type": "function",
         "z": "986afd82ee909974",
+        "g": "352edda8f59a3cab",
         "name": "Confere novo significado",
         "func": "var color_values = flow.get(\"color_values\", \"bank1\")\nvar color_value_can_change = flow.get(\"color_value_can_change\")\nvar new_color_value = flow.get(\"new_color_value\")\n\nnew_color_value = msg.payload\n\ncolor_value_can_change = true\n\nif( color_values.green == new_color_value || \n    color_values.red == new_color_value ||\n    color_values.yellow == new_color_value ||\n    color_values.blue == new_color_value\n){\n    color_value_can_change = false\n}\n\n\n\nflow.set(\"new_color_value\", new_color_value)\nflow.set(\"color_value_can_change\", color_value_can_change)\nreturn msg;",
         "outputs": 1,
@@ -7267,8 +7425,8 @@
         "initialize": "// Code added here will be run once\n// whenever the node is started.\nvar color_value_can_change = true\nflow.set(\"color_value_can_change\", color_value_can_change)\n\nvar new_color_value = \"\"\nflow.set(\"new_color_value\", new_color_value)",
         "finalize": "",
         "libs": [],
-        "x": 1950,
-        "y": 2780,
+        "x": 1930,
+        "y": 2740,
         "wires": [
             []
         ]
@@ -7277,6 +7435,7 @@
         "id": "48951c0a55e91a72",
         "type": "ui_button",
         "z": "986afd82ee909974",
+        "g": "352edda8f59a3cab",
         "name": "",
         "group": "f4f6b202d5b20fa6",
         "order": 9,
@@ -7293,8 +7452,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 1410,
-        "y": 2840,
+        "x": 1390,
+        "y": 2800,
         "wires": [
             [
                 "f86c8f593b9d6d2a"
@@ -7305,6 +7464,7 @@
         "id": "f86c8f593b9d6d2a",
         "type": "function",
         "z": "986afd82ee909974",
+        "g": "352edda8f59a3cab",
         "name": "function 10",
         "func": "var color_value_can_change = flow.get(\"color_value_can_change\")\n\nmsg = {}\nmsg.payload = color_value_can_change\nreturn msg;",
         "outputs": 1,
@@ -7312,8 +7472,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1570,
-        "y": 2840,
+        "x": 1550,
+        "y": 2800,
         "wires": [
             [
                 "68b8b9caeac92ec6"
@@ -7324,6 +7484,7 @@
         "id": "68b8b9caeac92ec6",
         "type": "switch",
         "z": "986afd82ee909974",
+        "g": "352edda8f59a3cab",
         "name": "",
         "property": "payload",
         "propertyType": "msg",
@@ -7338,8 +7499,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 1730,
-        "y": 2840,
+        "x": 1710,
+        "y": 2800,
         "wires": [
             [
                 "1f3b47b7053c8409"
@@ -7353,6 +7514,7 @@
         "id": "1f3b47b7053c8409",
         "type": "function",
         "z": "986afd82ee909974",
+        "g": "352edda8f59a3cab",
         "name": "Att color_value",
         "func": "var color_values = flow.get(\"color_values\", \"bank1\")\nvar new_color_value = flow.get(\"new_color_value\")\nvar color_to_change = flow.get(\"color_to_change\")\n\nif(color_to_change == \"Verde\"){\n    color_values.green = new_color_value\n}\nelse if(color_to_change == \"Vermelho\"){\n    color_values.red = new_color_value\n}\nelse if (color_to_change == \"Amarelo\") {\n    color_values.yellow = new_color_value\n}\nelse if (color_to_change == \"Azul\") {\n    color_values.blue = new_color_value\n}\n\nflow.set(\"color_values\", color_values, \"bank1\")\n\nmsg.payload = new_color_value\nreturn msg;",
         "outputs": 1,
@@ -7360,8 +7522,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1900,
-        "y": 2820,
+        "x": 1880,
+        "y": 2780,
         "wires": [
             [
                 "e95389ef51a73ed5",
@@ -7373,6 +7535,7 @@
         "id": "a494bf8233d61c28",
         "type": "function",
         "z": "986afd82ee909974",
+        "g": "352edda8f59a3cab",
         "name": "Valor de cor ja usado",
         "func": "msg = {}\nmsg.topic = \"AVISO\"\nmsg.payload = \"Este significado já está sendo utilizado. Digite outro significado para esta cor.\"\nreturn msg;",
         "outputs": 1,
@@ -7380,8 +7543,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1920,
-        "y": 2860,
+        "x": 1900,
+        "y": 2820,
         "wires": [
             [
                 "3480bec80c1422e0"
@@ -7392,6 +7555,7 @@
         "id": "3480bec80c1422e0",
         "type": "ui_toast",
         "z": "986afd82ee909974",
+        "g": "352edda8f59a3cab",
         "position": "top right",
         "displayTime": "5",
         "highlight": "",
@@ -7403,34 +7567,36 @@
         "className": "",
         "topic": "AVISO",
         "name": "Color_Value ja existe",
-        "x": 2160,
-        "y": 2860,
+        "x": 2140,
+        "y": 2820,
         "wires": []
     },
     {
         "id": "e95389ef51a73ed5",
         "type": "link out",
         "z": "986afd82ee909974",
+        "g": "352edda8f59a3cab",
         "name": "link out 1",
         "mode": "link",
         "links": [
             "f2222e4d8c0add6a",
             "de233bd3d1ea564c"
         ],
-        "x": 2025,
-        "y": 2820,
+        "x": 2005,
+        "y": 2780,
         "wires": []
     },
     {
         "id": "de233bd3d1ea564c",
         "type": "link in",
         "z": "986afd82ee909974",
+        "g": "352edda8f59a3cab",
         "name": "link in 2",
         "links": [
             "e95389ef51a73ed5"
         ],
-        "x": 1335,
-        "y": 2680,
+        "x": 1355,
+        "y": 2660,
         "wires": [
             [
                 "f36a1277d750c653"
@@ -7441,6 +7607,7 @@
         "id": "63091b79b208f34f",
         "type": "ui_led",
         "z": "986afd82ee909974",
+        "g": "352edda8f59a3cab",
         "order": 1,
         "group": "f4f6b202d5b20fa6",
         "width": 2,
@@ -7459,14 +7626,15 @@
         "shape": "circle",
         "showGlow": true,
         "name": "Green",
-        "x": 1570,
-        "y": 2960,
+        "x": 1490,
+        "y": 2920,
         "wires": []
     },
     {
         "id": "c3531fa1671a52e4",
         "type": "ui_led",
         "z": "986afd82ee909974",
+        "g": "352edda8f59a3cab",
         "order": 5,
         "group": "f4f6b202d5b20fa6",
         "width": 2,
@@ -7485,14 +7653,15 @@
         "shape": "circle",
         "showGlow": true,
         "name": "Red",
-        "x": 1570,
-        "y": 3000,
+        "x": 1490,
+        "y": 2960,
         "wires": []
     },
     {
         "id": "762558374619fb9a",
         "type": "ui_led",
         "z": "986afd82ee909974",
+        "g": "352edda8f59a3cab",
         "order": 11,
         "group": "f4f6b202d5b20fa6",
         "width": 2,
@@ -7511,14 +7680,15 @@
         "shape": "circle",
         "showGlow": true,
         "name": "Yellow",
-        "x": 1570,
-        "y": 3040,
+        "x": 1490,
+        "y": 3000,
         "wires": []
     },
     {
         "id": "9c2ae7ca7ae94e81",
         "type": "ui_led",
         "z": "986afd82ee909974",
+        "g": "352edda8f59a3cab",
         "order": 15,
         "group": "f4f6b202d5b20fa6",
         "width": 2,
@@ -7537,14 +7707,15 @@
         "shape": "circle",
         "showGlow": true,
         "name": "Blue",
-        "x": 1570,
-        "y": 3080,
+        "x": 1490,
+        "y": 3040,
         "wires": []
     },
     {
         "id": "71f6e1a76f253672",
         "type": "inject",
         "z": "986afd82ee909974",
+        "g": "352edda8f59a3cab",
         "name": "",
         "props": [
             {
@@ -7562,8 +7733,8 @@
         "topic": "",
         "payload": "Verde",
         "payloadType": "str",
-        "x": 1430,
-        "y": 2960,
+        "x": 1350,
+        "y": 2920,
         "wires": [
             [
                 "63091b79b208f34f"
@@ -7574,6 +7745,7 @@
         "id": "2a6e0ce883925f77",
         "type": "inject",
         "z": "986afd82ee909974",
+        "g": "352edda8f59a3cab",
         "name": "",
         "props": [
             {
@@ -7591,8 +7763,8 @@
         "topic": "",
         "payload": "Vermelho",
         "payloadType": "str",
-        "x": 1440,
-        "y": 3000,
+        "x": 1360,
+        "y": 2960,
         "wires": [
             [
                 "c3531fa1671a52e4"
@@ -7603,6 +7775,7 @@
         "id": "40b2d8ef052d9f59",
         "type": "inject",
         "z": "986afd82ee909974",
+        "g": "352edda8f59a3cab",
         "name": "",
         "props": [
             {
@@ -7620,8 +7793,8 @@
         "topic": "",
         "payload": "Amarelo",
         "payloadType": "str",
-        "x": 1440,
-        "y": 3040,
+        "x": 1360,
+        "y": 3000,
         "wires": [
             [
                 "762558374619fb9a"
@@ -7632,6 +7805,7 @@
         "id": "454bb2c7a57826ec",
         "type": "inject",
         "z": "986afd82ee909974",
+        "g": "352edda8f59a3cab",
         "name": "",
         "props": [
             {
@@ -7649,8 +7823,8 @@
         "topic": "",
         "payload": "Azul",
         "payloadType": "str",
-        "x": 1430,
-        "y": 3080,
+        "x": 1350,
+        "y": 3040,
         "wires": [
             [
                 "9c2ae7ca7ae94e81"
@@ -7661,6 +7835,7 @@
         "id": "5807098756557cf9",
         "type": "ui_text",
         "z": "986afd82ee909974",
+        "g": "352edda8f59a3cab",
         "group": "f4f6b202d5b20fa6",
         "order": 2,
         "width": 4,
@@ -7670,14 +7845,15 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "x": 2290,
-        "y": 2960,
+        "x": 2190,
+        "y": 2940,
         "wires": []
     },
     {
         "id": "684c6dc4b967cd09",
         "type": "ui_text",
         "z": "986afd82ee909974",
+        "g": "352edda8f59a3cab",
         "group": "f4f6b202d5b20fa6",
         "order": 6,
         "width": 4,
@@ -7687,14 +7863,15 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "x": 2290,
-        "y": 3000,
+        "x": 2190,
+        "y": 2980,
         "wires": []
     },
     {
         "id": "106763079d8a471a",
         "type": "ui_text",
         "z": "986afd82ee909974",
+        "g": "352edda8f59a3cab",
         "group": "f4f6b202d5b20fa6",
         "order": 12,
         "width": 4,
@@ -7704,14 +7881,15 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "x": 2290,
-        "y": 3040,
+        "x": 2190,
+        "y": 3020,
         "wires": []
     },
     {
         "id": "78c28a4569ba1999",
         "type": "ui_text",
         "z": "986afd82ee909974",
+        "g": "352edda8f59a3cab",
         "group": "f4f6b202d5b20fa6",
         "order": 16,
         "width": 4,
@@ -7721,14 +7899,15 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "x": 2290,
-        "y": 3080,
+        "x": 2190,
+        "y": 3060,
         "wires": []
     },
     {
         "id": "4d9bcf9bcc04b7f1",
         "type": "inject",
         "z": "986afd82ee909974",
+        "g": "352edda8f59a3cab",
         "name": "",
         "props": [
             {
@@ -7746,8 +7925,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 1810,
-        "y": 3020,
+        "x": 1710,
+        "y": 3000,
         "wires": [
             [
                 "a70707a51bf50683"
@@ -7758,6 +7937,7 @@
         "id": "1bd4de93037badd5",
         "type": "function",
         "z": "986afd82ee909974",
+        "g": "352edda8f59a3cab",
         "name": "function 11",
         "func": "var color_values = flow.get(\"color_values\", \"bank1\")\n\nmsg = {}\nmsg.payload = color_values.green\nreturn msg;",
         "outputs": 1,
@@ -7765,8 +7945,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2090,
-        "y": 2960,
+        "x": 1990,
+        "y": 2940,
         "wires": [
             [
                 "b791dd8afc66e827"
@@ -7777,6 +7957,7 @@
         "id": "1deb1d0e8b3c56f7",
         "type": "function",
         "z": "986afd82ee909974",
+        "g": "352edda8f59a3cab",
         "name": "function 12",
         "func": "var color_values = flow.get(\"color_values\", \"bank1\")\n\nmsg = {}\nmsg.payload = color_values.red\nreturn msg;",
         "outputs": 1,
@@ -7784,8 +7965,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2090,
-        "y": 3000,
+        "x": 1990,
+        "y": 2980,
         "wires": [
             [
                 "f1372b28009e7be4"
@@ -7796,6 +7977,7 @@
         "id": "da13b5efb38a8cbe",
         "type": "function",
         "z": "986afd82ee909974",
+        "g": "352edda8f59a3cab",
         "name": "function 13",
         "func": "var color_values = flow.get(\"color_values\", \"bank1\")\n\nmsg = {}\nmsg.payload = color_values.yellow\nreturn msg;",
         "outputs": 1,
@@ -7803,8 +7985,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2090,
-        "y": 3040,
+        "x": 1990,
+        "y": 3020,
         "wires": [
             [
                 "796d2a59c4c12f9d"
@@ -7815,6 +7997,7 @@
         "id": "07d48c4273ec8942",
         "type": "function",
         "z": "986afd82ee909974",
+        "g": "352edda8f59a3cab",
         "name": "function 14",
         "func": "var color_values = flow.get(\"color_values\", \"bank1\")\n\nmsg = {}\nmsg.payload = color_values.blue\nreturn msg;",
         "outputs": 1,
@@ -7822,13 +8005,84 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2090,
-        "y": 3080,
+        "x": 1990,
+        "y": 3060,
         "wires": [
             [
                 "6177e9f7beff6420"
             ]
         ]
+    },
+    {
+        "id": "943150e8067e8d38",
+        "type": "inject",
+        "z": "986afd82ee909974",
+        "name": "Att Status Meia Noite",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "00 00 * * *",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 160,
+        "y": 580,
+        "wires": [
+            [
+                "812b7d9f0e77132b"
+            ]
+        ]
+    },
+    {
+        "id": "812b7d9f0e77132b",
+        "type": "function",
+        "z": "986afd82ee909974",
+        "name": "function 15",
+        "func": "var date = new Date()\n\nvar full_date = date.toLocaleString('pt-BR', {\n    timeZone: 'America/Sao_Paulo',\n})\nvar date_separator = full_date.split(\" \")\nvar new_date = date_separator[0]    //Ex: \"18/10/2022\"\nvar new_time = date_separator[1]    //Ex: \"15:45:05\"\n\nvar resumo_sinalizadores = flow.get(\"resumo_sinalizadores\", \"bank1\")\nvar sinalizadores = flow.get(\"sinalizadores\", \"bank1\")\n\nvar newPayload = [{}]\n\n//att para todos os sinalizadores\nfor(var i=0; i<sinalizadores.length; i++){\n    newPayload[i] = {\n        clientID : sinalizadores[i].clientID,\n        name: sinalizadores[i].name,\n        current_status: sinalizadores[i].current_status,\n        time_change_str: new_time,\n        current_date: new_date,\n        time_started: date.getTime(),\n        time_ended : 0\n    }\n}\n\nfor(var l=0; l<newPayload.length; l++){\n    resumo_sinalizadores.push(newPayload[l])   //add no vetor\n}\n\nvar count = 0\nfor (var j = 0; j < newPayload.length; j++) {\n    for (var k = resumo_sinalizadores.length - 1; k >= 0; k--) {\n        if (resumo_sinalizadores[k].clientID == newPayload[j].clientID) {\n            if(count == 1){\n                resumo_sinalizadores[k].time_ended = newPayload[j].time_started\n                break;\n            }\n            ++count;\n        }\n    }\n    count = 0\n}\n\n\nflow.set(\"resumo_sinalizadores\", resumo_sinalizadores, \"bank1\")\n   \nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 580,
+        "wires": [
+            [
+                "1962862a2130f2cb"
+            ]
+        ]
+    },
+    {
+        "id": "1962862a2130f2cb",
+        "type": "link out",
+        "z": "986afd82ee909974",
+        "name": "link out 2",
+        "mode": "link",
+        "links": [
+            "ce090a5e.662658"
+        ],
+        "x": 485,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "5c127e07977766e7",
+        "type": "comment",
+        "z": "986afd82ee909974",
+        "name": "Gerar CSV",
+        "info": "Permite que o usuario, atraves da dashboard, selecione o período dos dados \ndo sinalizador, para gerar um arquivo csv",
+        "x": 1260,
+        "y": 3240,
+        "wires": []
     },
     {
         "id": "688cddae.069644",
