@@ -535,7 +535,15 @@
             "910652968b0de9f7",
             "33f516155378c60c",
             "f3de6f1501163f3f",
-            "6dd659648d5eedf5"
+            "6dd659648d5eedf5",
+            "4baa15c658d0b98c",
+            "cd4a86c01c2eb045",
+            "81773b0beda37c82",
+            "b153f6b5c55946c0",
+            "234970f0133e9456",
+            "e5b4e03986cf703d",
+            "c379ae350a127c6f",
+            "17bf3098696ebf1d"
         ],
         "x": 34,
         "y": 59,
@@ -887,14 +895,16 @@
             "5e58566d2621be86",
             "f42cf29d1c3a96da",
             "d1cbaaa80a35f8b6",
-            "52254f729d148a30",
             "f8f3c7d95d68c214",
-            "2612b81d1d540a0a"
+            "f09ecb2d4a6649d8",
+            "ded063f81b057006",
+            "4c065b67cf326201",
+            "68c93d633c1a3adc"
         ],
         "x": 1574,
-        "y": 759,
+        "y": 699,
         "w": 972,
-        "h": 242
+        "h": 302
     },
     {
         "id": "8e8486fc2dbeb83a",
@@ -2103,16 +2113,6 @@
         "height": 1
     },
     {
-        "id": "4d3cebb6afa36f5f",
-        "type": "ui_group",
-        "name": "Group 2",
-        "tab": "35250d78.e38892",
-        "order": 2,
-        "disp": false,
-        "width": "30",
-        "collapse": false
-    },
-    {
         "id": "91661a03.9d6408",
         "type": "function",
         "z": "fcc6da58.250b58",
@@ -2730,9 +2730,7 @@
         "x": 1720,
         "y": 140,
         "wires": [
-            [
-                "a65068fa74520ce5"
-            ]
+            []
         ]
     },
     {
@@ -3118,7 +3116,8 @@
         "y": 980,
         "wires": [
             [
-                "dd995a651d1dc7ec"
+                "81773b0beda37c82",
+                "17bf3098696ebf1d"
             ]
         ],
         "info": "Topico onde os ESPs vao responder a chamada"
@@ -3167,16 +3166,18 @@
         "z": "986afd82ee909974",
         "g": "7321907a.ee288",
         "name": "Preenche chamada",
-        "func": "var chamada = flow.get(\"chamada\")||[];\n\nvar objChamada = {};\n\nvar mensagem = msg.payload  //Ex.: AA100-IHM\nvar separator = mensagem.split(\"-\")  //separa o cliente do status\n\nobjChamada.clientID = separator[0] //cliente   Ex.: AA100\nobjChamada.type = separator[1]  //Ex: IHM \n\nvar podeAdicionar = true\n\nfor(var j=0; j<chamada.length; j++){\n    if(chamada[j].clientID == objChamada.clientID && chamada[j].type == objChamada.type){ //se ja existe no vetor\n        podeAdicionar = false\n    }\n}\n\nif(podeAdicionar == true){\n    chamada.push(objChamada)\n}\n\n\nflow.set(\"chamada\", chamada)\n\nmsg.payload = chamada\n\nreturn msg;",
+        "func": "var chamada = flow.get(\"chamada\")||[];\n\nvar objChamada = {};\n\nvar mensagem = msg.payload  //Ex.: AA100-ihm-00:11:22:33:44:55\nvar separator = mensagem.split(\"-\")  //separa o cliente do status\n\nobjChamada.name = separator[0] //Ex.: AA100\nobjChamada.type = separator[1]  //Ex: ihm\nobjChamada.mac_address = separator[2]   //Ex: 00:11:22:33:44:55\n\nvar podeAdicionar = true\n\nfor(var j=0; j<chamada.length; j++){\n    if(chamada[j].mac_address == objChamada.mac_address){ //se ja existe no vetor\n        podeAdicionar = false\n    }\n}\n\nif(podeAdicionar == true){\n    chamada.push(objChamada)\n}\n\n\nflow.set(\"chamada\", chamada)\n\nmsg.payload = chamada\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 590,
+        "x": 370,
         "y": 980,
         "wires": [
-            []
+            [
+                "cd4a86c01c2eb045"
+            ]
         ],
         "info": "Recebe a resposta dos ESPs, e cria um vetor com todos que responderam"
     },
@@ -3194,14 +3195,14 @@
                 "vt": "str"
             }
         ],
-        "repeat": "300",
+        "repeat": "",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 1710,
+        "x": 1700,
         "y": 4520,
         "wires": [
             [
@@ -3238,13 +3239,13 @@
         "type": "function",
         "z": "986afd82ee909974",
         "name": "Confere a chamada",
-        "func": "var chamada = flow.get(\"chamada\")||[]\n\nvar allClients = flow.get(\"allClients\", \"bank1\")\nvar sinalizadores = flow.get(\"sinalizadores\", \"bank1\")\n\n var isOnline = false\n\nfor(var i=0; i<allClients.length; i++){\n    \n    for(var j=0; j<chamada.length; j++){\n        \n        if(allClients[i].clientID === chamada[j].clientID){\n            \n            if(allClients[i].type === chamada[j].type){\n                //client online\n                isOnline = true; \n            }\n              \n        }\n    }\n    if(isOnline == true){\n        allClients[i].connectivity = true\n    }\n    else{\n        allClients[i].connectivity = false\n    }\n    isOnline = false\n}\n\nchamada = []\n\nflow.set(\"chamada\", chamada)\nflow.set(\"allClients\", allClients, \"bank1\")\n\nmsg.payload = chamada\nreturn msg;",
+        "func": "var chamada = flow.get(\"chamada\")||[]\n\nvar allClients = flow.get(\"allClients\", \"bank1\")\nvar sinalizadores = flow.get(\"sinalizadores\", \"bank1\")\n\nvar isOnline = false\n\nfor(var i=0; i<allClients.length; i++){\n    \n    for(var j=0; j<chamada.length; j++){\n        \n        if(allClients[i].clientID === chamada[j].clientID){\n            \n            if(allClients[i].type === chamada[j].type){\n                //client online\n                isOnline = true; \n            }\n              \n        }\n    }\n    if(isOnline == true){\n        allClients[i].connectivity = true\n    }\n    else{\n        allClients[i].connectivity = false\n    }\n    isOnline = false\n}\n\nchamada = []\n\nflow.set(\"chamada\", chamada)\nflow.set(\"allClients\", allClients, \"bank1\")\n\nmsg.payload = chamada\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2200,
+        "x": 2190,
         "y": 4540,
         "wires": [
             []
@@ -4212,8 +4213,8 @@
         "y": 140,
         "wires": [
             [
-                "70bd1062.f436f",
-                "21d92f88bab1646b"
+                "21d92f88bab1646b",
+                "4baa15c658d0b98c"
             ]
         ]
     },
@@ -4394,7 +4395,8 @@
         "z": "986afd82ee909974",
         "name": "",
         "links": [
-            "5dfae462.2f63fc"
+            "5dfae462.2f63fc",
+            "5b6cdffd.a2d7b"
         ],
         "x": 1895,
         "y": 4480,
@@ -4409,7 +4411,9 @@
         "type": "link out",
         "z": "986afd82ee909974",
         "name": "",
-        "links": [],
+        "links": [
+            "53f8a41a.fc9d1c"
+        ],
         "x": 1825,
         "y": 4520,
         "wires": []
@@ -6000,7 +6004,7 @@
         "g": "874d38f878083d50",
         "group": "ead3fc9.832a3",
         "name": "Timeline Sinalizadores",
-        "order": 2,
+        "order": 3,
         "label": "Timeline Sinalizadores",
         "width": "25",
         "height": "12",
@@ -7328,7 +7332,7 @@
         "g": "874d38f878083d50",
         "group": "ead3fc9.832a3",
         "name": "",
-        "order": 1,
+        "order": 2,
         "width": 0,
         "height": 0,
         "format": "<style>\n    body.nr-dashboard-theme md-content md-card {\n        border-radius: 10px;\n    }\n\n    .nr-dashboard-theme ui-card-panel {\n        border-radius: 10px;\n    }\n</style>",
@@ -7341,8 +7345,7 @@
         "y": 900,
         "wires": [
             [
-                "1d5be367.89640d",
-                "2612b81d1d540a0a"
+                "1d5be367.89640d"
             ]
         ]
     },
@@ -8437,7 +8440,7 @@
         "z": "986afd82ee909974",
         "g": "7321907a.ee288",
         "name": "split msg",
-        "func": "var new_equipment = flow.get(\"new_equipment\")||{}\n\nvar mensagem = msg.payload  //Ex.: AA100-IHM-00:11:22:33:44:55\nvar separator = mensagem.split(\"-\")  //separa a mensagem\nnew_equipment.name = separator[0] //Ex: AA100\nnew_equipment.type = separator[1]     //Ex: IHM\nnew_equipment.macAdd = separator[2]   //EX: 00:11:22:33:44:55\nnew_equipment.connectivity = \"online\"\nflow.set(\"new_equipment\", new_equipment)\n\nmsg = {}\nmsg.payload = new_equipment\n\nreturn msg;",
+        "func": "var new_equipment = flow.get(\"new_equipment\")||{}\n\nvar mensagem = msg.payload  //Ex.: AA100-ihm-00:11:22:33:44:55\nvar separator = mensagem.split(\"-\")  //separa a mensagem\nnew_equipment.name = separator[0] //Ex: AA100\nnew_equipment.type = separator[1]     //Ex: ihm\nnew_equipment.macAdd = separator[2]   //EX: 00:11:22:33:44:55\nnew_equipment.connectivity = \"online\"\nflow.set(\"new_equipment\", new_equipment)\n\nmsg = {}\nmsg.payload = new_equipment\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -8611,7 +8614,8 @@
         "wires": [
             [
                 "80f6f6f2d712fb7b",
-                "af59f655dbcef04a"
+                "af59f655dbcef04a",
+                "e5b4e03986cf703d"
             ]
         ],
         "info": "Insere nova linha na tabela de logs"
@@ -8654,7 +8658,8 @@
             [
                 "ea1fa2179048a1a7",
                 "a4f965b8c7ea4f5d",
-                "f008569c1a3599c2"
+                "f008569c1a3599c2",
+                "c379ae350a127c6f"
             ]
         ]
     },
@@ -8835,7 +8840,8 @@
         "y": 200,
         "wires": [
             [
-                "a65068fa74520ce5"
+                "a65068fa74520ce5",
+                "d683ec4664b62bc6"
             ]
         ]
     },
@@ -9272,7 +9278,7 @@
         "z": "986afd82ee909974",
         "g": "874d38f878083d50",
         "name": "function 29",
-        "func": "var timeline_obj = msg.payload\nvar color_values = flow.get(\"color_values\", \"bank1\")\n\nfunction dateTime_correction(old_date_time) {\n    var date_time = new Date(old_date_time)\n    var full_date = date_time.toLocaleString('pt-BR', {\n        timeZone: 'America/Sao_Paulo',\n    })\n    return full_date\n}\n\nfunction timeStamptoString(timestamp) {\n    var date = new Date(timestamp)\n    var day = date.getDate().toString().padStart(2, '0')\n    var month = (date.getMonth() + 1).toString().padStart(2, '0')\n    var year = date.getFullYear()\n    var hours = (date.getHours() - 3).toString().padStart(2, '0')\n    var minutes = date.getMinutes().toString().padStart(2, '0')\n    var seconds = date.getSeconds().toString().padStart(2, '0')\n    return year + \"-\" + month + \"-\" + day + \"T\" + hours + \":\" + minutes + \":\" + seconds + \"-03:00\"\n}\n\nfunction getdataArr(mac_address) {\n    var arr = []\n    var y = 0\n    for (var x = 0; x < timeline_obj.length; x++) {\n        if (timeline_obj[x].mac_address == mac_address) {   //achou evento do sinalizador especificado\n            arr[y] = {\n                timeRange: [\n                    timeStamptoString(timeline_obj[x].created_at),\n                    timeline_obj[x].ended_at\n                ],\n                val: timeline_obj[x].color_status\n            }\n            ++y;\n        }\n    }\n    return arr\n}\n\nfunction insertColorValue(color_status){\n    switch(color_status){\n        case \"green\":\n            return color_values.green\n            break\n        case \"red\":\n            return color_values.red\n            break\n        case \"yellow\":\n            return color_values.yellow\n            break\n        case \"blue\":\n            return color_values.blue\n            break\n        case \"gray\":\n            return color_values.gray\n            break\n    }\n}\n\nfunction removeDuplicatesBy(keyFn, array) {\n    var mySet = new Set();\n    return array.filter(function (x) {\n        var key = keyFn(x), isNew = !mySet.has(key);\n        if (isNew) mySet.add(key);\n        return isNew;\n    });\n}\n\n//ordena a array de objetos em ordem alfabetica do atributo mac_address\nfunction compare(a, b) {\n    if (a.mac_address < b.mac_address) {\n        return -1;\n    }\n    if (a.mac_address > b.mac_address) {\n        return 1;\n    }\n    return 0;\n}\n\ntimeline_obj.sort(compare);\n\nvar time_date_now = new Date()\n//time_date_now = dateTime_correction(time_date_now)\n\nvar mac_full_list = []  //lista de todos os macs de todos os logs (com repeticao)\nfor(var x=0; x<timeline_obj.length; x++){\n    mac_full_list[x] = {\n        name: timeline_obj[x].name,\n        mac_address: timeline_obj[x].mac_address\n    }\n    \n    timeline_obj[x].color_status = insertColorValue(timeline_obj[x].color_status)\n\n    if (x == timeline_obj.length - 1) {\n        timeline_obj[x].ended_at = timeStamptoString(time_date_now)\n        break\n    }\n    else if(timeline_obj[x].mac_address == timeline_obj[x+1].mac_address){\n        timeline_obj[x].ended_at = timeStamptoString(timeline_obj[x+1].created_at)\n    }\n    else if (timeline_obj[x].mac_address != timeline_obj[x + 1].mac_address){\n        timeline_obj[x].ended_at = timeStamptoString(time_date_now)\n    }\n\n    \n\n}\n\n//lista com os mac address sem repeticao\nvar mac_list = removeDuplicatesBy(x => x.mac_address, mac_full_list)\n\nvar dataItems = new Array(mac_list.length)\n\nfor (var i = 0; i < mac_list.length; i++) {  //varre o vetor sinalizadores\n    dataItems[i] = {\n        group: mac_list[i].name,\n        data: [\n            {\n                label: \"\",\n                data: getdataArr(mac_list[i].mac_address)\n            }\n        ]\n    }\n}\n\n/*\nfor (var j = 0; j < dataItems.length; j++) {\n    dataItems[j].data[0].data[dataItems[j].data[0].data.length - 1].timeRange[1] = timeStamptoString(date.getTime())\n}\n*/\n\n\n\nmsg.payload = {}\nmsg.payload.dataItems = dataItems\nmsg.payload.startDateTime = '2022-08-04'\nmsg.payload.endDateTime = '2022-08-09'\nreturn msg;",
+        "func": "var timeline_obj = msg.payload\nvar color_values = flow.get(\"color_values\", \"bank1\")\n\nvar first_event_date = timeline_obj[0].created_at\nvar last_event_date = timeline_obj[timeline_obj.length-1].created_at\n\nvar start_date_timeline = flow.get(\"start_date_timeline\") || \"\"\nvar end_date_timeline = flow.get(\"end_date_timeline\") || \"\"\n\nfunction dateTime_correction(old_date_time) {\n    var date_time = new Date(old_date_time)\n    var full_date = date_time.toLocaleString('pt-BR', {\n        timeZone: 'America/Sao_Paulo',\n    })\n    return full_date\n}\n\nfunction timeStamptoString(timestamp) {\n    var date = new Date(timestamp)\n    var day = date.getDate().toString().padStart(2, '0')\n    var month = (date.getMonth() + 1).toString().padStart(2, '0')\n    var year = date.getFullYear()\n    var hours = (date.getHours() - 3).toString().padStart(2, '0')\n    var minutes = date.getMinutes().toString().padStart(2, '0')\n    var seconds = date.getSeconds().toString().padStart(2, '0')\n    return year + \"-\" + month + \"-\" + day + \"T\" + hours + \":\" + minutes + \":\" + seconds + \"-03:00\"\n}\n\nfunction getdataArr(mac_address) {\n    var arr = []\n    var y = 0\n    for (var x = 0; x < timeline_obj.length; x++) {\n        if (timeline_obj[x].mac_address == mac_address) {   //achou evento do sinalizador especificado\n            arr[y] = {\n                timeRange: [\n                    timeStamptoString(timeline_obj[x].created_at),\n                    timeline_obj[x].ended_at\n                ],\n                val: timeline_obj[x].color_status\n            }\n            ++y;\n        }\n    }\n    return arr\n}\n\nfunction insertColorValue(color_status){\n    switch(color_status){\n        case \"green\":\n            return color_values.green\n            break\n        case \"red\":\n            return color_values.red\n            break\n        case \"yellow\":\n            return color_values.yellow\n            break\n        case \"blue\":\n            return color_values.blue\n            break\n        case \"gray\":\n            return color_values.gray\n            break\n    }\n}\n\nfunction removeDuplicatesBy(keyFn, array) {\n    var mySet = new Set();\n    return array.filter(function (x) {\n        var key = keyFn(x), isNew = !mySet.has(key);\n        if (isNew) mySet.add(key);\n        return isNew;\n    });\n}\n\nfunction remove_signalyzer(arr){\n    for(var i=0; i<arr.length; i++){\n        if (arr[i].type_equipment == \"signalyzer\"){\n            arr.splice(i, 1)\n            --i;\n        }\n    }\n    return arr\n}\n\n//ordena a array de objetos em ordem alfabetica do atributo mac_address\nfunction compare(a, b) {\n    if (a.mac_address < b.mac_address) {\n        return -1;\n    }\n    if (a.mac_address > b.mac_address) {\n        return 1;\n    }\n    return 0;\n}\n\n\ntimeline_obj.sort(compare);\n\nvar time_date_now = new Date()\n//time_date_now = dateTime_correction(time_date_now)\n\nvar mac_full_list = []  //lista de todos os macs de todos os logs (com repeticao)\nfor(var x=0; x<timeline_obj.length; x++){\n    mac_full_list[x] = {\n        name: timeline_obj[x].name,\n        mac_address: timeline_obj[x].mac_address,\n        type_equipment: timeline_obj[x].type_equipment\n    }\n    \n    timeline_obj[x].color_status = insertColorValue(timeline_obj[x].color_status)\n\n    if (x == timeline_obj.length - 1) {\n        timeline_obj[x].ended_at = timeStamptoString(time_date_now)\n        break\n    }\n    else if(timeline_obj[x].mac_address == timeline_obj[x+1].mac_address){\n        timeline_obj[x].ended_at = timeStamptoString(timeline_obj[x+1].created_at)\n    }\n    else if (timeline_obj[x].mac_address != timeline_obj[x + 1].mac_address){\n        timeline_obj[x].ended_at = timeStamptoString(time_date_now)\n    }\n\n    \n\n}\n\n//lista com os mac address sem repeticao\nvar mac_list = removeDuplicatesBy(x => x.mac_address, mac_full_list)\nvar mac_list_ihm = remove_signalyzer(mac_list)\nnode.warn(mac_list_ihm)\nvar dataItems = new Array(mac_list_ihm.length)\n\nfor (var i = 0; i < mac_list_ihm.length; i++) {  //varre o vetor sinalizadores\n    dataItems[i] = {\n        group: mac_list_ihm[i].name,\n        data: [\n            {\n                label: \"\",\n                data: getdataArr(mac_list_ihm[i].mac_address)\n            }\n        ]\n    }\n}\n\n/*\nfor (var j = 0; j < dataItems.length; j++) {\n    dataItems[j].data[0].data[dataItems[j].data[0].data.length - 1].timeRange[1] = timeStamptoString(date.getTime())\n}\n*/\n\nfunction formatDate(date) {\n    var separator_date = date.split(\"T\")\n    var formatted_date = separator_date[0]\n    return formatted_date\n}\n\nif(start_date_timeline == null){\n    start_date_timeline = formatDate(first_event_date)\n}\nif(end_date_timeline == null){\n    end_date_timeline = formatDate(last_event_date)\n}\nif(start_date_timeline != null && end_date_timeline != null){\n    start_date_timeline = formatDate(start_date_timeline)\n    end_date_timeline = formatDate(end_date_timeline)\n}\n\nmsg.payload = {}\nmsg.payload.dataItems = dataItems\nmsg.payload.startDateTime = start_date_timeline\nmsg.payload.endDateTime = end_date_timeline\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -9282,8 +9288,8 @@
         "y": 900,
         "wires": [
             [
-                "52254f729d148a30",
-                "f8f3c7d95d68c214"
+                "f8f3c7d95d68c214",
+                "ded063f81b057006"
             ]
         ]
     },
@@ -9293,7 +9299,7 @@
         "z": "986afd82ee909974",
         "g": "874d38f878083d50",
         "name": "SELECT",
-        "query": "SELECT connectivity,\n   log_timestamp,\n   e.mac_address,\n   el.color_status,\n   el.created_at,\n   \"name\"\nfrom public.equipement_logs el \nleft join public.equipement e on el.equipement_id = e.id\n",
+        "query": "SELECT connectivity,\n   log_timestamp,\n   e.mac_address,\n   e.type_equipment,\n   el.color_status,\n   el.created_at,\n   \"name\"\nfrom public.equipement_logs el \nleft join public.equipement e on el.equipement_id = e.id\n",
         "postgreSQLConfig": "270590d0.3af0a",
         "split": false,
         "rowsPerMsg": 1,
@@ -9302,7 +9308,8 @@
         "y": 900,
         "wires": [
             [
-                "6ec6859d02da3a5f"
+                "6ec6859d02da3a5f",
+                "f09ecb2d4a6649d8"
             ]
         ],
         "info": "Seleciona toda a tabela equipamentos"
@@ -9368,23 +9375,6 @@
                 "5e58566d2621be86"
             ]
         ]
-    },
-    {
-        "id": "52254f729d148a30",
-        "type": "debug",
-        "z": "986afd82ee909974",
-        "g": "874d38f878083d50",
-        "name": "debug 10",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 2280,
-        "y": 840,
-        "wires": []
     },
     {
         "id": "c44212ae80dcdb72",
@@ -9607,7 +9597,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "{\n    \"xAxis\":{\n        \"xTickFormat\": \"HH\",\n        \"startDateTime\": \"{{payload.startDateTime}}\",\n        \"endDateTime\": \"{{payload.endDateTime}}\",\n        \"labelsFontSize\": 16,\n        \"labelsColor\": \"#000000\"\n    },\n    \"yAxis\": {\n        \"labelsFontSize\": 16,\n        \"labelsColor\": \"#aaaaaa\"\n    },\n    \"tooltips\": {\n        \"timeFormat\": \"%H:%M:%S\",\n        \"segmentTooltipContent\": \"\"\n    },\n    \"resetZoom\": {\n        \"labelFontSize\": 32,\n        \"labelColor\": \"#000000\"\n    },\n    \"chart\": {\n        \"topMargin\": 60,\n        \"height\": 20,\n        \"lineColors\": [\n          { \"statusColor\": \"#2cb805\", \"statusValue\": \"Em operação\" },\n          { \"statusColor\": \"#fa1515\", \"statusValue\": \"Parada não programada\" },\n          { \"statusColor\": \"#ffd91a\", \"statusValue\": \"Setup\" },\n          { \"statusColor\": \"#3744fb\", \"statusValue\": \"Parada programada\" },\n          { \"statusColor\": \"#8a8a8a\", \"statusValue\": \"Offline\" }\n        ]\n    },\n    \"options\": {\n        \"enableAnimations\": true,\n        \"enableDateMarker\": true\n    }\n}",
+        "template": "{\n    \"xAxis\":{\n        \"xTickFormat\": \"HH\",\n        \"startDateTime\": \"{{payload.startDateTime}}\",\n        \"endDateTime\": \"{{payload.endDateTime}}\",\n        \"labelsFontSize\": 16,\n        \"labelsColor\": \"#000000\"\n    },\n    \"yAxis\": {\n        \"labelsFontSize\": 16,\n        \"labelsColor\": \"#aaaaaa\"\n    },\n    \"tooltips\": {\n        \"timeFormat\": \"%H:%M:%S\",\n        \"segmentTooltipContent\": \"\"\n    },\n    \"resetZoom\": {\n        \"labelFontSize\": 32,\n        \"labelColor\": \"#000000\"\n    },\n    \"chart\": {\n        \"topMargin\": 60,\n        \"height\": 50,\n        \"lineColors\": [\n          { \"statusColor\": \"#2cb805\", \"statusValue\": \"Em operação\" },\n          { \"statusColor\": \"#fa1515\", \"statusValue\": \"Parada não programada\" },\n          { \"statusColor\": \"#ffd91a\", \"statusValue\": \"Setup\" },\n          { \"statusColor\": \"#3744fb\", \"statusValue\": \"Parada programada\" },\n          { \"statusColor\": \"#8a8a8a\", \"statusValue\": \"Offline\" }\n        ]\n    },\n    \"options\": {\n        \"enableAnimations\": true,\n        \"enableDateMarker\": true\n    }\n}",
         "output": "json",
         "x": 2200,
         "y": 960,
@@ -9616,23 +9606,6 @@
                 "fb2ce33434415ee8"
             ]
         ]
-    },
-    {
-        "id": "2612b81d1d540a0a",
-        "type": "debug",
-        "z": "986afd82ee909974",
-        "g": "874d38f878083d50",
-        "name": "debug 11",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 2420,
-        "y": 800,
-        "wires": []
     },
     {
         "id": "1efae357e679c6f0",
@@ -9954,6 +9927,247 @@
             ]
         ],
         "info": "Deleta linha da tabela\r\n\r\n"
+    },
+    {
+        "id": "4baa15c658d0b98c",
+        "type": "debug",
+        "z": "986afd82ee909974",
+        "g": "7321907a.ee288",
+        "name": "debug 12",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 300,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "cd4a86c01c2eb045",
+        "type": "debug",
+        "z": "986afd82ee909974",
+        "g": "7321907a.ee288",
+        "name": "debug 13",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 560,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "81773b0beda37c82",
+        "type": "function",
+        "z": "986afd82ee909974",
+        "g": "7321907a.ee288",
+        "name": "function 36",
+        "func": "var objChamada = {};\n\nvar mensagem = msg.payload  //Ex.: AA100-ihm-00:11:22:33:44:55-green\nvar separator = mensagem.split(\"-\")  //separa o cliente do status\n\nobjChamada.name = separator[0] //Ex.: AA100\nobjChamada.type = separator[1]  //Ex: ihm\nobjChamada.mac_address = separator[2]   //Ex: 00:11:22:33:44:55\nobjChamada.color_status = separator[3]  //Ex: green\n\nmsg.payload = {}\nmsg.payload = objChamada\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 920,
+        "wires": [
+            [
+                "b153f6b5c55946c0",
+                "234970f0133e9456"
+            ]
+        ]
+    },
+    {
+        "id": "b153f6b5c55946c0",
+        "type": "postgresql",
+        "z": "986afd82ee909974",
+        "g": "7321907a.ee288",
+        "name": "UPDATE ",
+        "query": "UPDATE public.equipement\nSET connectivity_status = 'online',\n    color_status = '{{msg.payload.color_status}}',\n    updated_at = current_timestamp\nWHERE mac_address = '{{msg.payload.mac_address}}'",
+        "postgreSQLConfig": "270590d0.3af0a",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 520,
+        "y": 920,
+        "wires": [
+            []
+        ],
+        "info": "Atualiza o sinalizador na tabela equipement.\r\nAtualiza color_status, connectivity_status e update_at"
+    },
+    {
+        "id": "234970f0133e9456",
+        "type": "debug",
+        "z": "986afd82ee909974",
+        "g": "7321907a.ee288",
+        "name": "debug 14",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 520,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "f09ecb2d4a6649d8",
+        "type": "debug",
+        "z": "986afd82ee909974",
+        "g": "874d38f878083d50",
+        "name": "debug 15",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1960,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "ded063f81b057006",
+        "type": "debug",
+        "z": "986afd82ee909974",
+        "g": "874d38f878083d50",
+        "name": "debug 16",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2220,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "e5b4e03986cf703d",
+        "type": "debug",
+        "z": "986afd82ee909974",
+        "g": "7321907a.ee288",
+        "name": "debug 17",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1080,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "c379ae350a127c6f",
+        "type": "debug",
+        "z": "986afd82ee909974",
+        "g": "7321907a.ee288",
+        "name": "debug 18",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 820,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "17bf3098696ebf1d",
+        "type": "debug",
+        "z": "986afd82ee909974",
+        "g": "7321907a.ee288",
+        "name": "debug 19",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 280,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "4c065b67cf326201",
+        "type": "ui_form",
+        "z": "986afd82ee909974",
+        "g": "874d38f878083d50",
+        "name": "",
+        "label": "",
+        "group": "ead3fc9.832a3",
+        "order": 1,
+        "width": "8",
+        "height": "1",
+        "options": [
+            {
+                "label": "Data Inicio",
+                "value": "start_date",
+                "type": "date",
+                "required": false,
+                "rows": null
+            },
+            {
+                "label": "Data Fim",
+                "value": "end_date",
+                "type": "date",
+                "required": false,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "start_date": "",
+            "end_date": ""
+        },
+        "payload": "",
+        "submit": "submit",
+        "cancel": "cancel",
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": true,
+        "className": "",
+        "x": 1810,
+        "y": 740,
+        "wires": [
+            [
+                "68c93d633c1a3adc"
+            ]
+        ]
+    },
+    {
+        "id": "68c93d633c1a3adc",
+        "type": "function",
+        "z": "986afd82ee909974",
+        "g": "874d38f878083d50",
+        "name": "function 37",
+        "func": "var start_date_timeline = flow.get(\"start_date_timeline\")||\"\"\nvar end_date_timeline = flow.get(\"end_date_timeline\")||\"\"\n\nstart_date_timeline = msg.payload.start_date\nend_date_timeline = msg.payload.end_date\n\nflow.set(\"start_date_timeline\", start_date_timeline)\nflow.set(\"end_date_timeline\", end_date_timeline)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1950,
+        "y": 740,
+        "wires": [
+            [
+                "5e58566d2621be86"
+            ]
+        ]
     },
     {
         "id": "688cddae.069644",
