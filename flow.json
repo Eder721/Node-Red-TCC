@@ -542,12 +542,20 @@
             "81773b0beda37c82",
             "b153f6b5c55946c0",
             "17bf3098696ebf1d",
-            "f24cb3fbab836d00"
+            "f24cb3fbab836d00",
+            "a03e96a754a36a0e",
+            "c632978b107b8341",
+            "25bb4437926efc03",
+            "3238e37b149484bf",
+            "217a708d8d176012",
+            "dc12954ccd36ccff",
+            "8964d6f5f2a8c2b0",
+            "30a057bad7351dab"
         ],
         "x": 34,
         "y": 59,
         "w": 1402,
-        "h": 1022
+        "h": 1062
     },
     {
         "id": "ac77b882.60d688",
@@ -684,7 +692,9 @@
             "562ad9cf6ffef88a",
             "239802e9717738e1",
             "b6ca060716a4f878",
-            "63724ab6a4ba01f2"
+            "63724ab6a4ba01f2",
+            "b51957da80236993",
+            "86720f6b068f63ba"
         ],
         "x": 1484,
         "y": 1959,
@@ -743,7 +753,8 @@
             "e7b81144092cab16",
             "041cacdc9466f117",
             "087adb67e1a8e297",
-            "2c387d0d65c89d48"
+            "2c387d0d65c89d48",
+            "a998ffcade6198a0"
         ],
         "x": 1534,
         "y": 1079,
@@ -845,7 +856,8 @@
             "5e07e23a0370662e",
             "fdd13a46e185c8eb",
             "ecf796734a073562",
-            "a978bf1dc6a72f5e"
+            "a978bf1dc6a72f5e",
+            "b56933edeee6c876"
         ],
         "x": 1614,
         "y": 2859,
@@ -904,12 +916,14 @@
             "ce090a5e.662658",
             "c2bb9c52.5d73",
             "686d85b7ee4c29a5",
-            "ed1a7b8299038b06"
+            "ed1a7b8299038b06",
+            "664683b2a0ccd3f0",
+            "4495db69e08ff93a"
         ],
-        "x": 1554,
+        "x": 1534,
         "y": 779,
         "w": 1252,
-        "h": 222
+        "h": 242
     },
     {
         "id": "f7accf3687f45d60",
@@ -937,8 +951,7 @@
             "6e2c66415af33b81",
             "5754444e8d1de7ba",
             "fa9432076de4ad15",
-            "9e24ef99d105d286",
-            "64a7cc7d2f148e43"
+            "9e24ef99d105d286"
         ],
         "x": 74,
         "y": 1719,
@@ -951,7 +964,7 @@
         "type": "junction",
         "z": "986afd82ee909974",
         "g": "3717a59d168d826b",
-        "x": 2080,
+        "x": 2040,
         "y": 1540,
         "wires": [
             [
@@ -2251,7 +2264,7 @@
         "payload": "AA100-00:11:22:33:44:55-green",
         "payloadType": "str",
         "x": 420,
-        "y": 1200,
+        "y": 1260,
         "wires": [
             [
                 "e5650ec4.06045"
@@ -2280,7 +2293,7 @@
         "payload": "AA100-00:11:22:33:44:55-red",
         "payloadType": "str",
         "x": 410,
-        "y": 1240,
+        "y": 1300,
         "wires": [
             [
                 "58fd4b6c.f12524"
@@ -2309,7 +2322,7 @@
         "payload": "AA100-00:11:22:33:44:55-blue",
         "payloadType": "str",
         "x": 410,
-        "y": 1280,
+        "y": 1340,
         "wires": [
             [
                 "c66e0af8.25b4f8"
@@ -2338,7 +2351,7 @@
         "payload": "AA100-00:11:22:33:44:55-yellow",
         "payloadType": "str",
         "x": 420,
-        "y": 1320,
+        "y": 1380,
         "wires": [
             [
                 "69bb37ee.e6b6d8"
@@ -2367,7 +2380,7 @@
         "payload": "AB100-green",
         "payloadType": "str",
         "x": 450,
-        "y": 1500,
+        "y": 1560,
         "wires": [
             [
                 "ceb41ec2.f4343"
@@ -2396,7 +2409,7 @@
         "payload": "AB100-red",
         "payloadType": "str",
         "x": 440,
-        "y": 1540,
+        "y": 1600,
         "wires": [
             [
                 "841fd246.9d31e"
@@ -2425,7 +2438,7 @@
         "payload": "AB100-blue",
         "payloadType": "str",
         "x": 450,
-        "y": 1580,
+        "y": 1640,
         "wires": [
             [
                 "ee54734a.10e1"
@@ -2454,7 +2467,7 @@
         "payload": "AB100-yellow",
         "payloadType": "str",
         "x": 450,
-        "y": 1620,
+        "y": 1680,
         "wires": [
             [
                 "559cec80.5953e4"
@@ -3218,7 +3231,7 @@
         "finalize": "",
         "libs": [],
         "x": 370,
-        "y": 1040,
+        "y": 1080,
         "wires": [
             []
         ],
@@ -3651,7 +3664,7 @@
         "payload": "AA100-ihm-00:11:22:33:44:55",
         "payloadType": "str",
         "x": 170,
-        "y": 1160,
+        "y": 1220,
         "wires": [
             [
                 "8652110a.c6eb1"
@@ -3680,7 +3693,7 @@
         "payload": "AA100-signalyzer-55:44:33:22:11:00",
         "payloadType": "str",
         "x": 170,
-        "y": 1120,
+        "y": 1180,
         "wires": [
             [
                 "597484fd.12ea8c"
@@ -3709,7 +3722,7 @@
         "payload": "AB100-ihm-AA:BB:CC:DD:EE:FF",
         "payloadType": "str",
         "x": 170,
-        "y": 1260,
+        "y": 1320,
         "wires": [
             [
                 "b3be575c.62e288"
@@ -3738,7 +3751,7 @@
         "payload": "AB100-signalyzer-FF:EE:DD:CC:BB:AA",
         "payloadType": "str",
         "x": 170,
-        "y": 1220,
+        "y": 1280,
         "wires": [
             [
                 "aed4dae.7383728"
@@ -4129,7 +4142,7 @@
             "6dd659648d5eedf5"
         ],
         "x": 565,
-        "y": 1200,
+        "y": 1260,
         "wires": []
     },
     {
@@ -4141,7 +4154,7 @@
             "6dd659648d5eedf5"
         ],
         "x": 555,
-        "y": 1240,
+        "y": 1300,
         "wires": []
     },
     {
@@ -4153,7 +4166,7 @@
             "6dd659648d5eedf5"
         ],
         "x": 555,
-        "y": 1280,
+        "y": 1340,
         "wires": []
     },
     {
@@ -4165,7 +4178,7 @@
             "6dd659648d5eedf5"
         ],
         "x": 555,
-        "y": 1320,
+        "y": 1380,
         "wires": []
     },
     {
@@ -4177,7 +4190,7 @@
             "66101c35.0443e4"
         ],
         "x": 555,
-        "y": 1500,
+        "y": 1560,
         "wires": []
     },
     {
@@ -4189,7 +4202,7 @@
             "66101c35.0443e4"
         ],
         "x": 535,
-        "y": 1540,
+        "y": 1600,
         "wires": []
     },
     {
@@ -4201,7 +4214,7 @@
             "66101c35.0443e4"
         ],
         "x": 555,
-        "y": 1580,
+        "y": 1640,
         "wires": []
     },
     {
@@ -4213,7 +4226,7 @@
             "66101c35.0443e4"
         ],
         "x": 555,
-        "y": 1620,
+        "y": 1680,
         "wires": []
     },
     {
@@ -4226,8 +4239,8 @@
             "d3cbcda1.c274b",
             "88dc9aec1d9026cd"
         ],
-        "x": 275,
-        "y": 1540,
+        "x": 1355,
+        "y": 2120,
         "wires": []
     },
     {
@@ -4369,7 +4382,7 @@
             "f3de6f1501163f3f"
         ],
         "x": 275,
-        "y": 1120,
+        "y": 1180,
         "wires": []
     },
     {
@@ -4381,7 +4394,7 @@
             "f3de6f1501163f3f"
         ],
         "x": 275,
-        "y": 1160,
+        "y": 1220,
         "wires": []
     },
     {
@@ -4393,7 +4406,7 @@
             "f3de6f1501163f3f"
         ],
         "x": 275,
-        "y": 1220,
+        "y": 1280,
         "wires": []
     },
     {
@@ -4405,7 +4418,7 @@
             "f3de6f1501163f3f"
         ],
         "x": 275,
-        "y": 1260,
+        "y": 1320,
         "wires": []
     },
     {
@@ -4579,7 +4592,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 170,
-        "y": 1500,
+        "y": 1560,
         "wires": [
             []
         ]
@@ -4771,12 +4784,12 @@
         "g": "822c3780a45a9041",
         "name": "IN_Select_Sinalizador",
         "links": [
-            "462a057fd489911e",
-            "cf0515bab0560a30",
-            "2a21ffedd6cd0109",
             "1489764.8783b8a",
+            "2a21ffedd6cd0109",
             "441dc6f0.a03448",
-            "9e8a4c4a.e692c"
+            "9e8a4c4a.e692c",
+            "af59f655dbcef04a",
+            "e6fbee5ee9011a28"
         ],
         "x": 1705,
         "y": 2000,
@@ -4881,7 +4894,7 @@
         "links": [
             "462a057fd489911e",
             "1489764.8783b8a",
-            "f24cb3fbab836d00"
+            "af59f655dbcef04a"
         ],
         "x": 1615,
         "y": 1540,
@@ -5023,7 +5036,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2420,
+        "x": 2400,
         "y": 840,
         "wires": [
             []
@@ -5052,7 +5065,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 2120,
+        "x": 2100,
         "y": 840,
         "wires": [
             [
@@ -5070,7 +5083,7 @@
             "9d54fb4c.b5b728",
             "1962862a2130f2cb"
         ],
-        "x": 2265,
+        "x": 2245,
         "y": 820,
         "wires": [
             [
@@ -5245,10 +5258,11 @@
         "name": "",
         "links": [
             "1489764.8783b8a",
-            "9e8a4c4a.e692c"
+            "9e8a4c4a.e692c",
+            "af59f655dbcef04a"
         ],
-        "x": 1835,
-        "y": 2360,
+        "x": 1805,
+        "y": 2320,
         "wires": [
             [
                 "bc2f7a13ddee397c"
@@ -5343,7 +5357,8 @@
         "y": 1280,
         "wires": [
             [
-                "4b3884529a9ae4e3"
+                "4b3884529a9ae4e3",
+                "28f00ec4bd73751b"
             ]
         ]
     },
@@ -5482,8 +5497,8 @@
         "payloadType": "str",
         "topic": "",
         "topicType": "str",
-        "x": 170,
-        "y": 1580,
+        "x": 1230,
+        "y": 2120,
         "wires": [
             [
                 "9e8a4c4a.e692c"
@@ -5759,8 +5774,8 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 2570,
-        "y": 1540,
+        "x": 2630,
+        "y": 1560,
         "wires": [
             []
         ],
@@ -5837,7 +5852,7 @@
         "enableAnimations": false,
         "enableDateMarker": false,
         "forwardInputMessages": true,
-        "x": 2680,
+        "x": 2660,
         "y": 920,
         "wires": [
             []
@@ -6343,7 +6358,7 @@
         "shape": "circle",
         "showGlow": true,
         "name": "",
-        "x": 2550,
+        "x": 2610,
         "y": 1600,
         "wires": []
     },
@@ -6435,7 +6450,7 @@
         "g": "874d38f878083d50",
         "name": "TIMELINE",
         "info": "",
-        "x": 1640,
+        "x": 1620,
         "y": 880,
         "wires": []
     },
@@ -6930,7 +6945,7 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 2500,
+        "x": 2480,
         "y": 920,
         "wires": [
             [
@@ -7738,17 +7753,18 @@
             }
         ],
         "repeat": "",
-        "crontab": "00 00 * * *",
+        "crontab": "00 03 * * *",
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
         "payload": "",
         "payloadType": "date",
         "x": 200,
-        "y": 1440,
+        "y": 1500,
         "wires": [
             [
-                "812b7d9f0e77132b"
+                "812b7d9f0e77132b",
+                "c16be0bf83646b80"
             ]
         ]
     },
@@ -7764,7 +7780,7 @@
         "finalize": "",
         "libs": [],
         "x": 410,
-        "y": 1440,
+        "y": 1500,
         "wires": [
             [
                 "1962862a2130f2cb"
@@ -7781,7 +7797,7 @@
             "ce090a5e.662658"
         ],
         "x": 525,
-        "y": 1440,
+        "y": 1500,
         "wires": []
     },
     {
@@ -7824,7 +7840,7 @@
         "z": "986afd82ee909974",
         "g": "3717a59d168d826b",
         "name": "Color_Values Array",
-        "func": "var color_values = flow.get(\"color_values\", \"bank1\")\n\nvar status = [color_values.green, color_values.red, color_values.yellow, color_values.blue]\n\nmsg = {}\nmsg.options = status\nreturn msg;",
+        "func": "var color_values = flow.get(\"color_values\", \"bank1\")\n\nvar status = [color_values.green, color_values.red, color_values.yellow, color_values.blue, color_values.gray]\n\nmsg = {}\nmsg.options = status\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -8145,7 +8161,8 @@
         "y": 780,
         "wires": [
             [
-                "af59f655dbcef04a"
+                "af59f655dbcef04a",
+                "a03e96a754a36a0e"
             ]
         ],
         "info": "Insere nova linha na tabela de logs"
@@ -8239,7 +8256,7 @@
         "z": "986afd82ee909974",
         "g": "822c3780a45a9041",
         "name": "Pass name to DB",
-        "func": "var name_to_show = flow.get(\"name_to_show\")\n\nmsg.payload.name = name_to_show\nreturn msg;",
+        "func": "var name_to_show = flow.get(\"name_to_show\")\n\nmsg.payload = {}\nmsg.payload.name = name_to_show\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -8249,7 +8266,8 @@
         "y": 2280,
         "wires": [
             [
-                "182a10176e81afc5"
+                "182a10176e81afc5",
+                "86720f6b068f63ba"
             ]
         ]
     },
@@ -8269,7 +8287,8 @@
         "wires": [
             [
                 "edf7d55ca2b9dc0e",
-                "7345c8fc3bb55383"
+                "7345c8fc3bb55383",
+                "b51957da80236993"
             ]
         ],
         "info": "Seleciona o equipamento passando o nome selecionado pelo usuario"
@@ -8545,7 +8564,7 @@
         "payload": "AC100-ihm-AA:00:BB:11:CC:22",
         "payloadType": "str",
         "x": 170,
-        "y": 1360,
+        "y": 1420,
         "wires": [
             [
                 "7d1f6a954ebef80a"
@@ -8574,7 +8593,7 @@
         "payload": "AC100-signalyzer-AA:00:BB:11:CC:22",
         "payloadType": "str",
         "x": 170,
-        "y": 1320,
+        "y": 1380,
         "wires": [
             [
                 "4026ad91149a33d4"
@@ -8588,7 +8607,7 @@
         "name": "",
         "links": [],
         "x": 275,
-        "y": 1320,
+        "y": 1380,
         "wires": []
     },
     {
@@ -8598,7 +8617,7 @@
         "name": "",
         "links": [],
         "x": 275,
-        "y": 1360,
+        "y": 1420,
         "wires": []
     },
     {
@@ -8689,7 +8708,8 @@
         "mode": "link",
         "links": [
             "3c9b5419b4bd45f1",
-            "ae55c09bfb767c69"
+            "ae55c09bfb767c69",
+            "88dc9aec1d9026cd"
         ],
         "x": 1395,
         "y": 500,
@@ -8792,18 +8812,19 @@
         "z": "986afd82ee909974",
         "g": "874d38f878083d50",
         "name": "Config Timeline Data",
-        "func": "var timeline_obj = msg.payload\nvar color_values = flow.get(\"color_values\", \"bank1\")\n\nvar first_event_date = timeline_obj[0].created_at\nvar last_event_date = timeline_obj[timeline_obj.length-1].created_at\n\nvar start_date_timeline = flow.get(\"start_date_timeline\") || \"\"\nvar end_date_timeline = flow.get(\"end_date_timeline\") || \"\"\n\nfunction dateTime_correction(old_date_time) {\n    var date_time = new Date(old_date_time)\n    var full_date = date_time.toLocaleString('pt-BR', {\n        timeZone: 'America/Sao_Paulo',\n    })\n    var separator = full_date.split(\" \")\n    var new_date = separator[0]\n    var new_time = separator[1]\n\n    var date_separator = new_date.split(\"/\")\n    var time_separator = new_time.split(\":\")\n\n    var day = date_separator[0]\n    var month = date_separator[1]\n    var year = date_separator[2]\n\n    var new_full_date = year+\"-\"+month+\"-\"+day+\"T\"+new_time+\"-00:00\"\n    \n    return new_full_date\n}\n\nfunction timeStamptoString(timestamp) {\n    var date = new Date(timestamp)\n    var day = date.getDate().toString().padStart(2, '0')\n    var month = (date.getMonth() + 1).toString().padStart(2, '0')\n    var year = date.getFullYear()\n    var hours = (date.getHours() - 3).toString().padStart(2, '0')\n    var minutes = date.getMinutes().toString().padStart(2, '0')\n    var seconds = date.getSeconds().toString().padStart(2, '0')\n    return year + \"-\" + month + \"-\" + day + \"T\" + hours + \":\" + minutes + \":\" + seconds + \"-03:00\"\n}\n\nfunction getdataArr(mac_address) {\n    var arr = []\n    var y = 0\n    for (var x = 0; x < timeline_obj.length; x++) {\n        if (timeline_obj[x].mac_address == mac_address) {   //achou evento do sinalizador especificado\n            arr[y] = {\n                timeRange: [\n                    dateTime_correction(timeline_obj[x].created_at),\n                    timeline_obj[x].ended_at\n                ],\n                val: timeline_obj[x].color_status\n            }\n            ++y;\n        }\n    }\n    return arr\n}\n\nfunction insertColorValue(color_status){\n    switch(color_status){\n        case \"green\":\n            return color_values.green\n            break\n        case \"red\":\n            return color_values.red\n            break\n        case \"yellow\":\n            return color_values.yellow\n            break\n        case \"blue\":\n            return color_values.blue\n            break\n        case \"gray\":\n            return color_values.gray\n            break\n    }\n}\n\nfunction removeDuplicatesBy(keyFn, array) {\n    var mySet = new Set();\n    return array.filter(function (x) {\n        var key = keyFn(x), isNew = !mySet.has(key);\n        if (isNew) mySet.add(key);\n        return isNew;\n    });\n}\n\nfunction remove_signalyzer(arr){\n    for(var i=0; i<arr.length; i++){\n        if (arr[i].type_equipment == \"signalyzer\"){\n            arr.splice(i, 1)\n            --i;\n        }\n    }\n    return arr\n}\n\n//ordena a array de objetos em ordem alfabetica do atributo mac_address\nfunction compare(a, b) {\n    if (a.mac_address < b.mac_address) {\n        return -1;\n    }\n    if (a.mac_address > b.mac_address) {\n        return 1;\n    }\n    return 0;\n}\n\n\ntimeline_obj.sort(compare);\n\nvar time_date_now = new Date()\n//time_date_now = dateTime_correction(time_date_now)\n\nvar mac_full_list = []  //lista de todos os macs de todos os logs (com repeticao)\nfor(var x=0; x<timeline_obj.length; x++){\n    mac_full_list[x] = {\n        name: timeline_obj[x].name,\n        mac_address: timeline_obj[x].mac_address,\n        type_equipment: timeline_obj[x].type_equipment\n    }\n    \n    timeline_obj[x].color_status = insertColorValue(timeline_obj[x].color_status)\n\n    if (x == timeline_obj.length - 1) {\n        timeline_obj[x].ended_at = dateTime_correction(time_date_now)\n        break\n    }\n    else if(timeline_obj[x].mac_address == timeline_obj[x+1].mac_address){\n        timeline_obj[x].ended_at = dateTime_correction(timeline_obj[x+1].created_at)\n    }\n    else if (timeline_obj[x].mac_address != timeline_obj[x + 1].mac_address){\n        timeline_obj[x].ended_at = dateTime_correction(time_date_now)\n    }\n\n    \n\n}\n\n//lista com os mac address sem repeticao\nvar mac_list = removeDuplicatesBy(x => x.mac_address, mac_full_list)\nvar mac_list_ihm = remove_signalyzer(mac_list)\nnode.warn(mac_list_ihm)\nvar dataItems = new Array(mac_list_ihm.length)\n\nfor (var i = 0; i < mac_list_ihm.length; i++) {  //varre o vetor sinalizadores\n    dataItems[i] = {\n        group: mac_list_ihm[i].name,\n        data: [\n            {\n                label: \"\",\n                data: getdataArr(mac_list_ihm[i].mac_address)\n            }\n        ]\n    }\n}\n\n/*\nfor (var j = 0; j < dataItems.length; j++) {\n    dataItems[j].data[0].data[dataItems[j].data[0].data.length - 1].timeRange[1] = timeStamptoString(date.getTime())\n}\n*/\n\nfunction formatDate(date) {\n    var separator_date = date.split(\"T\")\n    var formatted_date = separator_date[0]\n    return formatted_date\n}\n\nif(start_date_timeline == null){\n    start_date_timeline = formatDate(first_event_date)\n}\nif(end_date_timeline == null){\n    end_date_timeline = formatDate(last_event_date)\n}\nif(start_date_timeline != null && end_date_timeline != null){\n    start_date_timeline = formatDate(start_date_timeline)\n    end_date_timeline = formatDate(end_date_timeline)\n}\n\nmsg.payload = {}\nmsg.payload.dataItems = dataItems\nmsg.payload.startDateTime = start_date_timeline\nmsg.payload.endDateTime = end_date_timeline\nreturn msg;",
+        "func": "var timeline_obj = msg.payload\nvar color_values = flow.get(\"color_values\", \"bank1\")\n\nvar start_date_timeline = flow.get(\"start_date_timeline\") || \"\"\nvar end_date_timeline = flow.get(\"end_date_timeline\") || \"\"\n\nfunction dateTime_correction(old_date_time) {\n    var date_time = new Date(old_date_time)\n    var full_date = date_time.toLocaleString('pt-BR', {\n        timeZone: 'America/Sao_Paulo',\n    })\n    var separator = full_date.split(\" \")\n    var new_date = separator[0]\n    var new_time = separator[1]\n\n    var date_separator = new_date.split(\"/\")\n    var time_separator = new_time.split(\":\")\n\n    var day = date_separator[0]\n    var month = date_separator[1]\n    var year = date_separator[2]\n\n    var new_full_date = year+\"-\"+month+\"-\"+day+\"T\"+new_time+\"-03:00\"\n    \n    return new_full_date\n}\n\nvar first_event_date = dateTime_correction(timeline_obj[0].created_at)\nvar last_event_date = dateTime_correction(timeline_obj[timeline_obj.length - 1].created_at)\n\nfunction timeStamptoString(timestamp) {\n    var date = new Date(timestamp)\n    var day = date.getDate().toString().padStart(2, '0')\n    var month = (date.getMonth() + 1).toString().padStart(2, '0')\n    var year = date.getFullYear()\n    var hours = (date.getHours() - 3).toString().padStart(2, '0')\n    var minutes = date.getMinutes().toString().padStart(2, '0')\n    var seconds = date.getSeconds().toString().padStart(2, '0')\n    return year + \"-\" + month + \"-\" + day + \"T\" + hours + \":\" + minutes + \":\" + seconds + \"-03:00\"\n}\n\nfunction getdataArr(mac_address) {\n    var arr = []\n    var y = 0\n    for (var x = 0; x < timeline_obj.length; x++) {\n        if (timeline_obj[x].mac_address == mac_address) {   //achou evento do sinalizador especificado\n            arr[y] = {\n                timeRange: [\n                    dateTime_correction(timeline_obj[x].created_at),\n                    timeline_obj[x].ended_at\n                ],\n                val: timeline_obj[x].color_status\n            }\n            ++y;\n        }\n    }\n    return arr\n}\n\nfunction insertColorValue(color_status){\n    switch(color_status){\n        case \"green\":\n            return color_values.green\n            break\n        case \"red\":\n            return color_values.red\n            break\n        case \"yellow\":\n            return color_values.yellow\n            break\n        case \"blue\":\n            return color_values.blue\n            break\n        case \"gray\":\n            return color_values.gray\n            break\n    }\n}\n\nfunction removeDuplicatesBy(keyFn, array) {\n    var mySet = new Set();\n    return array.filter(function (x) {\n        var key = keyFn(x), isNew = !mySet.has(key);\n        if (isNew) mySet.add(key);\n        return isNew;\n    });\n}\n\nfunction remove_signalyzer(arr){\n    for(var i=0; i<arr.length; i++){\n        if (arr[i].type_equipment == \"signalyzer\"){\n            arr.splice(i, 1)\n            --i;\n        }\n    }\n    return arr\n}\n\n//ordena a array de objetos em ordem alfabetica do atributo mac_address\nfunction compare(a, b) {\n    if (a.mac_address < b.mac_address) {\n        return -1;\n    }\n    if (a.mac_address > b.mac_address) {\n        return 1;\n    }\n    return 0;\n}\n\n\ntimeline_obj.sort(compare);\n\nvar time_date_now = new Date()\n//time_date_now = dateTime_correction(time_date_now)\n\nvar mac_full_list = []  //lista de todos os macs de todos os logs (com repeticao)\nfor(var x=0; x<timeline_obj.length; x++){\n    mac_full_list[x] = {\n        name: timeline_obj[x].name,\n        mac_address: timeline_obj[x].mac_address,\n        type_equipment: timeline_obj[x].type_equipment\n    }\n    \n    timeline_obj[x].color_status = insertColorValue(timeline_obj[x].color_status)\n\n    if (x == timeline_obj.length - 1) {\n        timeline_obj[x].ended_at = dateTime_correction(time_date_now)\n        break\n    }\n    else if(timeline_obj[x].mac_address == timeline_obj[x+1].mac_address){\n        timeline_obj[x].ended_at = dateTime_correction(timeline_obj[x+1].created_at)\n    }\n    else if (timeline_obj[x].mac_address != timeline_obj[x + 1].mac_address){\n        timeline_obj[x].ended_at = dateTime_correction(time_date_now)\n    }\n\n    \n\n}\n\n//lista com os mac address sem repeticao\nvar mac_list = removeDuplicatesBy(x => x.mac_address, mac_full_list)\nvar mac_list_ihm = remove_signalyzer(mac_list)\nnode.warn(mac_list_ihm)\nvar dataItems = new Array(mac_list_ihm.length)\n\nfor (var i = 0; i < mac_list_ihm.length; i++) {  //varre o vetor sinalizadores\n    dataItems[i] = {\n        group: mac_list_ihm[i].name,\n        data: [\n            {\n                label: \"\",\n                data: getdataArr(mac_list_ihm[i].mac_address)\n            }\n        ]\n    }\n}\n\n/*\nfor (var j = 0; j < dataItems.length; j++) {\n    dataItems[j].data[0].data[dataItems[j].data[0].data.length - 1].timeRange[1] = timeStamptoString(date.getTime())\n}\n*/\n\nfunction formatDate(date) {\n    var separator_date = date.split(\"T\")\n    var formatted_date = separator_date[0]\n    return formatted_date\n}\n\nif(start_date_timeline == null){\n    start_date_timeline = formatDate(first_event_date)\n}\nif(end_date_timeline == null){\n    end_date_timeline = formatDate(last_event_date)\n}\nif(start_date_timeline != null && end_date_timeline != null){\n    start_date_timeline = formatDate(start_date_timeline)\n    end_date_timeline = formatDate(end_date_timeline)\n}\n\nmsg.payload = {}\nmsg.payload.dataItems = dataItems\nmsg.payload.startDateTime = start_date_timeline+\" 00:00:00\"\nmsg.payload.endDateTime = end_date_timeline+\" 23:59:59\"\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2060,
+        "x": 2040,
         "y": 920,
         "wires": [
             [
                 "f8f3c7d95d68c214",
-                "ed1a7b8299038b06"
+                "ed1a7b8299038b06",
+                "664683b2a0ccd3f0"
             ]
         ]
     },
@@ -8818,7 +8839,7 @@
         "split": false,
         "rowsPerMsg": 1,
         "outputs": 1,
-        "x": 1860,
+        "x": 1840,
         "y": 920,
         "wires": [
             [
@@ -8850,7 +8871,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 1670,
+        "x": 1650,
         "y": 920,
         "wires": [
             [
@@ -8867,7 +8888,10 @@
         "mode": "link",
         "links": [
             "d1cbaaa80a35f8b6",
-            "3c9b5419b4bd45f1"
+            "3c9b5419b4bd45f1",
+            "d0232751d7d8859b",
+            "88dc9aec1d9026cd",
+            "d3cbcda1.c274b"
         ],
         "x": 1075,
         "y": 780,
@@ -8882,7 +8906,7 @@
         "links": [
             "af59f655dbcef04a"
         ],
-        "x": 1765,
+        "x": 1745,
         "y": 960,
         "wires": [
             [
@@ -8985,12 +9009,12 @@
         ],
         "repeat": "",
         "crontab": "",
-        "once": false,
+        "once": true,
         "onceDelay": 0.1,
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 1650,
+        "x": 1660,
         "y": 2040,
         "wires": [
             [
@@ -9102,7 +9126,7 @@
         "syntax": "mustache",
         "template": "{\n    \"xAxis\":{\n        \"xTickFormat\": \"HH\",\n        \"startDateTime\": \"{{payload.startDateTime}}\",\n        \"endDateTime\": \"{{payload.endDateTime}}\",\n        \"labelsFontSize\": 16,\n        \"labelsColor\": \"#000000\"\n    },\n    \"yAxis\": {\n        \"labelsFontSize\": 16,\n        \"labelsColor\": \"#aaaaaa\"\n    },\n    \"tooltips\": {\n        \"timeFormat\": \"%H:%M:%S\",\n        \"segmentTooltipContent\": \"\"\n    },\n    \"resetZoom\": {\n        \"labelFontSize\": 32,\n        \"labelColor\": \"#000000\"\n    },\n    \"chart\": {\n        \"topMargin\": 60,\n        \"height\": 50,\n        \"lineColors\": [\n          { \"statusColor\": \"#2cb805\", \"statusValue\": \"Em operação\" },\n          { \"statusColor\": \"#fa1515\", \"statusValue\": \"Parada não programada\" },\n          { \"statusColor\": \"#ffd91a\", \"statusValue\": \"Setup\" },\n          { \"statusColor\": \"#3744fb\", \"statusValue\": \"Parada programada\" },\n          { \"statusColor\": \"#8a8a8a\", \"statusValue\": \"Offline\" }\n        ]\n    },\n    \"options\": {\n        \"enableAnimations\": true,\n        \"enableDateMarker\": true\n    }\n}",
         "output": "json",
-        "x": 2300,
+        "x": 2280,
         "y": 920,
         "wires": [
             [
@@ -9445,7 +9469,7 @@
         "finalize": "",
         "libs": [],
         "x": 390,
-        "y": 1000,
+        "y": 1040,
         "wires": [
             [
                 "b153f6b5c55946c0"
@@ -9464,7 +9488,7 @@
         "rowsPerMsg": 1,
         "outputs": 1,
         "x": 580,
-        "y": 1000,
+        "y": 1040,
         "wires": [
             []
         ],
@@ -9484,7 +9508,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 340,
-        "y": 960,
+        "y": 1000,
         "wires": []
     },
     {
@@ -9525,7 +9549,7 @@
         "topicType": "msg",
         "splitLayout": true,
         "className": "",
-        "x": 1650,
+        "x": 1630,
         "y": 820,
         "wires": [
             [
@@ -9545,7 +9569,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1840,
+        "x": 1820,
         "y": 820,
         "wires": [
             [
@@ -9918,7 +9942,7 @@
         "z": "986afd82ee909974",
         "g": "f7accf3687f45d60",
         "name": "Set filename and convert to buffer",
-        "func": "var email = flow.get(\"email\", \"bank1\")\nvar name_to_csv = flow.get(\"name_to_csv\")\nvar date_begin_csv = flow.get(\"date_begin_csv\")\nvar date_end_csv = flow.get(\"date_end_csv\")\nvar color_values = flow.get(\"color_values\", \"bank1\")\n\n\n\nvar description_text = \"Dados do Sinalizador \"+name_to_csv\ndescription_text += \"\\r\\n\"\ndescription_text += \"Periodo:\"\ndescription_text += \"\\r\\n\"\ndescription_text += \"- Data Início: \"+date_begin_csv\ndescription_text += \"\\r\\n\"\ndescription_text += \"- Data Fim: \" + date_end_csv\ndescription_text += \"\\r\\n\"\ndescription_text += \"\\r\\n\"\ndescription_text += \"- \"+color_values.green+\": \"+msg.times.t_green\ndescription_text += \"\\r\\n\"\ndescription_text += \"- \" + color_values.red + \": \" + msg.times.t_red\ndescription_text += \"\\r\\n\"\ndescription_text += \"- \" + color_values.yellow + \": \" + msg.times.t_yellow\ndescription_text += \"\\r\\n\"\ndescription_text += \"- \" + color_values.blue + \": \" + msg.times.t_blue\ndescription_text += \"\\r\\n\"\ndescription_text += \"- \" + color_values.gray + \": \" + msg.times.t_gray\n\nmsg.topic = \"Data attached\"\nmsg.filename = \"data.csv\"\nmsg.payload = Buffer.from(msg.payload);\nmsg.to = email\nmsg.description = description_text\nreturn msg;",
+        "func": "var email = flow.get(\"email\", \"bank1\")\nvar name_to_csv = flow.get(\"name_to_csv\")\nvar date_begin_csv = flow.get(\"date_begin_csv\")\nvar date_end_csv = flow.get(\"date_end_csv\")\nvar color_values = flow.get(\"color_values\", \"bank1\")\n\nfunction formatTime(totalTime) {   //recebe em milisegundos\n    var diffDays = Math.floor(totalTime / 86400000); // days\n    var diffHrs = Math.floor((totalTime % 86400000) / 3600000); // hours\n\n    var diffMins = Math.floor(((totalTime % 86400000) % 3600000) / 60000); // minutes\n    diffMins = diffMins < 10 ? \"0\" + diffMins : diffMins;\n    var diffSecs = Math.floor((((totalTime % 86400000) % 3600000) % 60000) / 1000);  //seconds\n    diffSecs = diffSecs < 10 ? \"0\" + diffSecs : diffSecs;\n    diffHrs = diffHrs + (diffDays * 24)\n    diffHrs = diffHrs < 10 ? \"0\" + diffHrs : diffHrs;\n    var formatedTime = diffHrs + \":\" + diffMins + \":\" + diffSecs\n    return formatedTime;\n}\n\nvar per_green = (msg.times.t_green / msg.times.t_total) * 100\nvar per_red = (msg.times.t_red / msg.times.t_total) * 100\nvar per_yellow = (msg.times.t_yellow / msg.times.t_total) * 100\nvar per_blue = (msg.times.t_blue / msg.times.t_total) * 100\nvar per_gray = (msg.times.t_gray / msg.times.t_total) * 100\n\nper_green = per_green.toFixed(2)\nper_red = per_red.toFixed(2)\nper_yellow = per_yellow.toFixed(2)\nper_blue = per_blue.toFixed(2)\nper_gray = per_gray.toFixed(2)\n\nvar t_total = formatTime(msg.times.t_total)\nvar t_green = formatTime(msg.times.t_green)\nvar t_red = formatTime(msg.times.t_red)\nvar t_yellow = formatTime(msg.times.t_yellow)\nvar t_blue = formatTime(msg.times.t_blue)\nvar t_gray = formatTime(msg.times.t_gray)\n\n\n\nvar description_text = \"Dados do Sinalizador \"+name_to_csv\ndescription_text += \"\\r\\n\"\ndescription_text += \"Periodo:\"\ndescription_text += \"\\r\\n\"\ndescription_text += \"- Data Início: \"+date_begin_csv\ndescription_text += \"\\r\\n\"\ndescription_text += \"- Data Fim: \" + date_end_csv\ndescription_text += \"\\r\\n\"\ndescription_text += \"\\r\\n\"\ndescription_text += \"Tempo total = \"+t_total\ndescription_text += \"\\r\\n\"\ndescription_text += \"- \" + color_values.green + \": \" + t_green + \" = \"+per_green+\"%\"\ndescription_text += \"\\r\\n\"\ndescription_text += \"- \" + color_values.red + \": \" + t_red + \" = \" + per_red + \"%\"\ndescription_text += \"\\r\\n\" \ndescription_text += \"- \" + color_values.yellow + \": \" + t_yellow + \" = \" + per_yellow + \"%\"\ndescription_text += \"\\r\\n\"\ndescription_text += \"- \" + color_values.blue + \": \" + t_blue + \" = \" + per_blue + \"%\"\ndescription_text += \"\\r\\n\"\ndescription_text += \"- \" + color_values.gray + \": \" + t_gray + \" = \" + per_gray + \"%\"\n\nmsg.topic = \"Data attached\"\nmsg.filename = \"datalog\" + name_to_csv + \"-\" + date_begin_csv + \"_\" + date_end_csv+\".csv\"\nmsg.payload = Buffer.from(msg.payload);\nmsg.to = email\nmsg.description = description_text\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -9973,7 +9997,7 @@
         "z": "986afd82ee909974",
         "g": "3717a59d168d826b",
         "name": "",
-        "property": "payload.color_status",
+        "property": "payload[0].color_status",
         "propertyType": "msg",
         "rules": [
             {
@@ -9990,7 +10014,8 @@
         "wires": [
             [
                 "79d201895a20c389",
-                "8e8486fc2dbeb83a"
+                "8e8486fc2dbeb83a",
+                "a998ffcade6198a0"
             ]
         ]
     },
@@ -10024,7 +10049,6 @@
         "name": "link out 7",
         "mode": "link",
         "links": [
-            "d0232751d7d8859b",
             "df9d1b15db8b3ce9"
         ],
         "x": 1075,
@@ -10142,7 +10166,7 @@
         "split": false,
         "rowsPerMsg": 1,
         "outputs": 1,
-        "x": 2240,
+        "x": 2220,
         "y": 1640,
         "wires": [
             [
@@ -10241,7 +10265,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2020,
+        "x": 2000,
         "y": 880,
         "wires": []
     },
@@ -10258,7 +10282,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2260,
+        "x": 2240,
         "y": 860,
         "wires": []
     },
@@ -10280,14 +10304,331 @@
         "wires": []
     },
     {
-        "id": "64a7cc7d2f148e43",
-        "type": "comment",
+        "id": "a998ffcade6198a0",
+        "type": "debug",
         "z": "986afd82ee909974",
-        "g": "f7accf3687f45d60",
-        "name": "PAREI AQUI",
-        "info": "Arrumar texto do corpo do email com os valores dos tempos",
-        "x": 790,
-        "y": 1960,
+        "g": "3717a59d168d826b",
+        "name": "debug 25",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1980,
+        "y": 1580,
+        "wires": []
+    },
+    {
+        "id": "a03e96a754a36a0e",
+        "type": "debug",
+        "z": "986afd82ee909974",
+        "g": "7321907a.ee288",
+        "name": "debug 26",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1120,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "664683b2a0ccd3f0",
+        "type": "function",
+        "z": "986afd82ee909974",
+        "g": "874d38f878083d50",
+        "name": "Adjust Date Format",
+        "func": "var dateTime_begin = msg.payload.startDateTime //2022-08-04 00:00:00\nvar dateTime_end = msg.payload.endDateTime\n\nvar sep1_begin = dateTime_begin.split(\" \")\nvar sep1_end = dateTime_end.split(\" \")\n\nvar date_begin = sep1_begin[0]  //2022-08-04\nvar date_end = sep1_end[0]     \n\nvar separator_begin = date_begin.split(\"-\")\nvar separator_end = date_end.split(\"-\")\n\nvar day_begin = separator_begin[2]      //04\nvar month_begin = separator_begin[1]    //08\nvar year_begin = separator_begin[0]     //2022\n\nvar day_end = separator_end[2]\nvar month_end = separator_end[1]\nvar year_end = separator_end[0]\n\nvar new_date_begin = day_begin+\"/\"+month_begin+\"/\"+year_begin\nvar new_date_end = day_end+\"/\"+month_end+\"/\"+year_end\n\nmsg.payload.begin = new_date_begin\nmsg.payload.end = new_date_end\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2430,
+        "y": 980,
+        "wires": [
+            [
+                "4495db69e08ff93a"
+            ]
+        ]
+    },
+    {
+        "id": "4495db69e08ff93a",
+        "type": "ui_template",
+        "z": "986afd82ee909974",
+        "g": "874d38f878083d50",
+        "group": "ead3fc9.832a3",
+        "name": "Display Date Interval",
+        "order": 2,
+        "width": 4,
+        "height": 2,
+        "format": "<p><b>Data Início:</b>{{msg.payload.begin}}</p>\n\n<p><b> Data Final:</b> {{msg.payload.end}}</p>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 2660,
+        "y": 980,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c16be0bf83646b80",
+        "type": "function",
+        "z": "986afd82ee909974",
+        "name": "function 38",
+        "func": "var date = new Date()\n\nvar full_date = date.toLocaleString('pt-BR', {\n    timeZone: 'America/Sao_Paulo',\n})\nvar date_separator = full_date.split(\" \")\nvar new_date = date_separator[0]    //Ex: \"18/10/2022\"\nvar new_time = date_separator[1]    //Ex: \"15:45:05\"\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 1460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "25bb4437926efc03",
+        "type": "inject",
+        "z": "986afd82ee909974",
+        "g": "7321907a.ee288",
+        "name": "Att Status Meia Noite",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "00 03 * * *",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 180,
+        "y": 920,
+        "wires": [
+            [
+                "dc12954ccd36ccff"
+            ]
+        ]
+    },
+    {
+        "id": "c632978b107b8341",
+        "type": "function",
+        "z": "986afd82ee909974",
+        "g": "7321907a.ee288",
+        "name": "midnigth update",
+        "func": "var equipment_count = flow.get(\"equipment_count\")||0\nvar equipment_list = msg.payload    //all equipment table data\n\nmsg.payload = {}\nif(equipment_count == equipment_list.length){//se passou do ultimo equipamento da tabela\n    msg.payload.finished = true\n}\nelse{\n    msg.payload.finished = false\n    //prepare new log event\n    msg.payload.id = equipment_list[equipment_count].id\n    msg.payload.name = equipment_list[equipment_count].name\n    msg.payload.connectivity = equipment_list[equipment_count].connectivity_status\n    msg.payload.color_status = equipment_list[equipment_count].color_status\n}\n\nequipment_count = equipment_count+1\n\nflow.set(\"equipment_count\", equipment_count)\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 920,
+        "wires": [
+            [
+                "8964d6f5f2a8c2b0"
+            ]
+        ]
+    },
+    {
+        "id": "3238e37b149484bf",
+        "type": "postgresql",
+        "z": "986afd82ee909974",
+        "g": "7321907a.ee288",
+        "name": "INSERT LOG",
+        "query": "INSERT INTO public.equipement_logs\n   (equipement_id, connectivity , color_status)\n  VALUES('{{msg.payload.id}}', '{{msg.payload.connectivity}}', '{{msg.payload.color_status}}') RETURNING *;",
+        "postgreSQLConfig": "270590d0.3af0a",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 1160,
+        "y": 920,
+        "wires": [
+            [
+                "af59f655dbcef04a",
+                "30a057bad7351dab"
+            ]
+        ],
+        "info": "Insere nova linha na tabela de logs"
+    },
+    {
+        "id": "217a708d8d176012",
+        "type": "postgresql",
+        "z": "986afd82ee909974",
+        "g": "7321907a.ee288",
+        "name": "SELECT",
+        "query": "SELECT * FROM public.equipement\nORDER BY created_at ASC;\n",
+        "postgreSQLConfig": "270590d0.3af0a",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 660,
+        "y": 920,
+        "wires": [
+            [
+                "c632978b107b8341"
+            ]
+        ],
+        "info": "Pega o id do equipamento no banco"
+    },
+    {
+        "id": "dc12954ccd36ccff",
+        "type": "change",
+        "z": "986afd82ee909974",
+        "g": "7321907a.ee288",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "equipment_count",
+                "pt": "flow",
+                "to": "0",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 430,
+        "y": 920,
+        "wires": [
+            [
+                "217a708d8d176012"
+            ]
+        ]
+    },
+    {
+        "id": "8964d6f5f2a8c2b0",
+        "type": "switch",
+        "z": "986afd82ee909974",
+        "g": "7321907a.ee288",
+        "name": "",
+        "property": "payload.finished",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 990,
+        "y": 920,
+        "wires": [
+            [
+                "3238e37b149484bf",
+                "a4f965b8c7ea4f5d"
+            ]
+        ]
+    },
+    {
+        "id": "30a057bad7351dab",
+        "type": "delay",
+        "z": "986afd82ee909974",
+        "g": "7321907a.ee288",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 860,
+        "y": 1020,
+        "wires": [
+            [
+                "217a708d8d176012"
+            ]
+        ]
+    },
+    {
+        "id": "b56933edeee6c876",
+        "type": "inject",
+        "z": "986afd82ee909974",
+        "g": "352edda8f59a3cab",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1730,
+        "y": 3140,
+        "wires": [
+            [
+                "d1d671813ee10f73",
+                "bc2a2fd6.cc499"
+            ]
+        ]
+    },
+    {
+        "id": "b51957da80236993",
+        "type": "debug",
+        "z": "986afd82ee909974",
+        "g": "822c3780a45a9041",
+        "name": "debug 27",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2220,
+        "y": 2200,
+        "wires": []
+    },
+    {
+        "id": "86720f6b068f63ba",
+        "type": "debug",
+        "z": "986afd82ee909974",
+        "g": "822c3780a45a9041",
+        "name": "debug 28",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2100,
+        "y": 2360,
         "wires": []
     },
     {
