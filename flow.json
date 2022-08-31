@@ -9049,8 +9049,8 @@
         "g": "7321907a.ee288",
         "name": "",
         "info": "inserir esse evento de perda de conexão no log - DONE\n\n\nREGRA MASTER: Se um dos dois equipamentos (IHM ou Torre) perder conexão, ambos ficam como\nstatus gray\n\nSe quem perdeu conexão, for:\n- Torre:\n    - Atualiza o equipamento no banco\n    - Conectividade = false\n    - Color_status = gray\n    - Avisar a ihm correspondente\n- IHM\n    - Atualzia o equipamento no banco\n    - Conectividade = false\n    - Color_status = gray\n    - Avisar a torre correspondente",
-        "x": 800,
-        "y": 100,
+        "x": 740,
+        "y": 120,
         "wires": []
     },
     {
